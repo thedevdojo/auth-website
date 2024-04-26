@@ -47,102 +47,102 @@
             </div>
     
             <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-            <div :class="{ 'hidden' : !mobile, 'flex': mobile }" class="hidden left-0 z-10 justify-center items-center w-full font-semibold select-none md:flex lg:absolute">
-                <div class="flex flex-col justify-center mt-4 space-y-2 w-full md:mt-0 md:flex-row md:space-x-6 lg:space-x-10 xl:space-x-16 md:space-y-0">
-                    <div x-data="{ isOpen: false }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" class="relative py-3">
-                        <div class="flex relative z-10 items-center space-x-1 text-gray-300 cursor-pointer lg:space-x-3 hover:text-gray-100 focus:outline-none">
-                            <span class="">Product</span>
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <div :class="{ 'hidden' : !mobile, 'flex': mobile }" class="hidden left-0 z-10 justify-center items-center w-full font-semibold -translate-x-6 select-none md:flex lg:absolute">
+                <div class="flex flex-col justify-center mt-4 space-y-2 w-full text-sm md:mt-0 md:flex-row md:space-y-0">
+                    <div x-data="{ isOpen: false }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" class="flex relative items-stretch h-12">
+                        <div class="flex relative z-10 items-center px-5 space-x-1 text-gray-300 cursor-pointer h-100 lg:space-x-1.5 hover:text-gray-100 focus:outline-none">
+                            <span class="">Install Guides</span>
+                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                             </svg>
                         </div>
     
-                        <div x-show="isOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="overflow-hidden absolute left-0 z-20 z-30 p-3 mt-3 -ml-0 space-y-2 w-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl ring-1 ring-black ring-opacity-5 shadow-lg transform lg:left-1/2 lg:-ml-48 md:w-96" data-rounded="rounded-xl" data-rounded-max="rounded-full" style="display: none;">
+                        <div x-show="isOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="overflow-hidden absolute z-30 p-3 mt-12 -ml-0 space-y-2 w-full bg-gradient-to-b from-black to-black rounded-xl border border-dashed ring-1 ring-black ring-opacity-5 shadow-lg transform via-zinc-950 border-zinc-700 lg:left-1/2 lg:-translate-x-1/2 md:w-96" x-cloak>
     
-                            <a href="#_" class="block px-4 py-3 pr-0 text-base text-gray-200 rounded-xl cursor-pointer hover:bg-gray-900 hover:text-gray-100" data-rounded="rounded-xl">
+                            <a href="#_" class="block px-4 py-3 pr-0 text-base text-gray-200 rounded-xl cursor-pointer hover:bg-zinc-900 hover:text-gray-100" data-rounded="rounded-xl">
                                 <span class="flex items-start space-x-1 md:space-x-3">
-                                    <svg class="flex-shrink-0 mt-1 w-9 h-9 text-blue-500" data-primary="blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
-                                    </svg>
+                                    <svg class="flex-shrink-0 mt-1 w-auto h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 50" fill="none"><path fill="#FF2D20" fill-rule="evenodd" d="M47.717 11.12a.775.775 0 0 1 .027.2v10.55a.77.77 0 0 1-.386.667l-8.855 5.099V37.74a.771.771 0 0 1-.385.668l-18.483 10.64c-.043.024-.089.04-.135.056-.017.005-.034.016-.052.02a.775.775 0 0 1-.394 0c-.021-.005-.04-.016-.06-.024-.043-.016-.087-.029-.128-.052L.386 38.408A.771.771 0 0 1 0 37.74V6.09c0-.069.01-.136.027-.202.006-.022.02-.042.027-.064.014-.04.028-.082.049-.12.014-.024.035-.045.053-.068.022-.03.042-.062.068-.089.022-.022.051-.038.076-.058.028-.023.053-.048.085-.066L9.626.103a.771.771 0 0 1 .77 0l9.24 5.32h.002c.03.02.056.043.084.065.025.02.053.037.075.058.027.028.046.06.07.09.016.023.038.044.051.069.022.038.035.079.05.119.008.022.021.042.027.065a.78.78 0 0 1 .027.201v19.768l7.7-4.433V11.319c0-.067.01-.136.027-.2.007-.023.02-.043.027-.065.015-.04.029-.082.05-.12.014-.024.035-.045.052-.068.023-.03.042-.062.07-.09.021-.021.05-.038.074-.057.029-.023.054-.048.085-.066l9.242-5.32a.77.77 0 0 1 .77 0l9.24 5.32c.032.019.057.043.086.065.024.02.052.037.074.058.027.028.046.06.07.09.017.023.038.043.051.069.023.037.035.078.05.119.009.022.022.042.027.065Zm-1.513 10.305v-8.773l-3.234 1.861-4.467 2.572v8.773l7.702-4.433h-.001Zm-9.24 15.87v-8.779l-4.395 2.51-12.548 7.161v8.862l16.943-9.754ZM1.54 7.422v29.873l16.94 9.753v-8.86L9.63 33.18l-.002-.002-.004-.002c-.03-.018-.055-.043-.083-.064-.024-.019-.052-.034-.073-.055l-.002-.003c-.025-.024-.042-.054-.063-.081-.02-.026-.042-.048-.058-.075v-.003c-.018-.029-.029-.063-.041-.096-.013-.029-.029-.056-.037-.087-.01-.036-.011-.076-.015-.113-.004-.029-.012-.058-.012-.087V11.856L4.774 9.283 1.54 7.422Zm8.471-5.763L2.313 6.09l7.697 4.432 7.698-4.433-7.698-4.43h.002Zm4.004 27.657 4.467-2.57V7.421l-3.234 1.862-4.467 2.572v19.323l3.234-1.863ZM37.734 6.888l-7.698 4.432 7.698 4.432 7.697-4.433-7.697-4.43Zm-.77 10.197-4.468-2.572-3.234-1.861v8.773l4.467 2.571 3.235 1.863v-8.774ZM19.25 36.855l11.291-6.445 5.645-3.222-7.693-4.428-8.856 5.098-8.073 4.648 7.686 4.35Z" clip-rule="evenodd"/></svg>
                                     <span class="flex flex-col">
-                                        <span>Drag'n Drop</span>
-                                        <span class="text-sm font-normal text-gray-300">Simple drag'n drop tailwind page creator.</span>
+                                        <span>Laravel App</span>
+                                        <span class="text-sm font-normal text-gray-300">Install Auth in any new Laravel app</span>
                                     </span>
                                 </span>
                             </a>
-                            <a href="#_" class="block px-4 py-3 pr-0 text-base text-gray-200 rounded-xl cursor-pointer hover:bg-gray-900 hover:text-gray-100" data-rounded="rounded-xl">
-                                <span class="flex items-start space-x-4">
-                                    <svg class="flex-shrink-0 mt-1 w-9 h-9 text-blue-500" data-primary="blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                                    </svg>
+                            <a href="#_" class="block px-4 py-3 pr-0 text-base text-gray-200 rounded-xl cursor-pointer hover:bg-zinc-900 hover:text-gray-100" data-rounded="rounded-xl">
+                                <span class="flex items-start space-x-1 md:space-x-3">
+                                    <svg class="flex-shrink-0 mt-1 w-auto h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 50" fill="none"><path fill="#6875F5" d="M12.119 46.208C5.064 41.798.302 33.951.302 24.956.302 11.199 11.413 0 25.17 0c5.203 0 10.317 1.587 14.55 4.674-.264 18.695-11.552 34.656-27.601 41.534Z"/><path fill="#6875F5" d="M14.94 47.795C18.116 49.206 21.642 50 25.17 50c13.756 0 24.867-11.2 24.867-24.956 0-3.615-.793-7.143-2.204-10.23C43.07 30.513 30.637 42.946 14.94 47.796Z"/></svg>
                                     <span class="flex flex-col">
-                                        <span>Premium Tools</span>
-                                        <span class="text-sm font-normal text-gray-300">Gain access to the ultimate set of tools.</span>
+                                        <span>Jetstream</span>
+                                        <span class="text-sm font-normal text-gray-300">Install Auth in Laravel Jetstream</span>
                                     </span>
                                 </span>
                             </a>
-                            <a href="#_" class="block px-4 py-3 pr-0 text-base text-gray-200 rounded-xl cursor-pointer hover:bg-gray-900 hover:text-gray-100" data-rounded="rounded-xl">
-                                <span class="flex items-start space-x-4">
-                                    <svg class="flex-shrink-0 mt-1 w-9 h-9 text-blue-500" data-primary="blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                                    </svg>
+                            <a href="#_" class="block px-4 py-3 pr-0 text-base text-gray-200 rounded-xl cursor-pointer hover:bg-zinc-900 hover:text-gray-100" data-rounded="rounded-xl">
+                                <span class="flex items-start space-x-1 md:space-x-3">
+                                    <svg class="flex-shrink-0 mt-1 w-auto h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 50" height="50" fill="none"><path fill="#fff" d="M25.03 50c13.807 0 25-11.193 25-25s-11.193-25-25-25-25 11.193-25 25 11.193 25 25 25Z"/><path fill="#FCBF24" d="M25.03 48.824c13.158 0 23.824-10.667 23.824-23.824 0-13.157-10.666-23.824-23.824-23.824C11.873 1.176 1.207 11.843 1.207 25c0 13.157 10.666 23.824 23.823 23.824Z"/><path fill="#D97707" d="M13.119 25 25.03 13.088 37.016 25 25.03 36.985 13.12 25Z"/><path fill="#FEF3C7" d="M41.942 8.162 25.03 25V13.162l4.927-4.927h11.985v-.073ZM25.03 25l16.912 16.912V30l-5-5H25.03Zm-4.926 16.912 4.926-4.927V25L8.192 41.912h11.912ZM8.192 20.074 13.12 25H25.03L8.192 8.162v11.911Z"/></svg>
                                     <span class="flex flex-col">
-                                        <span>Community</span>
-                                        <span class="text-sm font-normal text-gray-300">A community of creators like yourself.</span>
+                                        <span>Breeze</span>
+                                        <span class="text-sm font-normal text-gray-300">Install in a new Laravel Breeze App</span>
+                                    </span>
+                                </span>
+                            </a>
+                            <a href="#_" class="block px-4 py-3 pr-0 text-base text-gray-200 rounded-xl cursor-pointer hover:bg-zinc-900 hover:text-gray-100" data-rounded="rounded-xl">
+                                <span class="flex items-start space-x-1 md:space-x-3">
+                                    <svg class="flex-shrink-0 mt-1 w-auto h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51" fill="none"><path fill="url(#a)" d="M45 9.4a24.919 24.919 0 0 1 5.509 15.666c0 13.868-11.304 25.11-25.246 25.11-9.699-.002-18.539-5.53-22.744-14.224A25 25 0 0 1 5.54 9.4a25.402 25.402 0 0 0-2.253 10.522c0 13.165 9.843 23.836 21.984 23.836 12.14 0 21.983-10.672 21.983-23.836A25.402 25.402 0 0 0 44.999 9.4Z"/><path fill="url(#b)" d="M25.536.176a20.424 20.424 0 0 1 11.38 3.45c-7.933-3.608-17.28-1.28-22.645 5.64-5.365 6.92-5.365 16.646 0 23.566 5.366 6.92 14.712 9.247 22.646 5.64a20.487 20.487 0 0 1-24.018-.91c-6.99-5.462-9.767-14.811-6.91-23.26C8.845 5.855 16.704.178 25.539.179l-.003-.002Z"/><path fill="url(#c)" d="M28.902 3.332c8.833-.001 16.148 7.034 16.717 16.076.569 9.042-5.804 16.983-14.564 18.147 7.185-2.1 11.748-9.329 10.677-16.914-1.071-7.585-7.446-13.187-14.917-13.11-7.471.078-13.734 5.812-14.656 13.417v-.43c-.002-9.489 7.494-17.182 16.743-17.186Z"/><defs><linearGradient id="a" x1="5048.57" x2=".023" y1="1868.66" y2="1868.66" gradientUnits="userSpaceOnUse"><stop stop-color="#5D63FB"/><stop offset="1" stop-color="#0769FF"/></linearGradient><linearGradient id="b" x1="1606.82" x2="1606.82" y1=".176" y2="4174.93" gradientUnits="userSpaceOnUse"><stop stop-color="#39BEFF"/><stop offset="1" stop-color="#0769FF"/></linearGradient><linearGradient id="c" x1="12.159" x2="3345.61" y1="1714.5" y2="1714.5" gradientUnits="userSpaceOnUse"><stop stop-color="#38BCFF"/><stop offset=".999" stop-color="#91D8FF"/></linearGradient></defs></svg>
+                                    <span class="flex flex-col">
+                                        <span>Wave</span>
+                                        <span class="text-sm font-normal text-gray-300">Install within Laravel Wave application</span>
+                                    </span>
+                                </span>
+                            </a>
+                            <a href="#_" class="block px-4 py-3 pr-0 text-base text-gray-200 rounded-xl cursor-pointer hover:bg-zinc-900 hover:text-gray-100" data-rounded="rounded-xl">
+                                <span class="flex items-start space-x-1 md:space-x-3">
+                                    <svg class="flex-shrink-0 mt-1 -ml-1 w-auto h-11 text-white"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="none"><rect width="50" height="50" fill="#3D3D3D" rx="25"/><mask id="a" width="48" height="30" x="1" y="10" maskUnits="userSpaceOnUse" style="mask-type:luminance"><path fill="#fff" d="M48.044 10.521H1.956V39.48h46.088V10.52Z"/></mask><g fill="#fff" mask="url(#a)"><path d="M48.044 20.707c-15.132 2.89-30.956 5.916-46.088 8.806 1.858-.192 6.053-.545 7.91-.75l.313 1.058c2.787 8.235 12.966 12.013 20.679 8.117 2.304-3.397 5.65-8.484 8.061-12.062l9.125-5.169Zm-17.272 8.907a383.65 383.65 0 0 1-3.1 4.457c-4.64 1.923-10.86-.555-12.638-5.24-.051-.136-.08-.281-.159-.564l18.049-1.82c-.796 1.172-1.472 2.17-2.152 3.168ZM14.336 24.964l.063-1.358c.011-.084.027-.167.044-.25.823-3.823 3.071-6.436 6.82-7.523 3.855-1.118 7.412-.24 9.958 2.876.304.372 1.116 1.569 1.116 1.569s5.08-.956 4.83-1.048c-1.708-4.875-8.373-10.186-16.448-8.33-8.308 1.91-11.964 9.852-11.186 15.235 1.095-.263 3.717-.905 4.803-1.17ZM43.944 32.119c-2.694.104-3.28.69-3.384 3.384-.104-2.694-.69-3.28-3.384-3.384 2.694-.104 3.28-.69 3.384-3.384.104 2.694.69 3.28 3.384 3.384Z"/><path d="M43.944 32.119c-2.694.104-3.28.69-3.384 3.384-.104-2.694-.69-3.28-3.384-3.384 2.694-.104 3.28-.69 3.384-3.384.104 2.694.69 3.28 3.384 3.384ZM46.858 29.832c-.992.038-1.207.254-1.246 1.246-.038-.992-.254-1.208-1.245-1.246.991-.038 1.207-.254 1.245-1.246.039.992.254 1.208 1.246 1.246Z"/></g></svg>
+                                    <!-- <svg  class="flex-shrink-0 mt-1 w-10 h-auto text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="none"><rect width="50" height="50" fill="url(#a)" rx="25"/><mask id="b" width="48" height="30" x="1" y="10" maskUnits="userSpaceOnUse" style="mask-type:luminance"><path fill="#fff" d="M48.044 10.521H1.956V39.48h46.088V10.52Z"/></mask><g fill="#000" mask="url(#b)"><path d="M48.044 20.707c-15.132 2.89-30.956 5.916-46.088 8.806 1.858-.192 6.053-.545 7.91-.75l.313 1.058c2.787 8.235 12.966 12.013 20.679 8.117 2.304-3.397 5.65-8.484 8.061-12.062l9.125-5.169Zm-17.272 8.907a383.65 383.65 0 0 1-3.1 4.457c-4.64 1.923-10.86-.555-12.638-5.24-.051-.136-.08-.281-.159-.564l18.049-1.82c-.796 1.172-1.472 2.17-2.152 3.168ZM14.336 24.964l.063-1.358c.011-.084.027-.167.044-.25.823-3.823 3.071-6.436 6.82-7.523 3.855-1.118 7.412-.24 9.958 2.876.304.372 1.116 1.569 1.116 1.569s5.08-.956 4.83-1.048c-1.708-4.875-8.373-10.186-16.448-8.33-8.308 1.91-11.964 9.852-11.186 15.235 1.095-.263 3.717-.905 4.803-1.17ZM43.944 32.119c-2.694.104-3.28.69-3.384 3.384-.104-2.694-.69-3.28-3.384-3.384 2.694-.104 3.28-.69 3.384-3.384.104 2.694.69 3.28 3.384 3.384Z"/><path d="M43.944 32.119c-2.694.104-3.28.69-3.384 3.384-.104-2.694-.69-3.28-3.384-3.384 2.694-.104 3.28-.69 3.384-3.384.104 2.694.69 3.28 3.384 3.384ZM46.858 29.832c-.992.038-1.207.254-1.246 1.246-.038-.992-.254-1.208-1.245-1.246.991-.038 1.207-.254 1.245-1.246.039.992.254 1.208 1.246 1.246Z"/></g><defs><linearGradient id="a" x1="25" x2="25" y1="0" y2="50" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#F1F1F9"/></linearGradient></defs></svg> -->
+                                    <!-- <svg class="flex-shrink-0 mt-1 w-10 h-auto text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="none"><rect width="50" height="50" fill="#292929" rx="25"/><mask id="a" width="48" height="30" x="1" y="10" maskUnits="userSpaceOnUse" style="mask-type:luminance"><path fill="#fff" d="M48.044 10.521H1.956V39.48h46.088V10.52Z"/></mask><g fill="#fff" mask="url(#a)"><path d="M48.044 20.707c-15.132 2.89-30.956 5.916-46.088 8.806 1.858-.192 6.053-.545 7.91-.75l.313 1.058c2.787 8.235 12.966 12.013 20.679 8.117 2.304-3.397 5.65-8.484 8.061-12.062l9.125-5.169Zm-17.272 8.907a383.65 383.65 0 0 1-3.1 4.457c-4.64 1.923-10.86-.555-12.638-5.24-.051-.136-.08-.281-.159-.564l18.049-1.82c-.796 1.172-1.472 2.17-2.152 3.168ZM14.336 24.964l.063-1.358c.011-.084.027-.167.044-.25.823-3.823 3.071-6.436 6.82-7.523 3.855-1.118 7.412-.24 9.958 2.876.304.372 1.116 1.569 1.116 1.569s5.08-.956 4.83-1.048c-1.708-4.875-8.373-10.186-16.448-8.33-8.308 1.91-11.964 9.852-11.186 15.235 1.095-.263 3.717-.905 4.803-1.17ZM43.944 32.119c-2.694.104-3.28.69-3.384 3.384-.104-2.694-.69-3.28-3.384-3.384 2.694-.104 3.28-.69 3.384-3.384.104 2.694.69 3.28 3.384 3.384Z"/><path d="M43.944 32.119c-2.694.104-3.28.69-3.384 3.384-.104-2.694-.69-3.28-3.384-3.384 2.694-.104 3.28-.69 3.384-3.384.104 2.694.69 3.28 3.384 3.384ZM46.858 29.832c-.992.038-1.207.254-1.246 1.246-.038-.992-.254-1.208-1.245-1.246.991-.038 1.207-.254 1.245-1.246.039.992.254 1.208 1.246 1.246Z"/></g></svg> -->
+                                    <span class="flex flex-col">
+                                        <span>Genesis</span>
+                                        <span class="text-sm font-normal text-gray-300">Install with the Genesis Starter Kit</span>
+                                    </span>
+                                </span>
+                            </a>
+                            <a href="#_" class="block px-4 py-3 pr-0 text-base text-gray-200 rounded-xl cursor-pointer hover:bg-zinc-900 hover:text-gray-100" data-rounded="rounded-xl">
+                                <span class="flex items-start space-x-1 md:space-x-3">
+                                    <svg class="flex-shrink-0 -mt-1 w-10 h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 51" fill="none"><g clip-path="url(#a)"><path fill="#F3CE49" d="M17.978 30.28c6.76 0 12.241-5.481 12.241-12.242 0-6.76-5.48-12.241-12.241-12.241-6.76 0-12.241 5.48-12.241 12.241 0 6.76 5.48 12.241 12.24 12.241Z"/><path fill="#fff" d="m18.252 18.183-.335 1.208 2.263 1.275c.122.068.198.21.196.362l-.003.046-.077.665c-.019.168-.131.299-.277.323l-1.854.312 1.707.954c.122.068.198.21.196.362l-.003.045-.077.666c-.02.167-.131.298-.277.323l-1.854.312 1.707.953c.122.068.198.21.196.362l-.003.046-.077.665c-.02.168-.132.299-.277.323l-1.854.313 1.707.953c.122.068.198.21.196.362l-.003.045-.077.666c-.02.167-.132.298-.277.323l-1.854.312 1.707.953c.122.068.198.211.196.362l-.003.046-.077.665c-.02.168-.132.299-.277.323l-2.595.493-.186 1.43-2.09.208.39-2.63c.019-.168.131-.299.277-.324l1.854-.312-1.708-.953a.408.408 0 0 1-.195-.362l.002-.046.078-.665c.019-.168.131-.299.277-.323l1.854-.313-1.708-.952a.409.409 0 0 1-.195-.363l.003-.045.077-.666c.019-.167.131-.298.277-.323l1.854-.312-1.707-.953a.409.409 0 0 1-.196-.362l.003-.046.077-.665c.02-.168.132-.299.277-.323l1.854-.313-1.707-.953a.409.409 0 0 1-.196-.362l.003-.045.077-.666c.02-.167.132-.298.277-.323l1.854-.312-1.707-.953a.408.408 0 0 1-.196-.362l.003-.046.187-1.063 2.296-.32Zm.829-7.951c.857-.086 1.52.143 1.992.685.471.542.665 1.228.581 2.059-.092.95-.414 1.617-.965 2.002-.55.385-1.26.621-2.127.708-.847.085-1.51-.106-1.989-.572-.48-.466-.673-1.179-.581-2.14.09-.874.412-1.528.969-1.962.556-.434 1.263-.694 2.12-.78Z"/><path fill="#fff" d="M11.814 50.172a.953.953 0 0 1-.945-.81.965.965 0 0 1 .646-1.064l11.281-3.723a1.024 1.024 0 0 0 .142-1.877 1.011 1.011 0 0 0-.774-.057L14.7 45.102a2.914 2.914 0 0 1-2.211-.192 2.937 2.937 0 0 1-1.44-1.699 2.954 2.954 0 0 1 .16-2.225 2.925 2.925 0 0 1 1.669-1.471l10.976-3.62c1.023-1.468 2.205-2.888 3.35-4.265 3.324-3.994 6.466-7.766 6.466-12.93 0-8.799-7.122-15.955-15.876-15.955S1.911 9.903 1.911 18.7c0 5.164 3.14 8.937 6.466 12.931 1.215 1.46 2.472 2.971 3.537 4.534a.964.964 0 0 1-.589 1.491.953.953 0 0 1-.99-.406c-1.012-1.486-2.184-2.894-3.425-4.386C3.513 28.783 0 24.564 0 18.7 0 8.843 7.98.824 17.788.824c9.81 0 17.789 8.019 17.789 17.877 0 5.863-3.513 10.082-6.91 14.164-1.24 1.491-2.413 2.9-3.426 4.386a.956.956 0 0 1-.491.37l-11.28 3.723a1.01 1.01 0 0 0-.577.51 1.024 1.024 0 0 0 .443 1.357c.236.123.511.147.765.067l7.47-2.461a2.912 2.912 0 0 1 2.21.192 2.936 2.936 0 0 1 1.441 1.7c.24.733.181 1.532-.161 2.224a2.923 2.923 0 0 1-1.669 1.471l-11.28 3.722a.93.93 0 0 1-.298.046Z"/><path fill="#fff" d="M11.123 37.67a.953.953 0 0 1-.943-.81.966.966 0 0 1 .644-1.064l4.073-1.344a.953.953 0 0 1 1.207.615.966.966 0 0 1-.61 1.212l-4.073 1.343a.961.961 0 0 1-.298.048Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 .824h35.577v50H0z"/></clipPath></defs></svg>
+                                    <span class="flex flex-col">
+                                        <span>Filament</span>
+                                        <span class="text-sm font-normal text-gray-300">Install Auth with any Filament Application</span>
                                     </span>
                                 </span>
                             </a>
                         </div>
                     </div>
-                    <a href="#_" class="py-3 text-gray-300 hover:text-gray-100 hover:underline">Pricing</a>
-                    <div x-data="{ isOpen: false }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" class="relative py-3">
-                        <div class="flex relative z-10 items-center space-x-1 text-gray-300 cursor-pointer lg:space-x-3 hover:text-gray-200 focus:outline-none">
-                            <span class="">Features</span>
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" class=""></path>
-                            </svg>
-                        </div>
-    
-                        <div x-show="isOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="overflow-hidden absolute left-0 z-20 z-30 p-3 mt-3 -ml-0 space-y-2 w-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl ring-1 ring-black ring-opacity-5 shadow-lg transform lg:left-1/2 lg:-ml-24 md:w-48" data-rounded="rounded-xl" data-rounded-max="rounded-full" style="display: none;">
-    
-                            <a href="#_" class="block px-4 py-3 text-sm text-gray-200 capitalize rounded-xl cursor-pointer hover:bg-gray-900 hover:text-gray-200" data-rounded="rounded-xl">
-                                Design Faster
-                            </a>
-                            <a href="#_" class="block px-4 py-3 text-sm text-gray-200 capitalize rounded-xl hover:bg-gray-900 hover:text-gray-200" data-rounded="rounded-xl">
-                                Easily Export
-                            </a>
-                            <a href="#_" class="block px-4 py-3 text-sm text-gray-200 capitalize rounded-xl hover:bg-gray-900 hover:text-gray-200" data-rounded="rounded-xl">
-                                Unlimited Combos
-                            </a>
-                            <a href="#_" class="block px-4 py-3 text-sm text-gray-200 capitalize rounded-xl hover:bg-gray-900 hover:text-gray-200" data-rounded="rounded-xl">
-                                And More
-                            </a>
-                        </div>
-                    </div>
-                    <div x-data="{ isOpen: false }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" class="relative py-3">
-                        <div class="flex relative z-10 items-center space-x-1 text-gray-300 cursor-pointer lg:space-x-3 hover:text-gray-100 focus:outline-none">
+                    
+                    <div x-data="{ isOpen: false }" @mouseenter="isOpen = true" @mouseleave="isOpen = false" class="flex relative items-stretch h-12">
+                        <div class="flex relative z-10 items-center px-5 space-x-1 text-gray-300 cursor-pointer h-100 lg:space-x-1.5 hover:text-gray-100 focus:outline-none">
                             <span class="">Resources</span>
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                             </svg>
                         </div>
     
-                        <div x-show="isOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="overflow-hidden absolute left-0 z-20 z-30 p-3 mt-3 -ml-0 space-y-2 w-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl ring-1 ring-black ring-opacity-5 shadow-lg transform lg:-ml-24 lg:left-1/2 md:w-48" data-rounded="rounded-xl" data-rounded-max="rounded-full" style="display: none;">
+                        <div x-show="isOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="overflow-hidden absolute left-1/2 z-30 p-3 mt-12 -ml-0 space-y-0.5 w-full bg-gradient-to-b from-black to-black rounded-xl border border-dashed ring-1 ring-black ring-opacity-5 shadow-lg transform -translate-x-1/2 via-zinc-950 border-zinc-700 md:w-48" x-cloak>
     
-                            <a href="#_" class="block px-4 py-3 text-sm text-gray-200 capitalize rounded-xl cursor-pointer hover:bg-gray-900 hover:text-gray-100" data-rounded="rounded-xl">
-                                About Us
+                            <a href="#_" class="flex overflow-hidden justify-between items-center px-4 py-3 text-sm text-gray-200 capitalize rounded-xl cursor-pointer group hover:bg-zinc-900 hover:text-gray-100" data-rounded="rounded-xl">
+                                <span>Questions</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="-mr-5 w-4 h-4 duration-300 ease-in-out translate-x-full group-hover:translate-x-0 group-hover:mr-0"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd" /><path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd" /></svg>  
                             </a>
-                            <a href="#_" class="block px-4 py-3 text-sm text-gray-200 capitalize rounded-xl hover:bg-gray-900 hover:text-gray-100" data-rounded="rounded-xl">
-                                Press Release
+                            <a href="#_" class="flex overflow-hidden justify-between items-center px-4 py-3 text-sm text-gray-200 capitalize rounded-xl cursor-pointer group hover:bg-zinc-900 hover:text-gray-100" data-rounded="rounded-xl">
+                                <span>DevDojo Pro</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="-mr-5 w-4 h-4 duration-300 ease-in-out translate-x-full group-hover:translate-x-0 group-hover:mr-0"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd" /><path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd" /></svg>  
                             </a>
-                            <a href="#_" class="block px-4 py-3 text-sm text-gray-200 capitalize rounded-xl hover:bg-gray-900 hover:text-gray-100" data-rounded="rounded-xl">
-                                Contact Us
-                            </a>
-                            <a href="#_" class="block px-4 py-3 text-sm text-gray-200 capitalize rounded-xl hover:bg-gray-900 hover:text-gray-100" data-rounded="rounded-xl">
-                                Our Blog
+                            <a href="#_" class="flex overflow-hidden justify-between items-center px-4 py-3 text-sm text-gray-200 capitalize rounded-xl cursor-pointer group hover:bg-zinc-900 hover:text-gray-100" data-rounded="rounded-xl">
+                                <span>Auth Github</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="-mr-5 w-4 h-4 duration-300 ease-in-out translate-x-full group-hover:translate-x-0 group-hover:mr-0"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd" /><path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd" /></svg>  
                             </a>
                         </div>
                     </div>
+                    <a href="#_" class="flex relative items-center px-5 h-12 text-gray-300 hover:text-gray-100 hover:underline">Documentation</a>
     
                 </div>
             </div>
