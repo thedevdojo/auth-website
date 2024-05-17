@@ -6,7 +6,7 @@
     <title>{title}</title>
     <style>[x-cloak] { display: none; }</style>
 
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="{ url('/assets/images/favicon.png') }">
 
     <meta name="description" content="A static site generator you're going to love. No more complicated configs, bloated frameworks, or feeling like you got kicked in the face by a horse!">
     <meta property="og:url" content="https://static.devdojo.com">
@@ -48,8 +48,8 @@
 
         @font-face {
             font-family: 'rota';
-            src: url('/fonts/rota/rota-semibold-webfont.woff2') format('woff2'),
-                url('/fonts/rota/rota-semibold-webfont.woff') format('woff');
+            src: url('{ url('/fonts/rota/rota-semibold-webfont.woff2') }') format('woff2'),
+                url('{ url('/fonts/rota/rota-semibold-webfont.woff') }') format('woff');
             font-weight: 600;
             font-style: normal;
 
@@ -60,8 +60,8 @@
 
         @font-face {
             font-family: 'rota';
-            src: url('/fonts/rota/rota-regular-webfont.woff2') format('woff2'),
-                url('/fonts/rota/rota-regular-webfont.woff') format('woff');
+            src: url('{ url('/fonts/rota/rota-regular-webfont.woff2') }') format('woff2'),
+                url('{ url('/fonts/rota/rota-regular-webfont.woff') }') format('woff');
             font-weight: 400;
             font-style: normal;
 
@@ -72,8 +72,8 @@
 
         @font-face {
             font-family: 'rota';
-            src: url('/fonts/rota/rota-medium-webfont.woff2') format('woff2'),
-                url('/fonts/rota/rota-medium-webfont.woff') format('woff');
+            src: url('{ url('/fonts/rota/rota-medium-webfont.woff2') }') format('woff2'),
+                url('{ url('/fonts/rota/rota-medium-webfont.woff') }') format('woff');
             font-weight: 500;
             font-style: normal;
 
@@ -84,8 +84,8 @@
 
         @font-face {
             font-family: 'rota';
-            src: url('/fonts/rota/rota-bold-webfont.woff2') format('woff2'),
-                url('/fonts/rota/rota-bold-webfont.woff') format('woff');
+            src: url('{ url('/fonts/rota/rota-bold-webfont.woff2') }') format('woff2'),
+                url('{ url('/fonts/rota/rota-bold-webfont.woff') }') format('woff');
             font-weight: 700;
             font-style: normal;
 
@@ -202,7 +202,7 @@
 
 
 .prose h2{
-  font-size:30px;
+  font-size:25px;
   font-weight:800;
 }
     </style>
@@ -324,7 +324,7 @@
       @show-template-preview.window="showTemplatePreview(event.detail.url);" 
       @set-active-template.window="setActiveTemplate(event.detail.slug);"
       @close-left-sidebar.window="leftSidebar = false"
-      x-init="route=window.location.pathname" 
+      x-init="route=window.location.href" 
       @set-route.window="route=event.detail.route" id="site">
 
       <include src="header.html"></include>
@@ -334,6 +334,6 @@
       <include src="footer.html"></include> 
     </div>
     
-    <script src="/assets/js/main.js"></script>
+    <script src="{ url('/assets/js/main.js') }"></script>
 </body>
 </html>
