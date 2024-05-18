@@ -30,7 +30,7 @@ Below are a few problems and solutions that this package aims to offer.
             <p x-on:click="showMore=!showMore" :class="{ '!text-red-500' : showMore, '!text-red-600' : !showMore }" class="!my-0 select-none cursor-pointer !px-5 !py-4 group text-base font-bold flex items-center">
             <svg :class="{ 'rotate-90' : showMore }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 scale-[0.98] group-hover:scale-100 ease-out duration-300 -translate-x-1 text-red-400"><path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>
             <span>Problem: Broken Signup Process</span></p>
-            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">Ever written a line of code that breaks something else? It's even worse when you break the signup process, and users can't access your application.</p>
+            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">You write code, it accidentially breaks the authetication and users cannot access your app.</p>
         </div>
     </div>
 </div>
@@ -41,7 +41,7 @@ Below are a few problems and solutions that this package aims to offer.
             <p x-on:click="showMore=!showMore" :class="{ '!text-green-500' : showMore, '!text-green-600' : !showMore }" class="!my-0 select-none cursor-pointer !px-5 !py-4 group text-base font-bold  flex items-center">
             <svg :class="{ 'rotate-90' : showMore }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 scale-[0.98] group-hover:scale-100 ease-out duration-300 -translate-x-1 text-green-400"><path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>
             <span>Solution: Fully Tested Authentication</span></p>
-            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">DevDojo Auth ships with a GitHub CI action that runs every time you push updates to your repo. This means you can gaurantee that the authentication process never breaks.</p>
+            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">You write code, and our GitHub CI action runs ensuring authentication is fully functional.</p>
         </div>
     </div>
 </div>
@@ -52,7 +52,7 @@ Below are a few problems and solutions that this package aims to offer.
             <p x-on:click="showMore=!showMore" :class="{ '!text-red-500' : showMore, '!text-red-600' : !showMore }" class="!my-0 select-none cursor-pointer !px-5 !py-4 group text-base font-bold flex items-center">
             <svg :class="{ 'rotate-90' : showMore }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 scale-[0.98] group-hover:scale-100 ease-out duration-300 -translate-x-1 text-red-400"><path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>
             <span>Problem: Time Consuming</span></p>
-            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">Making changes to your authentication process is time-consuming and takes away time that could have been spent building the actual application.</p>
+            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">Updating authentication functionality wastes valuable development time.</p>
         </div>
     </div>
 </div>
@@ -63,7 +63,7 @@ Below are a few problems and solutions that this package aims to offer.
             <p x-on:click="showMore=!showMore" :class="{ '!text-green-500' : showMore, '!text-green-600' : !showMore }" class="!my-0 select-none cursor-pointer !px-5 !py-4 group text-base font-bold  flex items-center">
             <svg :class="{ 'rotate-90' : showMore }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 scale-[0.98] group-hover:scale-100 ease-out duration-300 -translate-x-1 text-green-400"><path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>
             <span>Solution: Time-Saving</span></p>
-            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">Install DevDojo Auth and you can easily make updates to your authentication in seconds. Add social providers, update the branding, and so much more.</p>
+            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">Use DevDojo Auth to easily make updates to your authentication in seconds.</p>
         </div>
     </div>
 </div>
@@ -74,7 +74,7 @@ Below are a few problems and solutions that this package aims to offer.
             <p x-on:click="showMore=!showMore" :class="{ '!text-red-500' : showMore, '!text-red-600' : !showMore }" class="!my-0 select-none cursor-pointer !px-5 !py-4 group text-base font-bold flex items-center">
             <svg :class="{ 'rotate-90' : showMore }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 scale-[0.98] group-hover:scale-100 ease-out duration-300 -translate-x-1 text-red-400"><path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>
             <span>Problem: Poor User Experience</span></p>
-            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">Authentication pages can tend to look very boring, or in some cases too busy, resulting in a poor user experience.</p>
+            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">Authentication pages can be boring, or too busy, resulting in a poor user experience.</p>
         </div>
     </div>
 </div>
@@ -85,7 +85,7 @@ Below are a few problems and solutions that this package aims to offer.
             <p x-on:click="showMore=!showMore" :class="{ '!text-green-500' : showMore, '!text-green-600' : !showMore }" class="!my-0 select-none cursor-pointer !px-5 !py-4 group text-base font-bold  flex items-center">
             <svg :class="{ 'rotate-90' : showMore }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 scale-[0.98] group-hover:scale-100 ease-out duration-300 -translate-x-1 text-green-400"><path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>
             <span>Solution: Beautiful User Experience</span></p>
-            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">Our package ships with beautiful and configurable authentication pages, which results in a great user experience.</p>
+            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">Use DevDojo Auth to provde a beautiful and seamless authentication experience.</p>
         </div>
     </div>
 </div>

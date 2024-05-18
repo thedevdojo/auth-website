@@ -116,12 +116,12 @@
                                 :class="{ 'w-full left-0' : active=='home', 'w-0 left-1/2' : active!='home' }"    
                                 class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-gradient-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
                         </button> 
-                        <button hx-get="{ url('/docs/getting-started') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="morph" hx-push-url="true" @click="active='features'; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-features @mouseenter="calculateMarkerPosition($el); hovered='features'" 
-                            :class="{ 'text-white' : active == 'features', 'text-white/80': active != 'features' }"
+                        <button hx-get="{ url('/docs/getting-started') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="morph" hx-push-url="true" @click="active='docs'; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-docs @mouseenter="calculateMarkerPosition($el); hovered='docs'"
+                            :class="{ 'text-white' : active == 'docs', 'text-white/80': active != 'docs' }"
                             class="inline-flex relative flex-shrink-0 justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors md:py-2 group md:my-0 md:w-auto md:text-center">
-                            <span>Features</span>
+                            <span>Documentation</span>
                             <span 
-                                :class="{ 'w-full left-0' : active=='features', 'w-0 left-1/2' : active!='features' }"    
+                                :class="{ 'w-full left-0' : active=='docs', 'w-0 left-1/2' : active!='docs' }"    
                                 class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-gradient-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
                         </button>
                         <button hx-get="{ url('/docs/install') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="morph" hx-push-url="true" @click="active='install'; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-install @mouseenter="calculateMarkerPosition($el); hovered='install'" 
@@ -132,15 +132,14 @@
                                 :class="{ 'w-full left-0' : active=='installation', 'w-0 left-1/2' : active!='installation' }"    
                                 class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-gradient-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
                         </button> 
-                        <button hx-get="{ url('/docs/getting-started') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="morph" hx-push-url="true" @click="active='docs'; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-docs @mouseenter="calculateMarkerPosition($el); hovered='docs'"
-                            :class="{ 'text-white' : active == 'docs', 'text-white/80': active != 'docs' }"
+                        <button hx-get="{ url('/docs/features') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="morph" hx-push-url="true" @click="active='features'; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-features @mouseenter="calculateMarkerPosition($el); hovered='features'" 
+                            :class="{ 'text-white' : active == 'features', 'text-white/80': active != 'features' }"
                             class="inline-flex relative flex-shrink-0 justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors md:py-2 group md:my-0 md:w-auto md:text-center">
-                            <span>Documentation</span>
+                            <span>Features</span>
                             <span 
-                                :class="{ 'w-full left-0' : active=='docs', 'w-0 left-1/2' : active!='docs' }"    
+                                :class="{ 'w-full left-0' : active=='features', 'w-0 left-1/2' : active!='features' }"    
                                 class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-gradient-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
                         </button>
-
                     </div>
                 
                 </div>

@@ -1,10 +1,10 @@
 <If condition="frontmatter.home == true">
-    <div class="flex relative flex-col pb-8 mt-10 -translate-y-1 md:mt-0">
+    <div class="flex relative flex-col pb-8">
 
         <div class="flex relative flex-col">
-            <h1 class="font-book font-styling text-white w-full font-rota mb-5 md:mb-3 lg:mb-6 text-left text-[3rem] lg:text-[3.5rem]  tracking-tight leading-[90%] xl:mt-0 mt-2 xl:leading-[120%] font-gradient">Welcome to the Auth Docs</h1>
+            <h1 class="font-book font-styling text-white w-full font-rota mb-5 md:mb-3 lg:mb-6 text-left text-[3rem] lg:text-[3.5rem]  tracking-tight leading-[90%] xl:mt-0 mt-2 font-gradient">Welcome to the Auth Docs</h1>
         
-            <div class="relative hover:scale-[1.03] ease-out mb-0 duration-300 bg-pink-200 rounded-lg [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-transparent animate-border">
+            <div class="relative hover:scale-[1.03] ease-out mb-0 duration-300 bg-pink-200 rounded-lg [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-black hover:border-transparent animate-border">
                 <div class="hidden relative mx-auto w-full h-auto font-mono text-base font-medium text-left text-white bg-gradient-to-br to-black rounded-lg border shadow-sm duration-300 ease-out sm:inline-block border-zinc-700 radial-background group from-neutral-900">
                     <div class="flex items-center w-full p-[3px] border-b border-zinc-800 h-9 bg-zinc-100/10 opacity-100">
                         <div class="flex justify-start items-center pr-1.5 pl-1.5 space-x-0.5 w-full h-full">
@@ -26,10 +26,10 @@
     </div>
 </If>
 <If condition="frontmatter.install == true">
-    <div class="flex relative flex-col pb-8 mt-10 -translate-y-1 md:mt-0">
+    <div class="flex relative flex-col pb-8">
 
         <div class="flex relative flex-col">
-            <h1 class="font-book font-styling tracking-tightest text-white w-full font-rota mb-5 md:mb-3 lg:mb-6 text-left text-[3rem] lg:text-[3.5rem]  tracking-tight leading-[90%] xl:mt-0 mt-2 xl:leading-[120%] font-gradient">Installation</h1>
+            <h1 class="font-book font-styling tracking-tightest text-white w-full font-rota mb-5 md:mb-3 lg:mb-6 text-left text-[3rem] lg:text-[3.5rem]  tracking-tight leading-[90%] xl:mt-0 mt-2 font-gradient">Installation</h1>
         
             <div class="grid grid-cols-2 gap-3">
                 <include src="docs/install/laravel.html" 
@@ -58,5 +58,85 @@
     <div class="relative mb-10 w-full tracking-tightest">
         <include src="docs/install/laravel.html" title="Install in a New Laravel App"
             description="Learn how to install the Auth package in a new Laravel application"></include>
+    </div>
+</If>
+
+<If condition="frontmatter.features == true">
+    <h1 class="font-book font-styling text-white w-full font-rota mb-5 md:mb-3 lg:mb-6 text-left text-[3rem] lg:text-[3.5rem]  tracking-tight leading-[90%] xl:mt-0 mt-2 font-gradient">Features</h1>
+    <div class="grid grid-cols-2 gap-3 mb-10 sm:grid-cols-3">
+        <a href="#login" x-on:mouseenter="$el.classList.add('border-transparent'); $el.classList.remove('border-zinc-800');" x-on:mouseout="$el.classList.remove('border-transparent'); $el.classList.add('border-zinc-800');" class="relative group cursor-pointer hover:scale-[1.03] ease-out inline-block mb-0 duration-300 bg-pink-200 rounded-lg [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-zinc-800 animate-border w-full">
+            <span class="flex relative items-center p-3 mx-auto space-x-3 w-full h-full font-mono text-base font-medium text-left text-white bg-gradient-to-br to-black rounded-lg border shadow-sm duration-300 ease-out pointer-events-none border-zinc-700 radial-background group from-neutral-900">
+                <span class="flex justify-center items-center w-7 h-7 rounded-md duration-100 ease-out group-hover:bg-white bg-zinc-700 group-hover:text-zinc-900 text-zinc-200">
+                    <svg class="flex-shrink-0 w-auto h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><path d="M208,76H180V56A52,52,0,0,0,76,56V76H48A20,20,0,0,0,28,96V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V96A20,20,0,0,0,208,76ZM100,56a28,28,0,0,1,56,0V76H100ZM204,204H52V100H204Zm-76-92a32,32,0,0,0-12,61.66V180a12,12,0,0,0,24,0v-6.34A32,32,0,0,0,128,112Zm0,24a8,8,0,1,1-8,8A8,8,0,0,1,128,136Z"></path></svg>
+                </span>
+                <span class="inline-block h-auto text-base font-bold tracking-wide sm:text-sm xl:text-base font-rota">Login</span>
+            </span>
+        </a>
+        <a href="#register" x-on:mouseenter="$el.classList.add('border-transparent'); $el.classList.remove('border-zinc-800');" x-on:mouseout="$el.classList.remove('border-transparent'); $el.classList.add('border-zinc-800');" class="relative group cursor-pointer hover:scale-[1.03] ease-out inline-block mb-0 duration-300 bg-pink-200 rounded-lg [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-zinc-800 animate-border w-full">
+            <span class="flex relative items-center p-3 mx-auto space-x-3 w-full h-full font-mono text-base font-medium text-left text-white bg-gradient-to-br to-black rounded-lg border shadow-sm duration-300 ease-out pointer-events-none border-zinc-700 radial-background group from-neutral-900">
+                <span class="flex justify-center items-center w-7 h-7 rounded-md duration-100 ease-out group-hover:bg-white bg-zinc-700 group-hover:text-zinc-900 text-zinc-200">
+                    <svg class="flex-shrink-0 w-auto h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><path d="M128 20a108 108 0 1 0 108 108A108.12 108.12 0 0 0 128 20ZM79.57 196.57a60 60 0 0 1 96.86 0 83.72 83.72 0 0 1-96.86 0ZM100 120a28 28 0 1 1 28 28 28 28 0 0 1-28-28Zm94 59.94a83.48 83.48 0 0 0-29-23.42 52 52 0 1 0-74 0 83.48 83.48 0 0 0-29 23.42 84 84 0 1 1 131.9 0Z"></path></svg>
+                </span>
+                <span class="inline-block h-auto text-base font-semibold tracking-wide sm:text-sm xl:text-base font-rota">Register</span>
+            </span>
+        </a>
+        <a href="#verify-email" x-on:mouseenter="$el.classList.add('border-transparent'); $el.classList.remove('border-zinc-800');" x-on:mouseout="$el.classList.remove('border-transparent'); $el.classList.add('border-zinc-800');" class="relative group cursor-pointer hover:scale-[1.03] ease-out inline-block mb-0 duration-300 bg-pink-200 rounded-lg [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-zinc-800 animate-border w-full">
+            <span class="flex relative items-center p-3 mx-auto space-x-3 w-full h-full font-mono text-base font-medium text-left text-white bg-gradient-to-br to-black rounded-lg border shadow-sm duration-300 ease-out pointer-events-none border-zinc-700 radial-background group from-neutral-900">
+                <span class="flex justify-center items-center w-7 h-7 rounded-md duration-100 ease-out group-hover:bg-white bg-zinc-700 group-hover:text-zinc-900 text-zinc-200">
+                    <svg class="flex-shrink-0 w-auto h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><path d="M220.69 100.17a12 12 0 0 0-9.85 13.83 85 85 0 0 1 1.16 14 83.57 83.57 0 0 1-18 51.94 83.48 83.48 0 0 0-29-23.42 52 52 0 1 0-74 0 83.48 83.48 0 0 0-29 23.42A83.94 83.94 0 0 1 128 44a85 85 0 0 1 14 1.16 12 12 0 0 0 4-23.67A108.1 108.1 0 0 0 20 128a108 108 0 0 0 216 0 109.19 109.19 0 0 0-1.49-18 12 12 0 0 0-13.82-9.83ZM100 120a28 28 0 1 1 28 28 28 28 0 0 1-28-28Zm-20.43 76.57a60 60 0 0 1 96.86 0 83.72 83.72 0 0 1-96.86 0ZM240.49 48.49l-32 32a12 12 0 0 1-17 0l-16-16a12 12 0 0 1 17-17L200 55l23.51-23.52a12 12 0 1 1 17 17Z"></path></svg>
+                </span>
+                <span class="inline-block h-auto text-base font-semibold tracking-wide sm:text-sm xl:text-base font-rota">Verify Email</span>
+            </span>
+        </a>
+        <a href="#forgot-password" x-on:mouseenter="$el.classList.add('border-transparent'); $el.classList.remove('border-zinc-800');" x-on:mouseout="$el.classList.remove('border-transparent'); $el.classList.add('border-zinc-800');" class="relative group cursor-pointer hover:scale-[1.03] ease-out inline-block mb-0 duration-300 bg-pink-200 rounded-lg [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-zinc-800 animate-border w-full">
+            <span class="flex relative items-center p-3 mx-auto space-x-3 w-full h-full font-mono text-base font-medium text-left text-white bg-gradient-to-br to-black rounded-lg border shadow-sm duration-300 ease-out pointer-events-none border-zinc-700 radial-background group from-neutral-900">
+                <span class="flex justify-center items-center w-7 h-7 rounded-md duration-100 ease-out group-hover:bg-white bg-zinc-700 group-hover:text-zinc-900 text-zinc-200">
+                    <svg class="flex-shrink-0 w-auto h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><path d="M48 56v144a12 12 0 0 1-24 0V56a12 12 0 0 1 24 0Zm86.73 50.7L120 111.48V96a12 12 0 0 0-24 0v15.48l-14.73-4.78a12 12 0 1 0-7.41 22.82l14.72 4.79-9.1 12.52a12 12 0 1 0 19.42 14.11l9.1-12.52 9.1 12.52a12 12 0 1 0 19.42-14.11l-9.1-12.52 14.72-4.79a12 12 0 1 0-7.41-22.82Zm115.12 7.7a12 12 0 0 0-15.12-7.7L220 111.48V96a12 12 0 0 0-24 0v15.48l-14.73-4.78a12 12 0 1 0-7.41 22.82l14.72 4.79-9.1 12.52a12 12 0 1 0 19.42 14.11l9.1-12.52 9.1 12.52a12 12 0 1 0 19.42-14.11l-9.1-12.52 14.72-4.79a12 12 0 0 0 7.71-15.12Z"></path></svg>
+                </span>
+                <span class="inline-block h-auto text-base font-semibold tracking-wide sm:text-sm xl:text-base font-rota">Forgot Password</span>
+            </span>
+        </a>
+        <a href="#reset-password" x-on:mouseenter="$el.classList.add('border-transparent'); $el.classList.remove('border-zinc-800');" x-on:mouseout="$el.classList.remove('border-transparent'); $el.classList.add('border-zinc-800');" class="relative group cursor-pointer hover:scale-[1.03] ease-out inline-block mb-0 duration-300 bg-pink-200 rounded-lg [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-zinc-800 animate-border w-full">
+            <span class="flex relative items-center p-3 mx-auto space-x-3 w-full h-full font-mono text-base font-medium text-left text-white bg-gradient-to-br to-black rounded-lg border shadow-sm duration-300 ease-out pointer-events-none border-zinc-700 radial-background group from-neutral-900">
+                <span class="flex justify-center items-center w-7 h-7 rounded-md duration-100 ease-out group-hover:bg-white bg-zinc-700 group-hover:text-zinc-900 text-zinc-200">
+                    <svg class="flex-shrink-0 w-auto h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><path d="M228 128a100 100 0 0 1-98.66 100H128a99.39 99.39 0 0 1-68.62-27.29 12 12 0 0 1 16.48-17.45 76 76 0 1 0-1.57-109c-.13.13-.25.25-.39.37L54.89 92H72a12 12 0 0 1 0 24H24a12 12 0 0 1-12-12V56a12 12 0 0 1 24 0v20.72l21.48-19.66A100 100 0 0 1 228 128Z"></path></svg>
+                </span>
+                <span class="inline-block h-auto text-base font-semibold tracking-wide sm:text-sm xl:text-base font-rota">Reset Password</span>
+            </span>
+        </a>
+        <a href="#confirm-password" x-on:mouseenter="$el.classList.add('border-transparent'); $el.classList.remove('border-zinc-800');" x-on:mouseout="$el.classList.remove('border-transparent'); $el.classList.add('border-zinc-800');" class="relative group cursor-pointer hover:scale-[1.03] ease-out inline-block mb-0 duration-300 bg-pink-200 rounded-lg [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-zinc-800 animate-border w-full">
+            <span class="flex relative items-center p-3 mx-auto space-x-3 w-full h-full font-mono text-base font-medium text-left text-white bg-gradient-to-br to-black rounded-lg border shadow-sm duration-300 ease-out pointer-events-none border-zinc-700 radial-background group from-neutral-900">
+                <span class="flex justify-center items-center w-7 h-7 rounded-md duration-100 ease-out group-hover:bg-white bg-zinc-700 group-hover:text-zinc-900 text-zinc-200">
+                    <svg class="flex-shrink-0 w-auto h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><path d="M208 36H48a20 20 0 0 0-20 20v56c0 54.29 26.32 87.22 48.4 105.29 23.71 19.39 47.44 26 48.44 26.29a12.1 12.1 0 0 0 6.32 0c1-.28 24.73-6.9 48.44-26.29 22.08-18.07 48.4-51 48.4-105.29V56a20 20 0 0 0-20-20Zm-4 76c0 35.71-13.09 64.69-38.91 86.15A126.28 126.28 0 0 1 128 219.38a126.14 126.14 0 0 1-37.09-21.23C65.09 176.69 52 147.71 52 112V60h152ZM79.51 144.49a12 12 0 1 1 17-17L112 143l47.51-47.52a12 12 0 0 1 17 17l-56 56a12 12 0 0 1-17 0Z"></path></svg>
+                </span>
+                <span class="inline-block h-auto text-base font-semibold tracking-wide sm:text-sm xl:text-base font-rota">Confirm Password</span>
+            </span>
+        </a>
+        <a href="#social-login" x-on:mouseenter="$el.classList.add('border-transparent'); $el.classList.remove('border-zinc-800');" x-on:mouseout="$el.classList.remove('border-transparent'); $el.classList.add('border-zinc-800');" class="relative group cursor-pointer hover:scale-[1.03] ease-out inline-block mb-0 duration-300 bg-pink-200 rounded-lg [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-zinc-800 animate-border w-full">
+            <span class="flex relative items-center p-3 mx-auto space-x-3 w-full h-full font-mono text-base font-medium text-left text-white bg-gradient-to-br to-black rounded-lg border shadow-sm duration-300 ease-out pointer-events-none border-zinc-700 radial-background group from-neutral-900">
+                <span class="flex justify-center items-center w-7 h-7 rounded-md duration-100 ease-out group-hover:bg-white bg-zinc-700 group-hover:text-zinc-900 text-zinc-200">
+                    <svg class="flex-shrink-0 w-auto h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" class="signal-icon-wrapper" stroke="none"><path d="M8.75 7.742V2.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.25 7.746V2.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 21.25v-2.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.75 9.028c0-.706.571-1.278 1.277-1.278h11.946c.706 0 1.278.572 1.278 1.278v2.971a7.25 7.25 0 0 1-14.502 0V9.028z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                </span>
+                <span class="inline-block h-auto text-base font-semibold tracking-wide sm:text-sm xl:text-base font-rota">Social Login</span>
+            </span>
+        </a>
+        <a href="#two-factor-authentication" x-on:mouseenter="$el.classList.add('border-transparent'); $el.classList.remove('border-zinc-800');" x-on:mouseout="$el.classList.remove('border-transparent'); $el.classList.add('border-zinc-800');" class="relative group cursor-pointer hover:scale-[1.03] ease-out inline-block mb-0 duration-300 bg-pink-200 rounded-lg [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-zinc-800 animate-border w-full">
+            <span class="flex relative items-center p-3 mx-auto space-x-3 w-full h-full font-mono text-base font-medium text-left text-white bg-gradient-to-br to-black rounded-lg border shadow-sm duration-300 ease-out pointer-events-none border-zinc-700 radial-background group from-neutral-900">
+                <span class="flex justify-center items-center w-7 h-7 rounded-md duration-100 ease-out group-hover:bg-white bg-zinc-700 group-hover:text-zinc-900 text-zinc-200">
+                    <svg class="flex-shrink-0 w-auto h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><path d="M76.86 115.54a12 12 0 0 1 15.6-6.68l23.54 9.42V96a12 12 0 0 1 24 0v22.28l23.54-9.42a12 12 0 0 1 8.92 22.28L147 141.33l14.6 19.47a12 12 0 1 1-19.2 14.4L128 156l-14.4 19.2a12 12 0 1 1-19.2-14.4l14.6-19.47-25.46-10.19a12 12 0 0 1-6.68-15.6ZM228 56v56c0 54.29-26.32 87.22-48.4 105.29-23.71 19.39-47.44 26-48.44 26.29a12.1 12.1 0 0 1-6.32 0c-1-.28-24.73-6.9-48.44-26.29C54.32 199.22 28 166.29 28 112V56a20 20 0 0 1 20-20h160a20 20 0 0 1 20 20Zm-24 4H52v52c0 35.71 13.09 64.69 38.91 86.15A126.14 126.14 0 0 0 128 219.38a126.28 126.28 0 0 0 37.09-21.23C190.91 176.69 204 147.71 204 112Z"></path></svg>
+                </span>
+                <span class="inline-block h-auto text-base font-semibold tracking-wide sm:text-sm xl:text-base font-rota">Two-Factor Auth</span>
+            </span>
+        </a>
+        <a href="#authentication-setup" x-on:mouseenter="$el.classList.add('border-transparent'); $el.classList.remove('border-zinc-800');" x-on:mouseout="$el.classList.remove('border-transparent'); $el.classList.add('border-zinc-800');" class="relative group cursor-pointer hover:scale-[1.03] ease-out inline-block mb-0 duration-300 bg-pink-200 rounded-lg [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-zinc-800 animate-border w-full">
+            <span class="flex relative items-center p-3 mx-auto space-x-3 w-full h-full font-mono text-base font-medium text-left text-white bg-gradient-to-br to-black rounded-lg border shadow-sm duration-300 ease-out pointer-events-none border-zinc-700 radial-background group from-neutral-900">
+                <span class="flex justify-center items-center w-8 h-8 rounded-md duration-100 ease-out group-hover:bg-white bg-zinc-700 group-hover:text-zinc-900 text-zinc-200">
+                    <svg class="flex-shrink-0 w-auto h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="none" class="signal-icon-wrapper" stroke="none"><path d="M15.9999 3.75C16.6965 3.75 17.354 3.9176 17.9342 4.21468L15.8271 6.35442C15.3353 6.85385 15.335 7.65546 15.8265 8.15521C16.3236 8.66068 17.1364 8.66746 17.6418 8.17035L19.7841 6.06357C20.0819 6.64429 20.2499 7.30253 20.2499 8C20.2499 10.3472 18.3471 12.25 15.9999 12.25V12.25C15.2888 12.25 14.5523 12.4035 14.0449 12.9017L7.14675 19.6758C6.36154 20.4469 5.10063 20.4378 4.32664 19.6554C3.55813 18.8786 3.55625 17.6286 4.32242 16.8495L11.0955 9.96205C11.596 9.45316 11.7499 8.71373 11.7499 8V8C11.7499 5.65279 13.6527 3.75 15.9999 3.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6.2494 10.2492L4.3351 8.33487C3.55406 7.55382 3.55406 6.28749 4.33511 5.50645L5.50668 4.33487C6.28773 3.55382 7.55406 3.55383 8.33511 4.33488L9.25387 5.25365M18.7484 14.7482L19.6723 15.6721C20.4533 16.4531 20.4533 17.7194 19.6723 18.5005L18.5007 19.6721C17.7197 20.4531 16.4533 20.4531 15.6723 19.6721L13.7591 17.7588" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                </span>
+                <span class="inline-block h-auto text-base font-bold tracking-wide sm:text-sm xl:text-base font-rota">Auth Setup</span>
+            </span>
+        </a>
+
+        
     </div>
 </If>
