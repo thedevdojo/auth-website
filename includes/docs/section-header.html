@@ -25,3 +25,38 @@
         </div>
     </div>
 </If>
+<If condition="frontmatter.install == true">
+    <div class="flex relative flex-col pb-8 mt-10 -translate-y-1 md:mt-0">
+
+        <div class="flex relative flex-col">
+            <h1 class="font-book font-styling tracking-tightest text-white w-full font-rota mb-5 md:mb-3 lg:mb-6 text-left text-[3rem] lg:text-[3.5rem]  tracking-tight leading-[90%] xl:mt-0 mt-2 xl:leading-[120%] font-gradient">Installation</h1>
+        
+            <div class="grid grid-cols-2 gap-3">
+                <include src="docs/install/laravel.html" 
+                    title="Laravel" 
+                    description="A new Laravel app"></include>
+                <include src="docs/install/jetstream.html" 
+                    title="Jetstream" 
+                    description="A Jetstream app"></include>
+                <include src="docs/install/breeze.html" 
+                    title="Breeze" 
+                    description="Breeze Starter Kit"></include>
+                <include src="docs/install/wave.html" 
+                    title="Wave" 
+                    description="SaaS Starter Kit"></include>
+                <include src="docs/install/genesis.html" 
+                    title="Genesis" 
+                    description="Genesis Starter Kit"></include>
+                <include src="docs/install/filament.html" 
+                    title="Filament" 
+                    description="A Filament App"></include> 
+            </div>
+        </div>
+    </div>
+</If>
+<If condition="frontmatter.laravel == true">
+    <div class="relative mb-10 w-full tracking-tightest">
+        <include src="docs/install/laravel.html" title="Install in a New Laravel App"
+            description="Learn how to install the Auth package in a new Laravel application"></include>
+    </div>
+</If>

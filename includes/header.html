@@ -34,8 +34,8 @@
             targetElement.style.width = `0%`;
         }
     }" 
-    @set-page-active="scrollTop(); active = $event.detail.active; resetProgressWidth()"
-    @set-page-full-width="fullWidth=true"
+    @set-page-active.window="scrollTop(); active = $event.detail.active; resetProgressWidth()"
+    @set-page-full-width.window="fullWidth=true"
     id="header"
     x-init="
 
@@ -124,8 +124,8 @@
                                 :class="{ 'w-full left-0' : active=='features', 'w-0 left-1/2' : active!='features' }"    
                                 class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-gradient-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
                         </button>
-                        <button hx-get="{ url('/docs/installation') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="morph" hx-push-url="true" @click="active='installation'; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-installation @mouseenter="calculateMarkerPosition($el); hovered='installation'" 
-                            :class="{ 'text-white' : active == 'installation', 'text-white/80': active != 'installation' }"
+                        <button hx-get="{ url('/docs/install') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="morph" hx-push-url="true" @click="active='install'; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-install @mouseenter="calculateMarkerPosition($el); hovered='install'" 
+                            :class="{ 'text-white' : active == 'install', 'text-white/80': active != 'install' }"
                             class="inline-flex relative flex-shrink-0 justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors md:py-2 group md:my-0 md:w-auto md:text-center">
                             <span>Installation</span>
                             <span 

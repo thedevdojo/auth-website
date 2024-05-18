@@ -21,9 +21,9 @@
 
         <div id="docs-content" class="flex items-start pb-10">
             {static_content_element}
-            <div class="pt-5 mx-auto mr-0 max-w-4xl lg:pr-10">
+            <div class="pt-6 mx-auto mr-0 max-w-4xl lg:pr-10">
 
-                <include src="docs/home-header.html"></include>
+                <include src="docs/section-header.html"></include>
             
                 <article class="w-full max-w-full text-white prose-sm prose lg:prose-md prose-invert">
                     {content}
@@ -48,7 +48,7 @@
                     </If>
 
                     <If condition="frontmatter.nextURL != null">
-                        <button hx-get="{frontmatter.nextURL}" hx-target="#docs-content" hx-select="#docs-content" hx-swap="outerHTML" hx-push-url="true" @click="scrollTop(); route=$el.getAttribute('hx-get')"
+                        <button hx-get="{ url('{frontmatter.nextURL}') }" hx-target="#docs-content" hx-select="#docs-content" hx-swap="outerHTML" hx-push-url="true" @click="scrollTop(); route=$el.getAttribute('hx-get'); window.dispatchEvent(new CustomEvent('set-page-active', { detail: { active: '{frontmatter.nextSlug}' }})); console.log('{frontmatter.nextURL}')"
                             class="flex justify-end items-center p-4 w-full rounded-md border ease-linear md:w-1/2 duration-50 border-neutral-700 hover:border-yellow-400 text-neutral-400 group hover:text-yellow-400">
                             <div class="flex flex-col justify-center items-end">
                                 <small>Next Page</small>

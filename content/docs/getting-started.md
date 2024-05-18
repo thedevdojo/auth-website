@@ -4,6 +4,7 @@ description: This is the introduction and getting started seciton of the Static 
 slug: 'getting-started'
 nextTitle: 'Installation'
 nextURL: '/docs/install'
+nextSlug: 'install'
 prevTitle: null
 prevURL: null
 home: true
