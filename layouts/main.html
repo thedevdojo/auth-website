@@ -8,24 +8,24 @@
 
     <link rel="icon" type="image/x-icon" href="{ url('/assets/images/favicon.png') }">
 
-    <meta name="description" content="A static site generator you're going to love. No more complicated configs, bloated frameworks, or feeling like you got kicked in the face by a horse!">
-    <meta property="og:url" content="https://static.devdojo.com">
+    <meta name="description" content="DevDojo Auth: A powerful, customizable authentication solution. Say goodbye to complicated authentication setups and hello to seamless integration with login, registration, 2FA, and third-party OAuth services.">
+    <meta property="og:url" content="https://devdojo.com/platform/auth">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Static · The Static Site Generator you're going to love">
-    <meta property="og:image" content="https://static.devdojo.com/assets/images/static-og-image.jpg">
-    <meta property="og:image:alt" content="A screenshot of Static">
-    <meta property="og:description" content="A static site generator you're going to love. No more complicated configs, bloated frameworks, or feeling like you got kicked in the face by a horse!">
-    <meta property="og:site_name" content="Static">
+    <meta property="og:title" content="DevDojo Auth · The Ultimate Authentication Solution">
+    <meta property="og:image" content="https://cdn.devdojo.com/images/may2024/auth-og-image.jpeg">
+    <meta property="og:image:alt" content="A screenshot of DevDojo Auth">
+    <meta property="og:description" content="DevDojo Auth: A powerful, customizable authentication solution. Say goodbye to complicated authentication setups and hello to seamless integration with login, registration, 2FA, and third-party OAuth services.">
+    <meta property="og:site_name" content="DevDojo Auth">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@thedevdojo">
     <meta name="twitter:creator" content="@tnylea">
-    <meta name="twitter:url" content="https://static.devdojo.com">
-    <meta name="twitter:title" content="Static">
-    <meta name="twitter:description" content="A static site generator you're going to love. No more complicated configs, bloated frameworks, or feeling like you got kicked in the face by a horse!">
-    <meta name="twitter:image" content="https://static.devdojo.com/assets/images/static-og-image.jpg">
-    <meta name="twitter:image:alt" content="A screenshot of Static">
+    <meta name="twitter:url" content="https://devdojo.com/platform/auth">
+    <meta name="twitter:title" content="DevDojo Auth">
+    <meta name="twitter:description" content="DevDojo Auth: A powerful, customizable authentication solution. Say goodbye to complicated authentication setups and hello to seamless integration with login, registration, 2FA, and third-party OAuth services.">
+    <meta name="twitter:image" content="https://cdn.devdojo.com/images/may2024/auth-og-image.jpeg">
+    <meta name="twitter:image:alt" content="A screenshot of DevDojo Auth">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/base16/dracula.min.css">
     <style>
@@ -240,72 +240,6 @@
               console.log(slug);
           }, 100);
         },
-        showTemplatePreview: function(templateURL){
-          this.iframeURL = 'about:blank';
-          if(window.innerWidth < 768){ 
-            window.open(templateURL, '_blank'); 
-          }else{ 
-            this.templatePreview=true;
-            let that = this;
-            setTimeout(function(){
-                that.iframeReady=true;
-                that.iframeURL=templateURL; 
-            }, 10);
-          }
-        },
-        templateInstallCommand(){
-          if(this.activeTemplate != null){
-              if(this.activeTemplate.slug == 'starter'){
-                  return 'static new project';
-              } else {
-                  return 'static new project --' + this.activeTemplate.slug;
-              }
-          }
-
-          return '';
-        },
-        setActiveTemplate(template_slug){
-              for(let i =0; i<window.windowTemplates.length; i++){
-                  if(window.windowTemplates[i].slug == template_slug){
-                      this.activeTemplate = window.windowTemplates[i];
-                  }
-              }
-              if(this.activeTemplate == 'undefined'){
-                  this.activeTemplate = {
-                      name: ''
-                  };
-              }
-          },
-          favicon(){
-              if(this.activeTemplate != null){
-                  return this.activeTemplate.favicon;
-              }
-              return '';
-          },
-          name(){
-              if(this.activeTemplate != null){
-                  return this.activeTemplate.name;
-              }
-              return '';
-          },
-          slug(){
-              if(this.activeTemplate != null){
-                  return this.activeTemplate.slug;
-              }
-              return '';
-          },
-          get url(){
-              if(this.activeTemplate != null){
-                  return this.activeTemplate.url;
-              }
-              return '';
-          },
-          get repo(){
-              if(this.activeTemplate != null){
-                  return this.activeTemplate.repo;
-              }
-              return '';
-          } 
           }"
       x-init="
           $watch('leftSidebar', function(value){
@@ -319,8 +253,6 @@
               }
           })
       "
-      @show-template-preview.window="showTemplatePreview(event.detail.url);" 
-      @set-active-template.window="setActiveTemplate(event.detail.slug);"
       @close-left-sidebar.window="leftSidebar = false"
       x-init="route=window.location.href" 
       @set-route.window="route=event.detail.route" id="site">
