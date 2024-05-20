@@ -16,11 +16,12 @@ Install the package via composer
 
 ## 2. Publish the Files
 
-Publish the assets, configs, and migrations:
+Publish the assets, configs, ci workflow, and migrations:
 
 <div class="p-5 font-mono whitespace-break-spaces bg-white/[6%] rounded-xl border border-white/[8%]"><span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:assets</span>
 <span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:config</span>
-<span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">migrate</span> <span class="text-[#b4fd4f]">--path=vendor/devdojo/auth/database/migrations </span>
+<span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:ci</span>
+<span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:migrations</span>
 </div>
 
 ## 3. Run Migrations
