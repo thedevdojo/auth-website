@@ -1,6 +1,13 @@
 ---
 title: Install with a New Laravel App
 description: Learn how to install DevDojo Auth with-in a new Laravel app
+prevTitle: 'Introduction'
+prevURL: '/docs/getting-started'
+prevSlug: 'getting-started'
+slug: 'install'
+nextTitle: 'Authentication Pages'
+nextURL: '/docs/authentication-pages'
+nextSlug: 'authentication-pages'
 laravel: true
 ---
 
@@ -16,19 +23,15 @@ Be sure to change into the root directory of the project you just created `cd pr
 
 ## 2. Install the Package
 
-<div class="p-5 font-mono whitespace-break-spaces bg-white/[6%] rounded-xl border border-white/[8%]"><span class="text-pink-400">composer</span> <span class="text-green-400">require</span> <span class="text-yellow-400">devdojo/auth</span></div>
+<include src="docs/install/code/composer-require.html"></include>
 
 ## 3. Publish the Assets, Configs, CI Workflow, and Migrations
 
-<div class="p-5 font-mono whitespace-break-spaces bg-white/[6%] rounded-xl border border-white/[8%]"><span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:assets</span>
-<span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:config</span>
-<span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:ci</span>
-<span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:migrations</span>
-</div>
+<include src="docs/install/code/publish.html"></include>
 
 ## 4. Run the new Database Migrations
 
-<div class="p-5 font-mono whitespace-break-spaces bg-white/[6%] rounded-xl border border-white/[8%]"><span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">migrate</span></div>
+<include src="docs/install/code/migrate.html"></include>
 
 ## 🎉 Installation Complete
 

@@ -1,6 +1,13 @@
 ---
 title: Installation with Breeze
 description: Learn how to install DevDojo Auth with Breeze
+prevTitle: 'Introduction'
+prevURL: '/docs/getting-started'
+prevSlug: 'getting-started'
+slug: 'install'
+nextTitle: 'Authentication Pages'
+nextURL: '/docs/authentication-pages'
+nextSlug: 'authentication-pages'
 breeze: true
 ---
 
@@ -22,19 +29,15 @@ If you are using the Laravel installer you can select any of these stacks:
 
 After you've created a new Jetstream app you'll want to require the auth package:
 
-<div class="p-5 font-mono whitespace-break-spaces bg-white/[6%] rounded-xl border border-white/[8%]"><span class="text-pink-400">composer</span> <span class="text-green-400">require</span> <span class="text-yellow-400">devdojo/auth</span></div>
+<include src="docs/install/code/composer-require.html"></include>
 
 Next, you'll need to publish the assets, configs, ci workflow, and migrations:
 
-<div class="p-5 font-mono whitespace-break-spaces bg-white/[6%] rounded-xl border border-white/[8%]"><span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:assets</span>
-<span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:config</span>
-<span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:ci</span>
-<span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">vendor:publish</span> <span class="text-[#b4fd4f]">--tag=auth:migrations</span>
-</div>
+<include src="docs/install/code/publish.html"></include>
 
 Next, you'll want to run the new migrations:
 
-<div class="p-5 font-mono whitespace-break-spaces bg-white/[6%] rounded-xl border border-white/[8%]"><span class="text-pink-400">php</span> <span class="text-green-400">artisan</span> <span class="text-yellow-400">migrate</span></div>
+<include src="docs/install/code/migrate.html"></include>
 
 Now that we have DevDojo Auth setup there are a handful of things that we need to update.
 

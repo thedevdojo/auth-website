@@ -30,7 +30,6 @@
 
         <div class="flex relative flex-col">
             <h1 class="font-book font-styling tracking-tightest text-white w-full font-rota mb-5 md:mb-3 lg:mb-6 text-left text-[2rem] lg:text-[2.5rem]  tracking-tight leading-[90%] xl:mt-0 mt-2 font-gradient">Installation</h1>
-        
             <div class="grid grid-cols-2 gap-3">
                 <include src="docs/install/laravel.html" 
                     title="Laravel" 
@@ -41,15 +40,15 @@
                 <include src="docs/install/breeze.html" 
                     title="Breeze" 
                     description="Breeze Starter Kit"></include>
-                <include src="docs/install/wave.html" 
-                    title="Wave" 
-                    description="SaaS Starter Kit"></include>
-                <include src="docs/install/genesis.html" 
-                    title="Genesis" 
-                    description="Genesis Starter Kit"></include>
                 <include src="docs/install/filament.html" 
                     title="Filament" 
                     description="A Filament App"></include> 
+                <include src="docs/install/genesis.html" 
+                    title="Genesis" 
+                    description="Genesis Starter Kit"></include>
+                <include src="docs/install/wave.html" 
+                    title="Wave" 
+                    description="SaaS Starter Kit"></include>
             </div>
         </div>
     </div>
@@ -133,20 +132,44 @@
     </div>
 </If>
 <If condition="frontmatter.laravel == true">
+    <include src="docs/install/back-btn.html"></include>
     <div class="relative mb-10 w-full tracking-tightest">
         <include src="docs/install/laravel.html" title="Install in a New Laravel App"
             description="Learn how to install the Auth package in a new Laravel application"></include>
     </div>
 </If>
 <If condition="frontmatter.jetstream == true">
+    <include src="docs/install/back-btn.html"></include>
     <div class="relative mb-10 w-full tracking-tightest">
         <include src="docs/install/jetstream.html" title="Install with-in a Jetstream App"
             description="Learn how to install the Auth package in a Jetstream application"></include>
     </div>
 </If>
 <If condition="frontmatter.breeze == true">
+    <include src="docs/install/back-btn.html"></include>
     <div class="relative mb-10 w-full tracking-tightest">
         <include src="docs/install/breeze.html" title="Install with-in a Breeze App"
             description="Learn how to install the Auth package in a Breeze starter kit"></include>
+    </div>
+</If>
+<If condition="frontmatter.filament == true">
+    <include src="docs/install/back-btn.html"></include>
+    <div class="relative mb-10 w-full tracking-tightest">
+        <include src="docs/install/filament.html" title="Install with-in a Filament App"
+            description="Install the Auth package inside of a Filament application"></include>
+    </div>
+</If>
+<If condition="frontmatter.genesis == true">
+    <include src="docs/install/back-btn.html"></include>
+    <div class="relative mb-10 w-full tracking-tightest">
+        <include src="docs/install/genesis.html" title="Install with-in the Genesis Starter Kit"
+            description="Learn how to install the Auth package within a Genesis application"></include>
+    </div>
+</If>
+<If condition="frontmatter.wave == true">
+    <include src="docs/install/back-btn.html"></include>
+    <div class="relative mb-10 w-full tracking-tightest">
+        <include src="docs/install/wave.html" title="Install with-in the Wave Starter Kit"
+            description="Install the Auth package using the Wave Starter Kit"></include>
     </div>
 </If>
