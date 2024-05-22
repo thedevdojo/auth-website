@@ -49,7 +49,7 @@ Inside of this config, located at `config/fortify.php` you'll need to set `views
 'views' => false,
 ```
 
-and you'll also need to uncomment the `registration` and the `resetPassword` and `emailVerification` features since we will be relying on DevDojo Auth for those features:
+and you'll also need to comment out the `registration` and the `resetPassword` and `emailVerification` features since we will be relying on DevDojo Auth for those features:
 
 ```php
 'features' => [
@@ -67,4 +67,3 @@ and you'll also need to uncomment the `registration` and the `resetPassword` and
 ```
 
 That's it! DevDojo Auth is now working with Jetstream. You can enable 2FA in the Auth settings page and it will enable/disable 2FA and work with the current Jetstream implementation.
-

@@ -55,6 +55,12 @@ require __DIR__.'/auth.php';
 
 This is located near the end of the file. Go ahead and remove this from your application.
 
+## Enable the Name Field for Registration
+
+As Breeze depends on the `name` field for registration, you'll need to enable this option in the DevDojo Auth package.
+
+You can do that by visiting the `/auth/setup` route, clicking on `Settings`, and enabling the `Registration Include Name Field` option.
+
 ## Remove the Breeze Auth Views & Controllers
 
 Since we are now using the DevDojo Auth package we no longer need the Breeze views and controllers. 
