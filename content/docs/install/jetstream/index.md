@@ -31,6 +31,10 @@ Next, you'll want to run the new migrations:
 
 <include src="docs/install/code/migrate.html"></include>
 
+Finally, you need to extend the DevDojo `User` model.
+
+<include src="docs/install/code/extend-model.html"></include>
+
 Now that we have DevDojo Auth setup there are a handful of things that we need to update.
 
 ## Publish the Fortify config

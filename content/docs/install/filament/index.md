@@ -36,3 +36,9 @@ Publish the assets, configs, ci workflow, and migrations:
 Run the database migrations:
 
 <include src="docs/install/code/migrate.html"></include>
+
+## 5. Extend the DevDojo User Model
+
+<include src="docs/install/code/extend-model.html"></include>
+
+That's it! DevDojo Auth package is now successfully installed in your Filament application.

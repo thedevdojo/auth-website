@@ -33,6 +33,10 @@ Run the database migrations:
 
 <include src="docs/install/code/migrate.html"></include>
 
+## 4. Extend the DevDojo User Model
+
+<include src="docs/install/code/extend-model.html"></include>
+
 ## Ready-to-go
 
 You're now ready to go! You can visit the auth setup route at `website.test/auth/setup` or any of the following authentication URL's:

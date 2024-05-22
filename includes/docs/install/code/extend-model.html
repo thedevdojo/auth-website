@@ -1,0 +1,20 @@
+<p>Your default <code>User</code> model needs the methods that handle 2FA and Email Verification. </p>
+<p>To do this we want extend the DevDojo <code>User</code> Model from your default <code>App\Models\User.php</code>, navigate to the <code>App\Models\User.php</code> file and add the following class to the top:</p>
+<pre><code class="php language-php hljs">use Devdojo\Auth\Models\User as AuthUser;</code></pre>
+<p>and extend the <code>AuthUser</code> class:</p>
+<pre><code class="php language-php hljs">class User extends AuthUser</code></pre>
+<p>Here is what your default User Model should look like:</p>
+
+<pre><code class="php language-php hljs">&lt;?php
+
+namespace App\Models;
+
+use Devdojo\Auth\Models\User as AuthUser;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+
+class User extends AuthUser
+{
+    ...
+}</code></pre>

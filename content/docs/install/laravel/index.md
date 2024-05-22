@@ -33,6 +33,10 @@ Be sure to change into the root directory of the project you just created `cd pr
 
 <include src="docs/install/code/migrate.html"></include>
 
+## 5. Extend the DevDojo User Model
+
+<include src="docs/install/code/extend-model.html"></include>
+
 ## 🎉 Installation Complete
 
 You will now be able to visit all the Authentication Pages as well as the setup page, where you can modify the authentication functionality and appearance.
