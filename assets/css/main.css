@@ -20,3 +20,17 @@
     initial-value: 0deg;
     syntax: '<angle>';
 } 
+
+.prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)){
+  text-decoration: none;
+}
+
+h2 a, h3 a, h4 a {
+  text-decoration: none !important;
+    transform: scale(1.2);
+    position: relative;
+    display: inline-block;
+    margin-left: -5px;
+    margin-right: 10px;
+    color: #b4fd4f !important;
+}

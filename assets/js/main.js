@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     loadGsapAnimations();
     createRadialBackgrounds();
     updateTOC();
+    addHeadingsToTOC();
     window.dispatchEvent(new CustomEvent('set-route', { detail: { route: window.location.href } }));
 });
 
@@ -293,6 +294,7 @@ document.addEventListener('htmx:afterSwap', function(evt) {
 document.addEventListener('htmx:afterSettle', function(evt) {
     setTimeout(function(){
         updateTOC();
+        addHeadingsToTOC();
     }, 10);
 });
 
@@ -305,6 +307,18 @@ function updateTOC(){
             window.dispatchEvent(new CustomEvent('set-toc', { detail: { toc: JSON.parse(document.getElementById('static-content').dataset.toc) } }));
         });
     }    
+}
+
+window.addHeadingsToTOC = function(){
+    const headings = document.querySelectorAll(".prose h2, .prose h3, .prose h4");
+    
+    headings.forEach(heading => {
+        const anchor = document.createElement("a");
+        anchor.href = `#${heading.id}`;
+        anchor.textContent = "# ";
+
+        heading.insertAdjacentElement("afterbegin", anchor);
+    });
 }
 
 window.renderTocFunctionality = function(){

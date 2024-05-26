@@ -242,6 +242,9 @@
         },
           }"
       x-init="
+        
+          
+
           $watch('leftSidebar', function(value){
               if(value){
                   window.dispatchEvent(new CustomEvent('close-mobile-menu', {}));

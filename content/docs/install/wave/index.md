@@ -8,7 +8,7 @@ slug: 'install'
 nextTitle: 'Authentication Pages'
 nextURL: '/docs/authentication-pages'
 nextSlug: 'authentication-pages'
-genesis: true
+wave: true
 ---
 
-Add docs here...
+Version 3.0 of [Wave](https://devdojo.com/wave) is currently in progress and will include the DevDojo Auth package out of the box. Updates coming soon.
