@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     createRadialBackgrounds();
     updateTOC();
     addHeadingsToTOC();
+    renderSmoothAnchorLinks();
     window.dispatchEvent(new CustomEvent('set-route', { detail: { route: window.location.href } }));
 });
 
@@ -295,6 +296,7 @@ document.addEventListener('htmx:afterSettle', function(evt) {
     setTimeout(function(){
         updateTOC();
         addHeadingsToTOC();
+        renderSmoothAnchorLinks();
     }, 10);
 });
 
@@ -318,6 +320,27 @@ window.addHeadingsToTOC = function(){
         anchor.textContent = "# ";
 
         heading.insertAdjacentElement("afterbegin", anchor);
+    });
+}
+
+window.renderSmoothAnchorLinks = function(){
+    const smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
+
+    smoothScrollLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const offset = 20; // Adjust the offset value as per your requirement
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                    top: targetPosition - offset,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 }
 
