@@ -16,7 +16,7 @@ DevDojo Auth is an open-source <a href="https://packagist.org/packages/devdojo/a
 
 After [installation](/docs/install), visit **/auth/setup** to customize and modify your authentication.
 
-<img src="https://devdojo.com/platform/auth/assets/images/setup-screen.jpg" class="w-full h-auto rounded-md" />
+<img src="{ url('/assets/images/setup-screen-bg.jpg') }" class="w-full h-auto rounded-md" />
 
 After DevDojo Auth is installed you'll be able to visit these [Authentication Pages](/docs/authentication-pages) in your application.
 

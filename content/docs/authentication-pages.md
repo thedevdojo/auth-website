@@ -11,7 +11,7 @@ nextSlug: 'setup-customizations'
 authenticationPages: true
 ---
 
-DevDojo Auth contains many pages that provide common authentication functionality. Below is a preview and overview of all the available authentication pages.
+DevDojo Auth contains many pages that provide functionality for the most common authentication use cases. Below is a preview and overview of all the available authentication pages.
 
 ## Login
 

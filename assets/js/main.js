@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateTOC();
     addHeadingsToTOC();
     renderSmoothAnchorLinks();
-    window.dispatchEvent(new CustomEvent('set-route', { detail: { route: window.location.href } }));
+    window.dispatchEvent(new CustomEvent('set-route', { detail: { route: window.location.pathname } }));
 });
 
 function loadGsapAnimations(){

@@ -228,6 +228,7 @@
         templateURL: 'about:blank',
         iframeURL: 'about:blank',
         mobile: false,
+        fullWidth: false,
         changeTheme: function(slug, url){
           this.ifreamReady=false;
           window.dispatchEvent(new CustomEvent('change-template', { detail : { slug: slug }}));
@@ -257,8 +258,8 @@
           })
       "
       @close-left-sidebar.window="leftSidebar = false"
-      x-init="route=window.location.href" 
-      @set-route.window="route=event.detail.route" id="site">
+      x-init="route=window.location.pathname" 
+      @set-route.window="route=event.detail.route" id="site" x-cloak>
 
       <include src="header.html"></include>
       <div id="site-content" class="">
