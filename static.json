@@ -3,7 +3,7 @@
         "url" : "http://localhost:3000"
     },
     "build" : {
-        "url" : "/platform/auth",
-        "directory" : "/Users/tonylea/Sites/devdojo/public/platform/auth"
+        "url" : "/auth",
+        "directory" : "/Users/tonylea/Sites/devdojo/public/auth"
     }
  }

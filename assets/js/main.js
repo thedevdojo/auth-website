@@ -18,13 +18,22 @@ Alpine.start()
 domReadyLoop();
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    document.getElementById('hero-bg').classList.remove('opacity-0');
+
     loadGsapAnimations();
     createRadialBackgrounds();
     updateTOC();
     addHeadingsToTOC();
     renderSmoothAnchorLinks();
     window.dispatchEvent(new CustomEvent('set-route', { detail: { route: window.location.pathname } }));
+    document.startViewTransition(() => updateTheDOMSomehow(data));
+    
 });
+
+window.onbeforeunload = function(){
+    console.log('go');
+  };
 
 function loadGsapAnimations(){
 

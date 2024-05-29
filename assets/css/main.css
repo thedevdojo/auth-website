@@ -34,3 +34,48 @@ h2 a, h3 a, h4 a {
     margin-right: 10px;
     color: #b4fd4f !important;
 }
+
+
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes slide-from-right {
+  from { 
+    transform: translateY(15px);
+    opacity:0; 
+  }
+}
+
+@keyframes slide-to-left {
+  to { transform: translateY(-0px);
+    filter: blur(0px);
+    opaity:1; }
+}
+
+/* define animations for the old and new content */
+::view-transition-old(slide-it) {
+  animation: 300ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+  400ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+::view-transition-new(slide-it) {
+  animation: 300ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+  400ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+/* tie the view transition to a given CSS class */
+/* #site-content {
+    view-transition-name: slide-it;
+} */
+
+#docs-content {
+  view-transition-name: slide-it;
+}
+
+#hero-bg{
+  view-transition-name: none;
+}

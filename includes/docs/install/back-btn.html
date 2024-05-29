@@ -1,4 +1,4 @@
-<button hx-get="{ url('/docs/install') }" hx-target="#docs-content" hx-select="#docs-content" hx-swap="outerHTML" hx-push-url="true" @click="scrollTop(); route=$el.getAttribute('hx-get');" 
+<button hx-get="{ url('/docs/install') }" hx-target="#docs-content" hx-select="#docs-content" hx-swap="outerHTML transition:true" hx-push-url="true" @click="scrollTop(); route=$el.getAttribute('hx-get');" 
     class="flex relative items-center pr-3 pl-5 py-2 scale-100 hover:scale-[1.01] mb-5 space-x-3 text-xs font-medium text-white rounded-md group border-zinc-700/70 hover:border-zinc-700/80 border bg-zinc-950 hover:bg-zinc-900">
     <span class="overflow-hidden absolute left-0 w-3 h-3 transition duration-150 ease-out transform translate-x-3.5 group-hover:translate-x-3">
         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>

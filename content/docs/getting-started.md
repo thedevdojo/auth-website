@@ -18,7 +18,7 @@ After [installation](/docs/install), visit **/auth/setup** to customize and modi
 
 <img src="{ url('/assets/images/setup-screen-bg.jpg') }" class="w-full h-auto rounded-md" />
 
-After DevDojo Auth is installed you'll be able to visit these [Authentication Pages](/docs/authentication-pages) in your application.
+After DevDojo Auth is installed you'll be able to visit these <a href="{ url('/docs/authentication-pages') }">Authentication Pages</a>.
 
 ## Why use it?
 
