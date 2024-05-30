@@ -44,7 +44,8 @@ ln -s packages/devdojo/auth/tests tests
 The second symlink will link our package public directory so we can see our CSS and JS changes.
 
 ```
-ln -s packages/devdojo/auth/public public/auth
+cd public
+ln -s ../packages/devdojo/auth/public auth
 ```
 
 Finally, we need to install the package dependencies and start our asset watcher.

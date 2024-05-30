@@ -19,8 +19,6 @@ domReadyLoop();
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    document.getElementById('hero-bg').classList.remove('opacity-0');
-
     loadGsapAnimations();
     createRadialBackgrounds();
     updateTOC();
@@ -306,9 +304,27 @@ document.addEventListener('htmx:afterSettle', function(evt) {
         updateTOC();
         addHeadingsToTOC();
         renderSmoothAnchorLinks();
+
+        confirmIntroInstallLinks();
     }, 10);
 });
 
+
+function confirmIntroInstallLinks(){
+    if(window.location.href.includes('docs/install')){
+        document.getElementById('installation-docs').dispatchEvent(new CustomEvent('set-active', {}));
+    } else {
+        document.getElementById('installation-docs').dispatchEvent(new CustomEvent('set-inactive', {}));
+    }
+
+    if(window.location.href.includes('docs/getting-started')){
+        document.getElementById('introduction-docs').dispatchEvent(new CustomEvent('set-active', {}));
+    } else {
+        document.getElementById('introduction-docs').dispatchEvent(new CustomEvent('set-inactive', {}));
+    }
+    
+    
+}
 
 
 function updateTOC(){

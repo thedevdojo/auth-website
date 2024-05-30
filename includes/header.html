@@ -78,10 +78,10 @@
         }, 100);
     " 
     @close-mobile-menu.window="mobileMenu=false" 
-    class="relative w-full">
-    <div class="flex cursor-pointer w-full absolute z-[999] group text-white bg-gradient-to-r from-[#9dff00] border-r border-b to-[#9dff00] border-zinc-800">
+    class="relative w-full z-[999]">
+    <div class="flex cursor-pointer w-full absolute z-[999] group text-white bg-[#b4fd4f]  border-r border-b  border-zinc-800">
         <div  id="top-bar" class="flex justify-between items-center px-6 mx-auto w-full max-w-7xl h-10 duration-300 ease-out md:px-8" x-cloak>
-            <a href="https://devdojo.com" class="flex relative items-center pl-5 h-full font-semibold text-black lg:w-auto lg:items-center lg:justify-center">
+            <a href="https://devdojo.com" class="flex relative items-center pl-5 h-full font-semibold text-black group-hover:opacity-100 lg:w-auto lg:items-center lg:justify-center">
                 <span class="overflow-hidden absolute left-0 w-4 h-4 transition duration-300 transform -rotate-180 -translate-x-0.5 ease group-hover:rotate-0 group-hover:translate-x-0 group-hover:w-4">
                     <svg  class="w-4 h-4"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 101" fill="none"><path fill="currentColor" d="m93.178 50.665-32.715-50h35.29l34.003 50-34.002 50h-35.29l32.714-50Zm-92.992 50 32.715-50L.186.665h35.29l34.003 50-34.002 50H.187Z"/></svg>
                 </span>
@@ -89,9 +89,8 @@
             </a>
         </div>
     </div>
-    <header class="box-border absolute z-[102] flex translate-y-10 items-center w-full h-20 leading-10 text-center bg-opacity-100 md:bg-opacity-50 bg-gradient-to-b from-black/90 to-black/90 md:from-black/90 md:to-black/10 backdrop-blur-md">
+    <header class="box-border absolute z-[102] flex translate-y-10 items-center w-full h-20 leading-10 text-center bg-opacity-100 md:bg-opacity-50 bg-gradient-to-b">
        
-        <div id="nav-border-animated" class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-300"></div>
         <div id="nav-container"  class="px-6 mx-auto w-full max-w-7xl leading-10 text-center duration-300 ease-out md:px-8" x-cloak>
             <div class="box-border flex flex-wrap justify-between items-center text-neutral-900">
                 <div class="flex relative items-center w-auto leading-10 lg:flex-grow-0 lg:flex-shrink-0 lg:text-left">
@@ -115,7 +114,7 @@
                                 :class="{ 'w-full left-0' : active=='home', 'w-0 left-1/2' : active!='home' }"    
                                 class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-gradient-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
                         </button> 
-                        <button hx-get="{ url('/docs/getting-started') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="outerHTML transition:true" hx-push-url="true" @click="active='docs'; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-docs @mouseenter="calculateMarkerPosition($el); hovered='docs'"
+                        <button hx-get="{ url('/docs/getting-started') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="outerHTML transition:true" hx-push-url="true" @click="active='docs';  introductionActive = true; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-docs @mouseenter="calculateMarkerPosition($el); hovered='docs'"
                             :class="{ 'text-white' : active == 'docs', 'text-white/80': active != 'docs' }"
                             class="inline-flex relative flex-shrink-0 justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors md:py-2 group md:my-0 md:w-auto md:text-center">
                             <span>Documentation</span>
@@ -123,7 +122,7 @@
                                 :class="{ 'w-full left-0' : active=='docs', 'w-0 left-1/2' : active!='docs' }"    
                                 class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-gradient-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
                         </button>
-                        <button hx-get="{ url('/docs/install') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="outerHTML transition:true" hx-push-url="true" @click="active='install'; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-install @mouseenter="calculateMarkerPosition($el); hovered='install'" 
+                        <button hx-get="{ url('/docs/install') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="outerHTML transition:true" hx-push-url="true" @click="active='install'; installationActive = true; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-install @mouseenter="calculateMarkerPosition($el); hovered='install'" 
                             :class="{ 'text-white' : active == 'install', 'text-white/80': active != 'install' }"
                             class="inline-flex relative flex-shrink-0 justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors md:py-2 group md:my-0 md:w-auto md:text-center">
                             <span>Installation</span>

@@ -6,6 +6,11 @@
     <title>{title}</title>
     <style>[x-cloak] { display: none; }</style>
 
+    <link rel="preload" href="{ url('/fonts/rota/rota-semibold-webfont.woff2') }" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{ url('/fonts/rota/rota-regular-webfont.woff2') }" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{ url('/fonts/rota/rota-medium-webfont.woff2') }" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{ url('/fonts/rota/rota-bold-webfont.woff2') }" as="font" type="font/woff2" crossorigin="anonymous">
+
     <link rel="icon" type="image/x-icon" href="{ url('/assets/images/favicon.png') }">
 
     <meta name="description" content="DevDojo Auth: A powerful, customizable authentication solution. Say goodbye to complicated authentication setups and hello to seamless integration with login, registration, 2FA, and third-party OAuth services.">
@@ -51,7 +56,7 @@
             src: url('{ url('/fonts/rota/rota-semibold-webfont.woff2') }') format('woff2'),
                 url('{ url('/fonts/rota/rota-semibold-webfont.woff') }') format('woff');
             font-weight: 600;
-            font-style: normal;
+            font-style: swap;
 
         }
 
@@ -63,7 +68,7 @@
             src: url('{ url('/fonts/rota/rota-regular-webfont.woff2') }') format('woff2'),
                 url('{ url('/fonts/rota/rota-regular-webfont.woff') }') format('woff');
             font-weight: 400;
-            font-style: normal;
+            font-style: swap;
 
         }
 
@@ -75,7 +80,7 @@
             src: url('{ url('/fonts/rota/rota-medium-webfont.woff2') }') format('woff2'),
                 url('{ url('/fonts/rota/rota-medium-webfont.woff') }') format('woff');
             font-weight: 500;
-            font-style: normal;
+            font-style: swap;
 
         }
 
@@ -87,7 +92,7 @@
             src: url('{ url('/fonts/rota/rota-bold-webfont.woff2') }') format('woff2'),
                 url('{ url('/fonts/rota/rota-bold-webfont.woff') }') format('woff');
             font-weight: 700;
-            font-style: normal;
+            font-style: swap;
 
         }
 
@@ -137,19 +142,6 @@
             color: #f8e164 !important;
         }
 
-        @font-face {
-          font-family: 'pistoleerhalfital';
-          src:url('/fonts/pistoleerhalfital.woff') format('woff'),
-              url('/fonts/pistoleerhalfital.woff2') format('woff2'),
-              url('/fonts/pistoleerhalfital.svg#pistoleerhalfital') format('svg'),
-              url('/fonts/pistoleerhalfital.eot'),
-              url('/fonts/pistoleerhalfital.eot?#iefix') format('embedded-opentype'),
-              url('/fonts/pistoleerhalfital.ttf') format('truetype');
-
-          font-weight: normal;
-          font-style: normal;
-          font-display: swap;
-      }
 
       .prose h1, .prose h2, .prose h3, .prose h4{
         font-family: 'Rota';
@@ -157,9 +149,6 @@
 
       
 
-      .pistol-font { 
-        font-family: 'pistoleerhalfital';
-      }  
     </style>
     
     
@@ -227,6 +216,8 @@
         activeTemplate: null,
         templateURL: 'about:blank',
         iframeURL: 'about:blank',
+        introductionActive: false,
+        installationActive: false,
         mobile: false,
         fullWidth: false,
         changeTheme: function(slug, url){
