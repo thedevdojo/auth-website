@@ -104,10 +104,10 @@ h2 a, h3 a, h4 a {
 
 :root {
   --color-bg1: rgb(98, 98, 98);
-  --color-bg2: rgb(17, 17, 42);
-  --color1: 18, 18, 18;
+  --color-bg2: rgb(105, 105, 105);
+  --color1: 18, 18, 45;
   --color2: 161, 161, 161;
-  --color3: 41, 41, 41;
+  --color3: 0, 0, 0;
   --color4: 190, 190, 190;
   --color5: 8, 8, 8;
   --color-interactive: 140, 100, 255;

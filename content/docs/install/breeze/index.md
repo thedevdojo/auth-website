@@ -47,13 +47,15 @@ Now that we have DevDojo Auth setup there are a handful of things that we need t
 
 ## Remove the Breeze Auth routes
 
-Inside of your application `routes/web.php` you'll see a line that looks like this:
+Inside of the `routes/auth.php` you'll need to remove all the guest authentication routes. Remove all content from this middleware group:
 
 ```php
-require __DIR__.'/auth.php';
+Route::middleware('guest')->group(function () {
+    // remove all these routes
+});
 ```
 
-This is located near the end of the file. Go ahead and remove this from your application.
+> You can remove the whole middleware group as well
 
 ## Enable the Name Field for Registration
 
