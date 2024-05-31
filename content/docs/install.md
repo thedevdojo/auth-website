@@ -37,19 +37,12 @@ Run the database migrations:
 
 <include src="docs/install/code/extend-model.html"></include>
 
-## Ready-to-go
+## 5. Installation Complete
 
-You're now ready to go! You can visit the auth setup route at `website.test/auth/setup` or any of the following authentication URL's:
+Now that everything is installed you'll be able to visit the auth setup route at `website.test/auth/setup`. You'll also have access to all the new <a href="{ url('/docs/authentication-pages') }">Authentication Pages</a>.
 
-<div class="p-5 font-mono whitespace-break-spaces bg-white/[6%] rounded-xl border border-white/[8%]">- <span class="text-green-400">/auth/login</span>
-- <span class="text-green-400">/auth/register</span>
-- <span class="text-green-400">/auth/verify</span>
-- <span class="text-green-400">/auth/two-factor-challenge</span>
-- <span class="text-green-400">/auth/password/confirm</span>
-- <span class="text-green-400">/auth/password/reset</span>
-- <span class="text-green-400">/auth/password/ReAlLyLoNgToKeNhErE</span>
-</div>
+## Installing in an Existing Application
 
-If 2FA is enabled, users will have access to the following route:
+As long as your application meets the minimum requirements (Laravel 10 or higher), you'll be able to install DevDojo Auth in your existing application. The steps will be the same as above. You'll also want to remove your existing Authentication from your application to remove duplicate functionality. 
 
-<div class="p-5 font-mono whitespace-break-spaces bg-white/[6%] rounded-xl border border-white/[8%]">- <span class="text-green-400">/user/two-factor-authentication</span></div>
+> It's possible to keep your existing authentication functionality to ensure everything works correctly; however, having multiple authentication paths may confuse your users.
