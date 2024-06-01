@@ -14,158 +14,24 @@ The DevDojo Auth package includes several configuration files that allow you to 
 
 ### 1. appearance.php
 
-This file allows you to customize the look and feel of the authentication pages.
+This file allows you to customize the look and feel of the authentication pages. You may manually modify this file if you would like to make any updates, but it's easier to make those changes from the Auth Setup page.
 
-#### Example Configuration:
+### 2. language.php
 
-```php
-return [
-    'logo' => '/path/to/logo.png',
-    'background_color' => '#f8f9fa',
-    'primary_color' => '#007bff',
-    'font' => 'Roboto, sans-serif',
-];
-```
+This file contains the language copy that will be used throughout your authentication. You can modify the tone of your copy to sound more like you.
 
-### 2. descriptions.php
+### 3. providers.php
 
-This file contains descriptions used in the authentication process, allowing you to modify them as needed.
+This is a list of all the available providers you can include in your authentication. When you toggle the network on/off it will change the `active` value to true/false and will show/hide that network in your authentication.
 
-#### Example Configuration:
+If you see some additional providers available from the <a href="https://socialiteproviders.com/" target="_blank">Socialite Providers website</a>, but it's not listed in this config. You may manually add it to the array and it will show up in the Auth Setup page allowing you to enable/disable that social network.
 
-```php
-return [
-    'login' => 'Please enter your login credentials',
-    'register' => 'Create a new account',
-];
-```
+### 4. settings.php
 
-### 3. fields.php
+This file contains settings that will change the way your authenticaiton functions.
 
-Define custom fields for user registration and other forms in this configuration file.
+> You'll also notice a descriptions.php file, which is only used internally in the Auth Setup pages, so this file can be ignored on your part.
 
-#### Example Configuration:
-
-```php
-return [
-    'registration' => [
-        'username' => [
-            'type' => 'text',
-            'label' => 'Username',
-            'required' => true,
-        ],
-        'phone' => [
-            'type' => 'text',
-            'label' => 'Phone Number',
-            'required' => false,
-        ],
-    ],
-];
-```
-
-### 4. language.php
-
-Configure language settings and translations for your authentication pages.
-
-#### Example Configuration:
-
-```php
-return [
-    'default' => 'en',
-    'available' => ['en', 'es', 'fr'],
-];
-```
-
-### 5. pages.php
-
-Manage the settings for the various authentication pages.
-
-#### Example Configuration:
-
-```php
-return [
-    'login' => [
-        'title' => 'Login',
-        'description' => 'Please login to your account',
-    ],
-    'register' => [
-        'title' => 'Register',
-        'description' => 'Create a new account',
-    ],
-];
-```
-
-### 6. providers.php
-
-Set up third-party OAuth providers for social authentication.
-
-#### Example Configuration:
-
-```php
-return [
-    'google' => [
-        'client_id' => env('GOOGLE_CLIENT_ID'),
-        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-    ],
-    'facebook' => [
-        'client_id' => env('FACEBOOK_CLIENT_ID'),
-        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-    ],
-];
-```
-
-### 7. settings.php
-
-General settings for the authentication package, including enabling features like two-factor authentication (2FA).
-
-#### Example Configuration:
-
-```php
-return [
-    '2fa' => [
-        'enabled' => true,
-        'secret_key_length' => 16,
-    ],
-];
-```
-
-## Making Changes via /auth/setup
-
-When you visit the `/auth/setup` page, you can customize the various settings for the DevDojo Auth package. The changes you make on this page will be automatically reflected in the corresponding configuration files within the `config/devdojo/auth` directory.
-
-### Example Workflow:
-
-1. **Visit the `/auth/setup` Page:**
-   Navigate to the `/auth/setup` page in your browser. Here, you will find options to customize the appearance, fields, language, and other settings for your authentication pages.
-
-2. **Make Changes:**
-   Adjust the settings according to your preferences. For example, you can change the logo, update the primary color, or enable additional registration fields.
-
-3. **Save Changes:**
-   Once you save your changes, they will be written to the corresponding configuration files in the `config/devdojo/auth` directory. For instance, if you update the primary color, this change will be reflected in the `appearance.php` file.
-
-## Additional Information
-
-### Environment Variables
-
-For sensitive information such as API keys and client secrets, it is recommended to use environment variables. The DevDojo Auth package uses the `env` function to retrieve these values from your `.env` file.
-
-### Example .env Configuration:
-
-```
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-
-FACEBOOK_CLIENT_ID=your-facebook-client-id
-FACEBOOK_CLIENT_SECRET=your-facebook-client-secret
-```
-
-### Customization Flexibility
-
-The DevDojo Auth package provides a high level of customization flexibility through its configuration files. This allows you to tailor the authentication process to fit the specific needs of your application and users.
-
-## Conclusion
-
-By understanding and utilizing the configuration files provided by the DevDojo Auth package, you can easily customize and manage the authentication experience in your application. The `/auth/setup` page provides a user-friendly interface for making these changes, ensuring that your configurations are always up to date and reflecting your preferences.
+Remember, you can make modifications to these configs manually or via the Auth Setup, but it's probably best practice to modify it in the setup page to prevent any conflicts from future releases.
 
 

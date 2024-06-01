@@ -8,37 +8,37 @@ description: Allow users to authenticate with many Social Providers
 
 ## Introduction
 
-The DevDojo Auth package supports integration with various social authentication providers like Google, Facebook, and Twitter. This allows users to log in using their social media accounts, making the authentication process more convenient and secure.
+Auth supports out-of-the-box social authentication. This allows users to log in using their social media accounts, making the authentication process more convenient and secure.
+
+## Included Providers
+
+The following providers are included by default and ready-to-use (after adding credentials):
+
+ - Facebook
+ - Twitter
+ - LinkedIn
+ - Google
+ - GitHub
+ - GitLab
+ - Bitbucket
+ - Slack
+
+These are all part of <a href="">Laravel Socialite</a>. If you want to use additional providers that are not listed above, you'll need to install another package called <a href="https://socialiteproviders.com/" target="_blank">Socialite Providers</a>.
+
+## Socialite Providers Package
+
+<a href="https://socialiteproviders.com/" target="_blank">Socialite Providers</a> is a third-party package available at <a href="https://socialiteproviders.com/" target="_blank">https://socialiteproviders.com/</a>. This package includes a ton of providers. You will need to install a package for each provider you want to include. For instance, if you want to use the <a href="https://socialiteproviders.com/Apple/" target="_blank">Apple Service provider</a>, you will need to <a href="https://socialiteproviders.com/Apple/" target="_blank">install the package here</a>.
+
+After installing the socialite providers you want to use, you can then move on to the rest of the setup.
+
 
 ## Setting Up Social Providers
 
-To enable social authentication, follow these steps:
+To setup a specific social auth provider, you will need to retrieve two keys for each. The `CLIENT_ID` and the `CLIENT_SECRET`. These credentials can be retrieved from each social network and each network has a different process for retrieving these keys. We will not go into detail on how to retrieve these keys; however, you can do a search for `Setting up oAuth with network` and you should find steps that will help you retrieve each of these.
 
-### 1. Retrieve Client Credentials
+## Add keys to your .env
 
-For each social provider you want to enable, you need to retrieve the `CLIENT_ID` and `CLIENT_SECRET`. These credentials are provided by the social platform when you register your application with them.
-
-#### Example:
-
-- **Google:**
-  - Go to the [Google Developers Console](https://console.developers.google.com/).
-  - Create a new project or select an existing project.
-  - Navigate to the **Credentials** page.
-  - Click on **Create Credentials** and select **OAuth 2.0 Client IDs**.
-  - Follow the steps to configure the consent screen and application.
-  - Retrieve your `CLIENT_ID` and `CLIENT_SECRET`.
-
-- **Facebook:**
-  - Go to the [Facebook Developers](https://developers.facebook.com/) site.
-  - Create a new app or select an existing app.
-  - Navigate to **Settings** > **Basic**.
-  - Retrieve your `App ID` (CLIENT_ID) and `App Secret` (CLIENT_SECRET).
-
-### 2. Configure Providers
-
-Add your provider credentials to the `.env` file. The credentials will be retrieved from the environment variables and used in the `config/devdojo/auth/providers.php` file.
-
-#### Example .env Configuration:
+When you have your `CLIENT_ID` and `CLIENT_SECRET` for each social provider, you will need to open your `.env` file and add those credentials, like so:
 
 ```
 GOOGLE_CLIENT_ID=your-google-client-id
@@ -48,92 +48,25 @@ FACEBOOK_CLIENT_ID=your-facebook-client-id
 FACEBOOK_CLIENT_SECRET=your-facebook-client-secret
 ```
 
-### 3. Enable Providers in Setup Page
+The example above is what it would look like to add your social authentication with `GOOGLE` and `FACEBOOK`.
 
-After adding the credentials to the `.env` file, you need to enable them in the setup page of your application. This will activate the social providers and make them available for user authentication.
-
-### 4. Visual Indicators
+### Visual Indicators
 
 In the setup screen, you will see a list of social providers with key icons next to them:
 
-- **Green Key Icon:** Indicates that the `CLIENT_ID` and `CLIENT_SECRET` have been correctly configured for the provider.
-- **Red Key Icon:** Indicates that the `CLIENT_ID` and `CLIENT_SECRET` are missing or incorrect.
+<img src="{ url('/assets/images/social-providers-screen.jpg') }" class="w-full h-auto rounded-md" />
 
-Make sure to configure the credentials properly to ensure the icons turn green, indicating that the provider is correctly set up.
+- **Green Key Icon:** Indicates that the `CLIENT_ID` and `CLIENT_SECRET` have been added.
+- **Red Key Icon:** Indicates that the `CLIENT_ID` and `CLIENT_SECRET` are missing.
 
-### 5. Update Routes
+### Testing Out Social Authentication
 
-To handle social authentication routes, update your application's routes file to include the necessary routes for social authentication.
+After you add the `CLIENT_ID` and `CLIENT_SECRET` for the social providers you'll then be able to toggle that social provider and see it on the Login/Register pages.
 
-#### Example Routes:
+If everything is setup correctly, you'll be able to click the Social Provider button and be authenticated with that user/network.
 
-```php
-use DevDojo\Auth\Http\Controllers\SocialController;
+Remember that everything needs to be setup correctly. In the social network setup page you'll need to make sure your local URL's are included correctly, even and HTTPS/HTTP mis-match can break the social authentication functionality.
 
-Route::get('login/{provider}', [SocialController::class, 'redirect']);
-Route::get('login/{provider}/callback', [SocialController::class, 'callback']);
-```
+## Show Social Providers on Login:
 
-### 6. Controller Methods
-
-The `SocialController` contains methods to handle the redirection to the social provider and the callback after authentication.
-
-#### Example Controller Methods:
-
-```php
-namespace DevDojo\Auth\Http\Controllers;
-
-use Illuminate\Http\Request;
-use Laravel\Socialite\Facades\Socialite;
-
-class SocialController extends Controller
-{
-    public function redirect($provider)
-    {
-        return Socialite::driver($provider)->redirect();
-    }
-
-    public function callback($provider)
-    {
-        $user = Socialite::driver($provider)->user();
-        // Handle user information and login
-    }
-}
-```
-
-### 7. Handling User Information
-
-Once the user is authenticated via a social provider, you can handle the user information returned by the provider. This typically involves creating a new user account or updating an existing account with the information provided.
-
-#### Example Handling:
-
-```php
-public function callback($provider)
-{
-    $socialUser = Socialite::driver($provider)->user();
-
-    $user = User::updateOrCreate(
-        ['provider_id' => $socialUser->getId()],
-        [
-            'name' => $socialUser->getName(),
-            'email' => $socialUser->getEmail(),
-            'avatar' => $socialUser->getAvatar(),
-            'provider' => $provider,
-        ]
-    );
-
-    Auth::login($user, true);
-
-    return redirect()->intended('/home');
-}
-```
-
-### 8. Testing Social Authentication
-
-After setting up and configuring your social providers, it's crucial to test the authentication process to ensure everything works correctly. Try logging in with each configured social provider and verify that the process completes successfully.
-
-### Conclusion
-
-By following these steps, you can enable social authentication in your application using the DevDojo Auth package. Properly configured social authentication provides a seamless login experience for your users and enhances the security of your application.
-
-
+Inside of your authentication setup page, you will see an option titled: **Login Show Social Providers**. If this is toggled off, the social provider buttons will not be visible by default. If a user then enters their email and it's associated with a social network, that network button will show up in place of the Email/Identifer input.
