@@ -1,6 +1,13 @@
 ---
 title: Config Files
 description: Learn about how DevDojo Auth uses configuration files to change and customize the authentication functionality
+prevTitle: 'Email Template'
+prevURL: '/docs/config/email'
+prevSlug: 'email'
+slug: 'files'
+nextTitle: 'Github Action'
+nextURL: '/docs/config/github-action'
+nextSlug: 'github-action'
 ---
 
 

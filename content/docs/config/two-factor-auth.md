@@ -1,6 +1,15 @@
 ---
 title: Two-Factor Authentication
 description: Learn about Two-Factor Auth and how to enable it for your application.
+prevTitle: 'Social Providers'
+prevURL: '/docs/config/social-providers'
+prevSlug: 'social-providers'
+slug: 'two-factor-auth'
+nextTitle: 'Email Template'
+nextURL: '/docs/config/email'
+nextSlug: 'email'
+
+
 ---
 
 # Using Two-Factor Authentication (2FA)

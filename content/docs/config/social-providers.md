@@ -1,6 +1,13 @@
 ---
 title: Social Providers
 description: Allow users to authenticate with many Social Providers
+prevTitle: 'Setup & Customizations'
+prevURL: '/docs/setup-customizations'
+prevSlug: 'setup-customizations'
+slug: 'social-providers'
+nextTitle: 'Two Factor Auth'
+nextURL: '/docs/config/two-factor-auth'
+nextSlug: 'two-factor-auth'
 ---
 
 

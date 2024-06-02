@@ -1,6 +1,13 @@
 ---
 title: Github Action Workflow
 description: DevDojo Auth ships with a Github action that can help gaurantee that your authentication is fully functional.
+nextTitle: 'Authentication Events'
+nextURL: '/docs/extend/events'
+nextSlug: 'events'
+slug: 'github-action'
+prevTitle: 'Config Files'
+prevURL: '/docs/config/files'
+prevSlug: 'files'
 ---
 
 

@@ -1,3 +1,17 @@
+---
+title: Contributing
+description: Want to make some contributions. Learn more here.
+prevTitle: 'Custom Components'
+prevURL: '/docs/extend/components'
+prevSlug: 'components'
+slug: 'troubleshooting'
+nextTitle: 'Troubleshooting'
+nextURL: '/docs/troubleshooting'
+nextSlug: 'troubleshooting'
+---
+
+# Contributing
+
 We welcome all new contributions to this project. If you would like to contribute to this package it will probably be helpful to learn how to setup a local version for working on the DevDojo Auth package.
 
 ## Local Dev Version

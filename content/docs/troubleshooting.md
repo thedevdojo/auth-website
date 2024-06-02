@@ -1,7 +1,13 @@
 ---
 title: Troubleshooting
 description: Troubleshooting Tips and Tricks
+prevTitle: 'Contributing'
+prevURL: '/docs/contributing'
+prevSlug: 'contributing'
+slug: 'troubleshooting'
 ---
+
+# Troubleshooting
 
 If you are trying to troubleshoot an issue or having problems getting something to function correctly, here are a few tips and tricks that might help you out.
 

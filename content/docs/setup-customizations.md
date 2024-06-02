@@ -1,6 +1,13 @@
 ---
 title: Setup and Customizations
 description: Learn about the Authentication Setup and Customization page
+prevTitle: 'Authentication Pages'
+prevURL: '/docs/authentication-pages'
+prevSlug: 'authentication-pages'
+slug: 'setup-customizations'
+nextTitle: 'Social Providers'
+nextURL: '/docs/config/social-providers'
+nextSlug: 'social-providers'
 setup: true
 ---
 
