@@ -4,7 +4,7 @@ description: Learn how to edit the email template to add your own logo and style
 nextTitle: 'Config Files'
 nextURL: '/docs/config/files'
 nextSlug: 'files'
-slug: 'email'
+slug: 'config/email'
 prevTitle: 'Two-Factor Auth'
 prevURL: '/docs/config/two-factor-auth'
 prevSlug: 'two-factor-auth'

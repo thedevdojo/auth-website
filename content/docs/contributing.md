@@ -4,7 +4,7 @@ description: Want to make some contributions. Learn more here.
 prevTitle: 'Custom Components'
 prevURL: '/docs/extend/components'
 prevSlug: 'components'
-slug: 'troubleshooting'
+slug: 'contributing'
 nextTitle: 'Troubleshooting'
 nextURL: '/docs/troubleshooting'
 nextSlug: 'troubleshooting'

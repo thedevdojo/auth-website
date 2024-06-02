@@ -4,7 +4,7 @@ description: Learn how to install DevDojo Auth with-in a new Laravel app
 prevTitle: 'Introduction'
 prevURL: '/docs/getting-started'
 prevSlug: 'getting-started'
-slug: 'install'
+slug: 'install/laravel/index'
 nextTitle: 'Authentication Pages'
 nextURL: '/docs/authentication-pages'
 nextSlug: 'authentication-pages'

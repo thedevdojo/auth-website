@@ -4,7 +4,7 @@ description: Learn how to override the authentication page components to take fu
 nextTitle: 'Contributing'
 nextURL: '/docs/contributing'
 nextSlug: 'contributing'
-slug: 'github-action'
+slug: 'extend/components'
 prevTitle: 'Authentication Events'
 prevURL: '/docs/extend/events'
 prevSlug: 'events'

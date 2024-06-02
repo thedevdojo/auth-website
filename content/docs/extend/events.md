@@ -4,7 +4,7 @@ description: Learn how to tap into Login, Register, Verify, and PasswordReset ev
 prevTitle: 'Github Action'
 prevURL: '/docs/config/github-action'
 prevSlug: 'github-action'
-slug: 'events'
+slug: 'extend/events'
 nextTitle: 'Custom Components'
 nextURL: '/docs/extend/components'
 nextSlug: 'components'

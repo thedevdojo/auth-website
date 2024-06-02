@@ -4,7 +4,7 @@ description: Learn how to install DevDojo Auth with Genesis
 prevTitle: 'Introduction'
 prevURL: '/docs/getting-started'
 prevSlug: 'getting-started'
-slug: 'install'
+slug: 'install/genesis/index'
 nextTitle: 'Authentication Pages'
 nextURL: '/docs/authentication-pages'
 nextSlug: 'authentication-pages'
