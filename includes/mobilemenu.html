@@ -1,0 +1,14 @@
+<div class="flex justify-center items-center pb-3 space-x-3 text-xs font-medium md:hidden">
+    <button hx-get="{ url('/') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="outerHTML transition:true" hx-push-url="true" data-home @click="active='home'; leftSidebar=false; fullWidth=false; scrollTop(); mobileMenu=false" class="flex flex-1 justify-center items-center p-2 rounded-md border hover:bg-zinc-800 border-zinc-800">
+        <svg class="mr-1.5 w-3.5 h-3.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="none"><path d="M3.75 11.199a3 3 0 0 1 1.134-2.35l5.872-4.662a2 2 0 0 1 2.488 0l5.872 4.662a3 3 0 0 1 1.135 2.35v7.051a2 2 0 0 1-2 2H5.749a2 2 0 0 1-2-2v-7.051z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.25 20.25v-6.5a2 2 0 0 0-2-2h-2.5a2 2 0 0 0-2 2v6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+        <span>Home</span>
+    </button>
+    <button hx-get="{ url('/docs/getting-started') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="outerHTML transition:true" hx-push-url="true" @click="active='docs'; leftSidebar=false;  introductionActive = true; fullWidth=true; scrollTop(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-docs class="flex flex-1 justify-center items-center p-2 rounded-md border hover:bg-zinc-800 border-zinc-800">
+        <svg class="mr-1.5 w-3.5 h-3.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="none"><path d="M16.25 7.75h-8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.25 11.25h-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.75 17.75h14.5m0 2.5V3.75a1 1 0 0 0-1-1H7.75a3 3 0 0 0-3 3v12.5a3 3 0 0 0 3 3h10.5a1 1 0 0 0 1-1z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+        <span>Docs</span>
+    </button>
+    <button @click="leftSidebar=false" class="flex flex-1 justify-center items-center p-2 rounded-md border hover:bg-zinc-800 border-zinc-800">
+        <svg class="mr-1.5 w-3.5 h-3.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="none"><path d="M19.25 4.75l-14.5 14.5m0-14.5l14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+        <span>Close Menu</span>
+    </button>
+</div>

@@ -134,12 +134,14 @@
                 
                 </div>
                 <div  class="flex relative items-center space-x-3 font-medium leading-10 md:flex-grow-0 md:flex-shrink-0 md:mt-0 md:text-right lg:flex-grow-0 lg:flex-shrink-0">
-                    <button @click="mobileMenu=!mobileMenu; $el.classList.add('scale-90'); setTimeout(function(){ $el.classList.remove('scale-90') }, 100)" class="block p-2 h-full rounded-lg duration-100 ease-out group md:hidden hover:bg-neutral-800/70">
-                        <div :class="{ '' : !mobileMenu, 'rotate-[0deg] scale-90 -translate-y-px origin-center' : mobileMenu }" class="flex flex-col justify-around items-end w-4 h-4 transition-all duration-300 linear">
-                            <div :class="{ 'w-full group-hover:w-2/3 -translate-x-px' : !mobileMenu, 'rotate-[45deg] w-full translate-y-1.5' : mobileMenu }" class="h-[2px] flex-shrink-0 rounded-lg transition-all linear duration-200 bg-zinc-100"></div>
-                            <div :class="{ 'opacity-100 w-1/2 group-hover:w-full -translate-x-px' : !mobileMenu, 'opacity-0' : mobileMenu }" class="h-[2px] flex-shrink-0 rounded-lg transition-all linear duration-200 bg-zinc-100 opacity-100"></div>
-                            <div :class="{ 'group-hover:w-1/2 w-2/3 -translate-x-px' : !mobileMenu, '-rotate-[45deg] w-full -translate-y-1' : mobileMenu }" class="h-[2px] flex-shrink-0 rounded-lg transition-all linear duration-200 bg-zinc-100"></div>
-                            </div>
+                    <button @click="leftSidebar=!leftSidebar; $el.classList.add('scale-90'); setTimeout(function(){ $el.classList.remove('scale-90') }, 100)" class="block p-2 h-full rounded-lg duration-100 ease-out group md:hidden hover:bg-neutral-800/70">
+                        <div class="flex flex-col justify-center items-center w-6 h-6 transition-all duration-300 linear">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full text-white currentColor">
+                                <path fill-rule="evenodd" d="M3 9a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9Zm0 6.75a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                              </svg>
+                              
+
+                        </div>
                     </button>
                     <div :class="{ 'flex' : mobile, 'hidden md:flex' : !mobile }" class="hidden relative z-20 flex-col justify-center pr-5 mt-4 space-y-8 md:pr-3 lg:pr-0 md:flex-row md:space-y-0 md:items-center md:space-x-6 md:mt-0 md:flex">
                         <a href="https://github.com/thedevdojo/auth" target="_blank" class="px-5 font-medium group text-black bg-white flex text-sm h-10 items-center rounded-lg shadow-xl cursor-pointer hover:bg-[#c9fd02]">

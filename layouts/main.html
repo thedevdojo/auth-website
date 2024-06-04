@@ -238,7 +238,10 @@
 
           $watch('leftSidebar', function(value){
               if(value){
+                  document.body.classList.add('overflow-hidden');
                   window.dispatchEvent(new CustomEvent('close-mobile-menu', {}));
+              } else {
+                document.body.classList.remove('overflow-hidden');
               }
           });
           $watch('templatePreview', function(value){
