@@ -45,7 +45,7 @@ Finally, you need to extend the DevDojo `User` model.
 
 Now that we have DevDojo Auth setup there are a handful of things that we need to update.
 
-## Remove the Breeze Auth routes
+## Remove the Guest Authentication Routes
 
 Inside of the `routes/auth.php` you'll need to remove all the guest authentication routes. Remove all content from this middleware group:
 

@@ -1,24 +1,24 @@
-<footer class="relative pt-10 pb-6 bg-black border-t md:pt-16 border-gray-200/10">
+<footer class="relative pt-10 pb-6 border-t bg-zinc-900 md:pt-16 border-gray-200/10">
     <div class="flex absolute top-0 left-0 items-center w-full h-px">
         <div class="w-full h-px bg-zinc-800"></div>
     </div>
-    <div :class="{ 'max-w-6xl': !fullWidth, 'max-w-7xl' : fullWidth }" class="px-6 mx-auto md:px-8">
+    <div class="px-6 mx-auto max-w-7xl md:px-8">
         <ul class="grid gap-y-10 pb-10 text-sm font-medium sm:pb-20 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-            <li class="row-span-2 pr-0 pr-10 space-y-5">
-                <div class="flex relative flex-col justify-start items-start w-auto leading-10 lg:px-4 lg:flex-grow-0 lg:flex-shrink-0 lg:text-left">
+            <li class="row-span-2 pl-2 space-y-5">
+                <div class="flex relative flex-col justify-start items-start w-auto leading-10 lg:flex-grow-0 lg:flex-shrink-0 lg:text-left">
                     <include src="logo.html"></include>
-     <p class="mt-5 text-xs font-light text-white/80">Welcome to Static. A static site generator you're going to love.</p>
-        </div>
+                    <p class="mt-5 text-xs font-light text-white/80">DevDojo Auth. An open-source <br > authentication package for Laravel.</p>
+                </div>
             </li>
-            <li class="row-span-2 space-y-5 lg:pl-10">
+            <li class="row-span-2 space-y-5 text-right lg:px-5">
                 <h2 class="text-sm font-light tracking-wide text-gray-50 uppercase">Core Concepts</h2>
                 <ul class="space-y-1 font-light text-gray-300 sm:space-y-2 text-md">
-                    <li class=""><a class="text-xs transition-colors duration-200 hover:text-gray-100 hover:underline sm:text-sm" href="/docs/getting-started">Getting Started</a></li>
-                    <li class=""><a class="text-xs transition-colors duration-200 hover:text-gray-100 hover:underline sm:text-sm" href="/docs/install">Installation</a></li>
-                    <li class=""><a class="text-xs transition-colors duration-200 hover:text-gray-100 hover:underline sm:text-sm" href="/docs/guides/deploy">Configuration</a></li>
+                    <li class=""><a class="text-xs transition-colors duration-200 hover:text-gray-100 hover:underline sm:text-sm" href="{ url('/docs/getting-started') }">Getting Started</a></li>
+                    <li class=""><a class="text-xs transition-colors duration-200 hover:text-gray-100 hover:underline sm:text-sm" href="{ url('/docs/install') }">Installation</a></li>
+                    <li class=""><a class="text-xs transition-colors duration-200 hover:text-gray-100 hover:underline sm:text-sm" href="{ url('/docs/setup-customizations') }">Setup & Customize</a></li>
                 </ul>
             </li>
-            <li class="row-span-2 space-y-5 lg:pl-12">
+            <li class="row-span-2 space-y-5 text-right lg:pl-6 lg:pr-8">
                 <h2 class="text-sm font-light tracking-wide text-gray-50 uppercase">Github Links</h2>
                 <ul class="space-y-2 text-gray-300 sm:space-y-2">
                     <li class=""><a class="text-xs transition-colors duration-200 hover:text-gray-100 hover:underline sm:text-sm" href="https://github.com/thedevdojo/auth" target="_blank">GitHub</a></li>
@@ -26,7 +26,7 @@
                     <li class=""><a class="text-xs transition-colors duration-200 hover:text-gray-100 hover:underline sm:text-sm" href="https://github.com/thedevdojo/wave" target="_blank">Wave</a></li>
                 </ul>
             </li>
-            <li class="row-span-2 space-y-5 lg:pl-16">
+            <li class="row-span-2 space-y-5 text-right lg:pr-6">
                 <h2 class="text-sm font-light tracking-wide text-gray-50 uppercase">DevDojo Links</h2>
                 <ul class="space-y-1 text-gray-300 sm:space-y-2">
                     <li class=""><a class="text-xs transition-colors duration-200 hover:text-gray-100 hover:underline sm:text-sm" href="https://devdojo.com" target="_blank">Home</a></li>
@@ -37,13 +37,12 @@
 
         </ul>
         <div class="flex relative flex-col-reverse justify-between items-start pt-10 pb-4 bg-top border-t sm:items-center lg:items-start border-gray-200/10 sm:pt-8 lg:flex-row">
-            <ul class="flex flex-col space-y-1 font-light lg:pl-40 lg:ml-2 lg:mb-0 text-white/50 sm:space-y-0 sm:space-x-5 sm:flex-row">
-                <li class=""><a href="/" class="text-xs transition-colors duration-300 hover:text-white/80 sm:text-sm">Privacy Policy</a></li>
-                <li><a href="/" class="text-xs transition-colors duration-300 hover:text-white/80 sm:text-sm">Disclaimers</a></li>
-                <li><a href="/" class="text-xs transition-colors duration-300 hover:text-white/80 sm:text-sm">Terms &amp; Conditions</a></li>
+            <ul class="flex flex-col space-y-1 font-light text-white/50 sm:space-y-0 sm:space-x-5 sm:flex-row">
+                <li class=""><a href="https://devdojo.com/page/terms" target="_blank" class="text-xs transition-colors duration-300 hover:text-white/80 sm:text-sm">Privacy Policy</a></li>
+                <li><a href="https://devdojo.com/help" target="_blank" class="text-xs transition-colors duration-300 hover:text-white/80 sm:text-sm">Help</a></li>
             </ul>
             <ul class="flex flex-col items-center mb-3 space-y-2 text-white/50 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-                <a href="/" class="text-sm font-normal tracking-tight leading-none transition-colors duration-300 hover:text-deep-purple-accent-400">© 2023 DevDojo</a>
+                <a href="https://devdojo.com" target="_blank" class="text-sm font-normal tracking-tight leading-none transition-colors duration-300 hover:text-deep-purple-accent-400">© 2024 DevDojo</a>
             </ul>
         </div>
     </div>

@@ -11,7 +11,7 @@ nextSlug: 'authentication-pages'
 install: true
 ---
 
-This package is compatible with any new Laravel application and most of the available starter kits. Select one of the guides above to walk through a detailed installation guide for your use-case.
+This package is compatible with any Laravel application (10.x or greater) and all available starter kits. Choose a guide above for a detailed installation walkthrough for your use case.
 
 Below is the basic installation steps for most applications.
 

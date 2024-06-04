@@ -1,11 +1,7 @@
-# Static Starter Template
+# DevDojo Auth
 
-This is the starter template for [Static](https://static.devdojo.com).
+This is the DevDojo Authentication site. Learn more about this package at [https://devdojo.com/auth](https://github.com/thedevdojo/auth).
 
-![Static Starter Template Cover Photo](https://raw.githubusercontent.com/static-templates/starter/main/assets/images/cover.jpg)
+<img src="https://cdn.devdojo.com/images/may2024/auth-og-image.jpeg" class="w-full h-auto" />
 
-You can install this theme with the [static](https://www.npmjs.com/package/@devdojo/static) new command like so:
-
-```
-static new folder-name
-```
+You can visit the package URL at [https://github.com/thedevdojo/auth](https://github.com/thedevdojo/auth)

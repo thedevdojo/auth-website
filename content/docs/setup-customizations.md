@@ -28,12 +28,12 @@ This setup page allows you to customize/configure the following aspects of your 
 - **Language** - Change/modify the Language copy throughout your authentication
 - **Settings** - Common settings functionality for your authentication
 
-We will go deeper into a few sections further in the documentation, for now it's good to just have an understanding of what each section is responsible for.
+We will go deeper into a few sections further in the documentation.
 
 
 ## How Does It Work
 
-The setup page essentially adds and modifies the configuration files located at `config/devdojo/auth`. In this folder you will see confiruation files that correspond to each section in the setup page. Whenever you make a modification in the Setup screen it will automatically be reflect in the config. <a href="{ url('/docs/config/files') }">Learn more about config files here</a>.
+The setup page essentially adds and modifies the configuration files located at `config/devdojo/auth`. In this folder you will see configuration files that correspond to each section in the setup page. Whenever you make a modification in your setup it will automatically be written to the config. <a href="{ url('/docs/config/files') }">A little more about configs</a>.
 
 
 ## Authorization

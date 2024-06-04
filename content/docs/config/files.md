@@ -15,7 +15,7 @@ nextSlug: 'github-action'
 
 ## Introduction
 
-The DevDojo Auth package includes several configuration files that allow you to customize the authentication experience for your users. These configuration files are located in the `config/devdojo/auth` directory. When you visit the `/auth/setup` page, all the changes you make there will be reflected in these configuration files.
+Several configuration files are included in this package. They allow you to customize the authentication experience for your users. These configuration files are located in the `config/devdojo/auth` directory. When you visit the `/auth/setup` page, all the changes you make there will be reflected in these configuration files.
 
 ## Configuration Files Overview
 
