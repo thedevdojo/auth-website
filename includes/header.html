@@ -30,7 +30,9 @@
         },
         resetProgressWidth(){
             const targetElement = document.getElementById('nav-border-animated');
-            targetElement.style.width = `0%`;
+            if(targetElement){
+                targetElement.style.width = `0%`;
+            }
         }
     }" 
     @set-page-active.window="scrollTop(); active = $event.detail.active; resetProgressWidth()"

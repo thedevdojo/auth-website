@@ -1,11 +1,15 @@
 // Add your javascript here
 
+import * as htmx from "htmx.org";
+window.htmx = htmx;
+import './htmx-loading-states';
+import './alpine-morph';
+import hljs from 'highlight.js';
 import Alpine from 'alpinejs'
 import morph from '@alpinejs/morph'
 import focus from '@alpinejs/focus'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
- 
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -25,16 +29,32 @@ document.addEventListener("DOMContentLoaded", function() {
     addHeadingsToTOC();
     renderSmoothAnchorLinks();
     window.dispatchEvent(new CustomEvent('set-route', { detail: { route: window.location.pathname } }));
-    document.startViewTransition(() => updateTheDOMSomehow(data));
-
     removeHTMXloadingStates();
+    changeDocsContentMobile();
+    // if (typeof document.startViewTransition === "function") {
+    //     document.startViewTransition(() => updateTheDOMSomehow(data));
+    // }
+    
     
 });
 
 removeHTMXloadingStates = function(){
     const loadingElements = document.querySelectorAll('[data-loading]');
+    console.log('accessed here');
     loadingElements.forEach(element => {
+        
         element.style.display = 'none';
+    });
+}
+
+changeDocsContentMobile = function(){
+    document.querySelectorAll('[hx-target="#docs-content"]').forEach(element => {
+        element.addEventListener('click', function(){
+            console.log('happened');
+            if (window.innerWidth < 768 && window.location.href == document.getElementById('home_url').value) {
+                window.location.href = element.getAttribute('hx-get');
+            }
+        });
     });
 }
 
@@ -447,3 +467,4 @@ function setAllOthersToInactive(link){
         }
     }
 }
+

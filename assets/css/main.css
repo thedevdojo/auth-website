@@ -35,51 +35,110 @@ h2 a, h3 a, h4 a {
     color: #b4fd4f !important;
 }
 
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: '<angle>';
+}        
 
-@keyframes fade-in {
-  from { opacity: 0; }
+@keyframes border-rotate {
+to {
+    --border-angle: 360deg;
+}
 }
 
-@keyframes fade-out {
-  to { opacity: 0; }
+.animate-border {
+  animation: border-rotate 3s linear infinite;
 }
 
-@keyframes slide-from-right {
-  from { 
-    transform: translateY(15px);
-    opacity:0; 
+.font-rota{
+  font-family: rota;
+}
+
+.hljs {
+  color: #f8e164;
+}
+
+@media(min-width: 768px) {
+.features-tailwind.hljs{
+  overflow:hidden;
+  padding-top: 15px !important;
+    padding-left: 20px !important;
+    padding-right: 190px !important;
+    padding-bottom: 150px !important;
+    background-size:top right;
+    /* background-image:url('/assets/images/page.svg'); */
+}
+}
+
+.features-tailwind.hljs{
+overflow:hidden;
+padding: 15px;
+}
+
+@media(min-width: 768px) {
+.features-layouts.hljs{
+  padding-top: 30px !important;
+  padding-left: 45px !important;
+  padding-bottom: 30px !important;
+}
+}
+
+.features-layouts.hljs{
+  padding: 15px;
+}
+
+.hljs-addition,
+.hljs-code,
+.hljs-string,
+.hljs-title.class_.inherited__ {
+  color: #f8e164 !important;
+}
+
+
+.prose h1, .prose h2, .prose h3, .prose h4{
+font-family: 'Rota';
+}
+
+.prose-sm pre code{
+  font-size:14px;
+}
+
+.docs .prose pre {
+  padding:0px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:rgba(255, 255, 255, 0.06);
+  border-radius:10px;
+  white-space: break-spaces;
+  display:grid;
+}
+
+
+
+.docs .prose pre code {
+  padding:18px;
+  white-space:pre;
+}
+
+@media (min-width: 640px) {
+  .docs .prose pre code {
+    padding:26px;
   }
 }
 
-@keyframes slide-to-left {
-  to { transform: translateY(-0px);
-    filter: blur(0px);
-    opaity:1; }
-}
-
-/* define animations for the old and new content */
-::view-transition-old(slide-it) {
-  animation: 300ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
-  400ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
-}
-::view-transition-new(slide-it) {
-  animation: 300ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
-  400ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
-}
-
-/* tie the view transition to a given CSS class */
-/* #site-content {
-    view-transition-name: slide-it;
-} */
-
-#docs-content {
-  view-transition-name: slide-it;
-}
-
-#hero-bg{
-  view-transition-name: none;
+.prose p{
+  color:rgba(255, 255, 255, 0.8);
 }
 
 
+.prose h2{
+  font-size:25px;
+  font-weight:800;
+}
+[data-loading] {
+  display: none;
+}
 
-
+.language-makefile .hljs-comment{
+  color: #87e778;
+}
