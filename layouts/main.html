@@ -104,6 +104,12 @@
               console.log(slug);
           }, 100);
         },
+        routeIsCurrentlyHomepage(){
+          if(this.route.replace(/^\/|\/$/g, '') == document.getElementById('home_url').value.replace(/^\/|\/$/g, '')){
+            return true;
+          }
+          return false;
+        }
           }"
       x-init="
         

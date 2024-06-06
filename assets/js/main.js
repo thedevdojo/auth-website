@@ -23,6 +23,7 @@ domReadyLoop();
 
 document.addEventListener("DOMContentLoaded", function() {
 
+    console.log('what');
     loadGsapAnimations();
     createRadialBackgrounds();
     updateTOC();
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     renderSmoothAnchorLinks();
     window.dispatchEvent(new CustomEvent('set-route', { detail: { route: window.location.pathname } }));
     removeHTMXloadingStates();
+    
     changeDocsContentMobile();
     // if (typeof document.startViewTransition === "function") {
     //     document.startViewTransition(() => updateTheDOMSomehow(data));
@@ -50,8 +52,7 @@ removeHTMXloadingStates = function(){
 changeDocsContentMobile = function(){
     document.querySelectorAll('[hx-target="#docs-content"]').forEach(element => {
         element.addEventListener('click', function(){
-            console.log('happened');
-            if (window.innerWidth < 768 && window.location.href == document.getElementById('home_url').value) {
+            if (window.innerWidth < 768 && (window.location.href == document.getElementById('home_url').value || window.location.pathname.replace(/^\/|\/$/g, '') == document.getElementById('home_url').value.replace(/^\/|\/$/g, ''))  ) {
                 window.location.href = element.getAttribute('hx-get');
             }
         });
