@@ -26,8 +26,17 @@ document.addEventListener("DOMContentLoaded", function() {
     renderSmoothAnchorLinks();
     window.dispatchEvent(new CustomEvent('set-route', { detail: { route: window.location.pathname } }));
     document.startViewTransition(() => updateTheDOMSomehow(data));
+
+    removeHTMXloadingStates();
     
 });
+
+removeHTMXloadingStates = function(){
+    const loadingElements = document.querySelectorAll('[data-loading]');
+    loadingElements.forEach(element => {
+        element.style.display = 'none';
+    });
+}
 
 window.onbeforeunload = function(){
     console.log('go');

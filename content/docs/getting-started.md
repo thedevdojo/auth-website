@@ -41,7 +41,7 @@ Below are a few problems and solutions that this package aims to offer.
             <p x-on:click="showMore=!showMore" :class="{ '!text-green-500' : showMore, '!text-green-600' : !showMore }" class="!my-0 select-none cursor-pointer !px-5 !py-4 group text-base font-bold  flex items-center">
             <svg :class="{ 'rotate-90' : showMore }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 scale-[0.98] group-hover:scale-100 ease-out duration-300 -translate-x-1 text-green-400"><path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>
             <span>Solution: One Package to Rule Them All</span></p>
-            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm"> Consolidate your authentication into a single, streamlined solution for effortless updates and consistent security across all apps.</p>
+            <p x-show="showMore" class="!my-0 p-5 pt-0 text-sm">Use a single authentication solution for effortless updates and consistent security.</p>
         </div>
     </div>
 </div>
