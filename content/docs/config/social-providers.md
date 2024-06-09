@@ -15,7 +15,7 @@ nextSlug: 'two-factor-auth'
 
 ## Introduction
 
-Auth supports out-of-the-box social authentication. This allows users to log in using their social media accounts, making the authentication process more convenient and secure.
+Auth supports out-of-the-box social authentication. This will allows your users to login/register using their social media accounts.
 
 ## Included Providers
 
