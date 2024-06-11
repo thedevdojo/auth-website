@@ -27,7 +27,7 @@ If you are using the Laravel installer you can select any of these stacks:
 
 ## Install the Auth Package
 
-After you've created a new Jetstream app you'll want to require the auth package:
+After you've created a new Breeze app you'll want to require the auth package:
 
 <include src="docs/install/code/composer-require.html"></include>
 
