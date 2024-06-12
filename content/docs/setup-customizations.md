@@ -13,7 +13,7 @@ setup: true
 
 ## The Setup Page
 
-DevDojo Auth comes with a simple Setup page to help you customize and configure your authentication.
+DevDojo Auth comes with a simple Setup page to help you customize your authentication.
 
 <img src="{ url('/assets/images/setup-screen.jpg') }" class="w-full h-auto rounded-md" />
 

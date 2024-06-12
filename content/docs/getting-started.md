@@ -10,11 +10,11 @@ prevURL: null
 home: true
 ---
 
-DevDojo Auth is an open-source <a href="https://packagist.org/packages/devdojo/auth" target="_blank">composer package</a> that makes adding authentication to your Laravel app a breeze. Just drop it in, and you're ready to go!
+DevDojo Auth is an open-source <a href="https://packagist.org/packages/devdojo/auth" target="_blank">composer package</a> that adds customizable authentication screens to your Laravel application. Just drop it in, and you're ready to go!
 
 ## Quick Start
 
-After [installation](/docs/install), visit **/auth/setup** to customize and modify your authentication.
+After [installation](/docs/install), visit **/auth/setup** to customize your authentication appearance and functionality.
 
 <img src="{ url('/assets/images/setup-screen-bg.jpg') }" class="w-full h-auto rounded-md" />
 

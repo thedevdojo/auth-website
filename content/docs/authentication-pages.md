@@ -54,10 +54,10 @@ The Password Reset Page. Visit this page at **/auth/password/ReAlLyLoNgToKeNhErE
 
 ## Two-Factor Challenge
 
-The Password Confirmation Page. Visit this page at **/auth/two-factor-challenge**
+The Two-Factor Authentication Challenge Page. Visit this page at **/auth/two-factor-challenge**
 
 <include src="docs/auth-page-image.html" page="two-factor"></include><div class="p-5 rounded-b-lg border text-zinc-300 bg-zinc-900 border-zinc-700">If you are using 2FA and the user has enabled 2FA for their account, this is the page they will see after attempting to log in. Learn more about <a href="{ url('/docs/config/two-factor-auth') }">Two-Factor Authentication here</a>.</div>
 
 ---
 
-Next, lets dive into customizations and confiruations you can add to your authentication pages.
+Next, lets dive into the customizations you can implement in your authentication pages.
