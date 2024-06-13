@@ -58,6 +58,14 @@ The Two-Factor Authentication Challenge Page. Visit this page at **/auth/two-fac
 
 <include src="docs/auth-page-image.html" page="two-factor"></include><div class="p-5 rounded-b-lg border text-zinc-300 bg-zinc-900 border-zinc-700">If you are using 2FA and the user has enabled 2FA for their account, this is the page they will see after attempting to log in. Learn more about <a href="{ url('/docs/config/two-factor-auth') }">Two-Factor Authentication here</a>.</div>
 
+## Two-Factor Setup
+
+If you are not utilizing Jetstream, you'll want a way for users to enable two-factor authentication. You can do this by directing users to `/user/two-factor-authentication` or you can iframe this page into your app.
+
+## Logout
+
+You may also visit the `/auth/logout` route to logout and clear the user session.
+
 ---
 
 Next, lets dive into the customizations you can implement in your authentication pages.
