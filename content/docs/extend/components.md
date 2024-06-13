@@ -26,7 +26,7 @@ To start with the current components from the Auth package, you can publish them
 php artisan vendor:publish --tag=auth:components
 ```
 
-This command will publish the default components to `resources/views/components/app/elements`. Any components in this folder can be used as opposed to the default components. This gives you ultimate flexibility on how your authentication will look and feel.
+This command will publish the default components to `resources/views/components/app/elements`. Any components in this folder can be used as opposed to the default components. This gives you ultimate flexibility in customizing the appearance and behavior of your authentication pages.
 
 Next, you need to specify which component you want to override.
 

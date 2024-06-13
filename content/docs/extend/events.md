@@ -97,4 +97,4 @@ Here, you will be able to perform any type of functionality with the user before
 
 ## Additional Events and Functionality
 
-If you find yourself trying to add functionality somewhere in the authentication process and are unable to. Feel free to [Submit a PR](https://github.com/thedevdojo/auth/compare), or discuss it with us and we'll help you try and figure out the best approach.
+If you find yourself unable to add desired functionality to the authentication process, feel free to [Submit a PR](https://github.com/thedevdojo/auth/compare), or discuss it with us, and we'll help you find the best approach.

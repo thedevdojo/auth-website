@@ -44,7 +44,7 @@ The Password Confirmation Page. Visit this page at **/auth/confirm**
 
 The Password Reset Request Page. Visit this page at **/auth/password/reset**
 
-<include src="docs/auth-page-image.html" page="password-reset-request"></include><div class="p-5 rounded-b-lg border text-zinc-300 bg-zinc-900 border-zinc-700">When the user clicks the <strong>Forgot Password</strong> link, this is the page they will see, allowing them to <strong>Request</strong> a Password Reset.</div>
+<include src="docs/auth-page-image.html" page="password-reset-request"></include><div class="p-5 rounded-b-lg border text-zinc-300 bg-zinc-900 border-zinc-700">This page allows users to reset their password after clicking the reset link sent to their email.</div>
 
 ## Password Reset
 
