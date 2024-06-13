@@ -59,7 +59,7 @@ Route::middleware('guest')->group(function () {
 
 ## Enable the Name Field for Registration
 
-As Breeze depends on the `name` field for registration, you'll need to enable this option in the DevDojo Auth package.
+As Breeze depends on the `name` field for registration, you'll want to enable this option in the setup page.
 
 You can do that by visiting the `/auth/setup` route, clicking on `Settings`, and enabling the `Registration Include Name Field` option.
 

@@ -66,6 +66,16 @@ and you'll also need to comment out the `registration`, `resetPassword`, `emailV
 ],
 ```
 
-You may also want to toggle the `Registration Include Name Field` from the `/auth/setup` settings page. This will allow the user to add their name upon registration.
+## Enable the Name Field for Registration
+
+As Breeze depends on the `name` field for registration, you'll want to enable this option in the setup page.
+
+You can do that by visiting the `/auth/setup` route, clicking on `Settings`, and enabling the `Registration Include Name Field` option.
+
+## Conditionally Enable 2FA
+
+If you want to enable two-factor authentication on your site you can do that by visiting `/auth/setup` and clicking on the `settings` section. Then toggle the `Enable 2fa` option and you users will now see the ability to enable two-factor authentication from their edit profile page.
+
+---
 
 That's it! DevDojo Auth is now working with Jetstream. You can enable 2FA in the Auth settings page and it will enable/disable 2FA and work with the current Jetstream implementation.
