@@ -464,7 +464,9 @@ function setAllOthersToInactive(link){
     const tocLinks = document.querySelectorAll('.toc li');
     for(let i = 0; i < tocLinks.length; i++){
         if(tocLinks[i] != link){
-            tocLinks[i].classList.remove('active');
+            if(tocLinks[i].classList){
+                tocLinks[i].classList.remove('active');
+            }
         }
     }
 }

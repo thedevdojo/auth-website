@@ -118,6 +118,7 @@
                         </button> 
                         <button hx-get="{ url('/docs/getting-started') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="outerHTML transition:true" hx-push-url="true" @click="active='docs';  introductionActive = true; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-docs @mouseenter="calculateMarkerPosition($el); hovered='docs'"
                             :class="{ 'text-white' : active == 'docs', 'text-white/80': active != 'docs' }"
+                            @set-docs-active.window="calculateMarkerPosition($el)"
                             class="inline-flex relative flex-shrink-0 justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors md:py-2 group md:my-0 md:w-auto md:text-center">
                             <span>Documentation</span>
                             <span 
@@ -126,6 +127,7 @@
                         </button>
                         <button hx-get="{ url('/docs/install') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="outerHTML transition:true" hx-push-url="true" @click="active='install'; installationActive = true; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-install @mouseenter="calculateMarkerPosition($el); hovered='install'" 
                             :class="{ 'text-white' : active == 'install', 'text-white/80': active != 'install' }"
+                            @set-install-active.window="calculateMarkerPosition($el)"
                             class="inline-flex relative flex-shrink-0 justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors md:py-2 group md:my-0 md:w-auto md:text-center">
                             <span>Installation</span>
                             <span 
