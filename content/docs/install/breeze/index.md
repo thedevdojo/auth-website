@@ -55,7 +55,14 @@ Route::middleware('guest')->group(function () {
 });
 ```
 
-> You can remove the whole middleware group as well
+Additionally, inside the routes/auth.php, remove the authenticated routes, if present:
+```php
+Route::middleware('auth')->group(function () {
+    // remove all these routes, if present
+});
+```
+
+> You can remove the whole middleware groups as well
 
 ## Enable the Name Field for Registration
 
