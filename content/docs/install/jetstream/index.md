@@ -72,6 +72,51 @@ As Breeze depends on the `name` field for registration, you'll want to enable th
 
 You can do that by visiting the `/auth/setup` route, clicking on `Settings`, and enabling the `Registration Include Name Field` option.
 
+## Modify Inertia Links
+
+> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" /></svg><span>Only applicable when using Inertia Stack</span>
+  
+By default your application `Welcome.vue` file located inside of `resources/js/Pages/Welcome.*` will have the following component links using the `Link` component:
+
+```html
+<Link
+    :href="route('login')"
+    class="..."
+>
+    Log in
+</Link>
+
+<Link
+    v-if="canRegister"
+    :href="route('register')"
+    class="..."
+>
+    Register
+</Link>
+```
+
+You will need to replace these `Link` elements with an `a` element, so that it looks like this instead:
+
+```html
+<a
+    :href="route('login')"
+    class="..."
+>
+    Log in
+</a>
+
+<a
+    v-if="canRegister"
+    :href="route('register')"
+    class="..."
+>
+    Register
+</a>
+```
+
+This is because when the application uses the `Link` element, Inertia will open these links via XHR requests, but we need them to perform their own request and function like normal links (the traditional `a` tags).
+
+
 ## Conditionally Enable 2FA
 
 If you want to enable two-factor authentication on your site you can do that by visiting `/auth/setup` and clicking on the `settings` section. Then toggle the `Enable 2fa` option and you users will now see the ability to enable two-factor authentication from their edit profile page.

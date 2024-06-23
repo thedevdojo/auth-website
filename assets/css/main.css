@@ -142,3 +142,38 @@ font-family: 'Rota';
 .language-makefile .hljs-comment{
   color: #87e778;
 }
+
+.prose :where(blockquote):not(:where([class~="not-prose"],[class~="not-prose"] *)){
+  background: #292932;
+    text-decoration: none;
+    font-style: normal !important;
+    padding: 5px 10px;
+    line-height: auto;
+    border-radius: 4px;
+    border-left-color: #bcfb4f;
+    border-inline-start-color: #bcfb4f !important;
+    border-bottom: 1px dotted #39393f;
+    border-top: 1px dotted #39393f;
+    border-right: 1px dotted #39393f;
+
+  svg {
+    color: #bcfb4f;
+    margin-right:5px;
+    margin-bottom:-2px;
+  }
+
+  p{
+    margin-top:5px;
+    margin-bottom:5px;
+    @apply flex items-center;
+  }
+
+  span{
+    transform: translateY(1px);
+    display: inline-block;
+  }
+}
+
+.prose :where(blockquote p:first-of-type):not(:where([class~="not-prose"],[class~="not-prose"] *))::before{
+  content: '' !important;
+}
