@@ -66,7 +66,7 @@ You can now customize the Blade component as much as you would like. We are util
 You may have added some additional Tailwind classes in your custom component that are not included by the default components. To do this, you can run the following command:
 
 ```bash
-npx tailwindcss -c ./packages/devdojo/auth/tailwind.config.js -o ./public/auth/build/assets/styles.css
+npx tailwindcss -c ./vendor/devdojo/auth/tailwind.config.js -o ./public/auth/build/assets/styles.css
 ```
 
 You will now see your updated styles within your authentication pages. 
