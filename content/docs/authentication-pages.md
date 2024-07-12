@@ -25,7 +25,7 @@ The Login Page. Visit this page at **/auth/login**
 
 The Register Page. Visit this page at **/auth/register**
 
-<include src="docs/auth-page-image.html" page="register"></include><div class="p-5 rounded-b-lg border text-zinc-300 bg-zinc-900 border-zinc-700">The registration page is where a user can sign up for a new account. Additionally, you can require users to provide their full name and allow them so register from any <a href="{ url('/docs/config/social-providers') }">Social Provider</a>.
+<include src="docs/auth-page-image.html" page="register"></include><div class="p-5 rounded-b-lg border text-zinc-300 bg-zinc-900 border-zinc-700">The registration page is where a user can sign up for a new account. Additionally, you can require users to provide their full name and allow them to register from any <a href="{ url('/docs/config/social-providers') }">Social Provider</a>.
 </div>
 
 ## Verify Email
