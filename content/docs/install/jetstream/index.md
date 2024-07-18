@@ -119,7 +119,7 @@ This is because when the application uses the `Link` element, Inertia will open 
 
 ## Conditionally Enable 2FA
 
-If you want to enable two-factor authentication on your site you can do that by visiting `/auth/setup` and clicking on the `settings` section. Then toggle the `Enable 2fa` option and you users will now see the ability to enable two-factor authentication from their edit profile page.
+If you want to enable two-factor authentication on your site you can do that by visiting `devdojo/auth` and clicking on the `settings` section. Then toggle the `Enable 2fa` option and you users will now see the ability to enable two-factor authentication from their edit profile page.
 
 ---
 
