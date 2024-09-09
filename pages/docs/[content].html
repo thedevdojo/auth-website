@@ -27,7 +27,7 @@
 
                 <div class="flex flex-col gap-5 justify-between items-stretch my-8 md:flex-row">
                     <If condition="frontmatter.prevURL != 'undefined' && frontmatter.prevURL != null">
-                        <button hx-get="{frontmatter.prevURL}" hx-target="#docs-content" hx-select="#docs-content" hx-swap="outerHTML transition:true" hx-push-url="true" @click="scrollTop(); route=$el.getAttribute('hx-get')"
+                        <button hx-get="{ url('{frontmatter.prevURL}') }" hx-target="#docs-content" hx-select="#docs-content" hx-swap="outerHTML transition:true" hx-push-url="true" @click="scrollTop(); route=$el.getAttribute('hx-get')"
                             class="flex items-center p-4 w-full rounded-md border ease-linear md:w-1/2 duration-50 border-neutral-700 hover:border-yellow-400 text-neutral-400 group hover:text-yellow-400">
                             <svg class="mr-4 ml-1.5 w-6 h-6 duration-300 ease-out group-hover:-translate-x-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="none"><path d="M3.75 12h16.5m-16.5 0l6.5 6.25M3.75 12l6.5-6.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
                             <div class="flex flex-col justify-center items-start">
