@@ -80,64 +80,54 @@
         }, 100);
     " 
     @close-mobile-menu.window="mobileMenu=false" 
-    class="relative w-full z-[999]">
-    <div class="flex cursor-pointer w-full absolute z-[999] group text-white bg-[#a9fd02]  border-r border-b  border-zinc-800">
-        <div  id="top-bar" class="flex justify-between items-center px-6 mx-auto w-full max-w-7xl h-10 duration-300 ease-out md:px-8" x-cloak>
-            <a href="https://devdojo.com" class="flex relative items-center pl-5 h-full font-semibold text-black group-hover:opacity-100 lg:w-auto lg:items-center lg:justify-center">
-                <span class="overflow-hidden absolute left-0 w-4 h-4 transition duration-300 transform -rotate-180 -translate-x-0.5 ease group-hover:rotate-0 group-hover:translate-x-0 group-hover:w-4">
-                    <svg  class="w-4 h-4"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 101" fill="none"><path fill="currentColor" d="m93.178 50.665-32.715-50h35.29l34.003 50-34.002 50h-35.29l32.714-50Zm-92.992 50 32.715-50L.186.665h35.29l34.003 50-34.002 50H.187Z"/></svg>
-                </span>
-                <span class="mx-auto ml-1 text-xs leading-none select-none">Back to DevDojo Home</span>
-            </a>
-        </div>
-    </div>
-    <header class="box-border absolute z-[102] flex translate-y-10 items-center w-full h-20 leading-10 text-center bg-opacity-100 md:bg-opacity-50 bg-gradient-to-b">
+    class="w-full z-[999] relative top-0 border-t border-stone-800">
+    <header class="box-border flex absolute items-center w-full h-20 leading-10 text-center z-102">
        
-        <div id="nav-container"  class="px-6 mx-auto w-full max-w-7xl leading-10 text-center duration-300 ease-out md:px-8" x-cloak>
+        <div id="nav-container"  class="px-5 mx-auto w-full max-w-7xl leading-10 text-center duration-300 ease-out" x-cloak>
             <div class="box-border flex flex-wrap justify-between items-center text-neutral-900">
-                <div class="flex relative items-center w-auto leading-10 lg:flex-grow-0 lg:flex-shrink-0 lg:text-left">
+                <div class="flex relative items-center w-auto leading-10 lg:grow-0 lg:shrink-0 lg:text-left">
                     <include src="logo.html"></include>
                 </div>
                 <div 
-                    :class="{ mobileMenu : 'flex z-[99] flex-col', 'md:flex hidden' : !mobileMenu }"
-                    class="absolute z-50 flex-col items-center justify-center w-full h-auto text-xs font-semibold text-center text-gray-400 -translate-x-1/2 translate-y-[154px] md:translate-y-0 md:rounded-lg backdrop-blur-sm md:w-auto md:h-10 left-1/2 md:flex-row md:items-center" x-cloak
+                    :class="{ mobileMenu : 'flex z-99 flex-col', 'md:flex hidden' : !mobileMenu }"
+                    class="absolute z-50 flex-col items-center justify-center w-full h-auto text-xs font-semibold text-center text-gray-400 -translate-x-1/2 translate-y-[154px] md:translate-y-0 md:rounded-lg backdrop-blur-xs md:w-auto md:h-10 left-1/2 md:flex-row md:items-center" x-cloak
                 >
-                    <div class="absolute top-0 right-0 w-full h-px bg-gradient-to-r from-transparent to-transparent opacity-60 -translate-y-px via-white/30"></div>
-                    <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent to-transparent opacity-60 translate-y-px via-white/20"></div>
+                    <div class="absolute top-0 right-0 w-full h-px from-transparent to-transparent opacity-60 -translate-y-px bg-linear-to-r via-white/30"></div>
+                    <div class="absolute bottom-0 left-0 w-full h-px from-transparent to-transparent opacity-60 translate-y-px bg-linear-to-r via-white/20"></div>
                     <div id="marker" x-init="setTimeout(function(){ $el.classList.remove('opacity-0'); }, 300);" class="absolute opacity-0 top-0 z-20 left-0 w-auto h-auto rounded-lg bg-white/20 md:bg-white/[7%] backdrop-blur-lg ease-out duration-300" 
                         :style="'width:' + markerPosition.width + 'px; height:' + markerPosition.height + 'px; top:' + markerPosition.top + 'px; left:' + markerPosition.left + 'px;'"
                         x-cloak></div>
                     <div id="nav-items" class="relative z-50 flex-col  items-center justify-center w-full h-auto px-2 py-[5px] text-xs font-semibold text-center text-gray-400 md:rounded-lg md:ring-1 ring-gray-200/[15%] bg-black/90 md:bg-white/[8%] md:w-auto md:h-10 md:flex-row md:items-center">
                         <button hx-get="{ url('/') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="outerHTML transition:true" hx-push-url="true" data-home @click="active='home'; fullWidth=false; scrollTop(); resetProgressWidth(); mobileMenu=false" @mouseenter="calculateMarkerPosition($el); hovered='home'" 
                             :class="{ 'text-white' : active == 'home', 'text-white/80': active != 'home' }"
-                            class="inline-flex relative flex-shrink-0 justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors md:py-2 group md:my-0 md:w-auto md:text-center">
+                            class="inline-flex relative justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors shrink-0 md:py-2 group md:my-0 md:w-auto md:text-center">
                             <span>Home</span>
                             <span 
                                 :class="{ 'w-full left-0' : active=='home', 'w-0 left-1/2' : active!='home' }"    
-                                class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-gradient-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
+                                class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-linear-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
                         </button> 
                         <button hx-get="{ url('/docs/getting-started') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="outerHTML transition:true" hx-push-url="true" @click="active='docs';  introductionActive = true; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-docs @mouseenter="calculateMarkerPosition($el); hovered='docs'"
                             :class="{ 'text-white' : active == 'docs', 'text-white/80': active != 'docs' }"
                             @set-docs-active.window="calculateMarkerPosition($el)"
-                            class="inline-flex relative flex-shrink-0 justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors md:py-2 group md:my-0 md:w-auto md:text-center">
+                            class="inline-flex relative justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors shrink-0 md:py-2 group md:my-0 md:w-auto md:text-center">
                             <span>Documentation</span>
                             <span 
                                 :class="{ 'w-full left-0' : active=='docs', 'w-0 left-1/2' : active!='docs' }"    
-                                class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-gradient-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
+                                class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-linear-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
                         </button>
                         <button hx-get="{ url('/docs/install') }" hx-target="#site-content" hx-select="#site-content" hx-ext="alpine-morph" hx-swap="outerHTML transition:true" hx-push-url="true" @click="active='install'; installationActive = true; fullWidth=true; scrollTop(); resetProgressWidth(); route=$el.getAttribute('hx-get');  mobileMenu=false" data-install @mouseenter="calculateMarkerPosition($el); hovered='install'" 
                             :class="{ 'text-white' : active == 'install', 'text-white/80': active != 'install' }"
                             @set-install-active.window="calculateMarkerPosition($el)"
-                            class="inline-flex relative flex-shrink-0 justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors md:py-2 group md:my-0 md:w-auto md:text-center">
+                            class="inline-flex relative justify-center items-center px-3 py-3 my-2 w-full h-full leading-tight text-center rounded-lg transition-colors shrink-0 md:py-2 group md:my-0 md:w-auto md:text-center">
                             <span>Installation</span>
                             <span 
                                 :class="{ 'w-full left-0' : active=='install', 'w-0 left-1/2' : active!='install' }"    
-                                class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-gradient-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
+                                class="absolute bottom-0 px-1.5 h-px duration-300 ease-out translate-y-1.5"><span class="block relative w-full h-px bg-linear-to-r md:from-white/0 md:via-white/40 md:to-white/0"></span></span>
                         </button> 
                     </div>
                 
                 </div>
-                <div  class="flex relative items-center space-x-3 font-medium leading-10 md:flex-grow-0 md:flex-shrink-0 md:mt-0 md:text-right lg:flex-grow-0 lg:flex-shrink-0">
+                <div  class="flex relative items-center space-x-3 font-medium leading-10 md:grow-0 md:shrink-0 md:mt-0 md:text-right lg:grow-0 lg:shrink-0">
                     <button @click="leftSidebar=!leftSidebar; $el.classList.add('scale-90'); setTimeout(function(){ $el.classList.remove('scale-90') }, 100)" class="block p-2 h-full rounded-lg duration-100 ease-out group md:hidden hover:bg-neutral-800/70">
                         <div class="flex flex-col justify-center items-center w-6 h-6 transition-all duration-300 linear">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full text-white currentColor">

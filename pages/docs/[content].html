@@ -1,11 +1,11 @@
 <layout title="{frontmatter.title}" src="main.html">
 
-    <div  class="flex items-start px-6 pt-[110px] mx-auto max-w-7xl md:pt-28 md:px-7 docs">
+    <div  class="flex items-start px-5 pt-[110px] mx-auto max-w-7xl md:pt-20 docs">
 
-        <div x-show="leftSidebar" @click="leftSidebar=false" class="block w-screen h-screen z-[9998] absolute inset-0 bg-black/50"></div>
+        <div x-show="leftSidebar" @click="leftSidebar=false" class="block absolute inset-0 w-screen h-screen z-9998 bg-black/50"></div>
         <div 
             :class="{ 'translate-x-0  bg-black/90 border-r border-neutral-800/20 md:bg-transparent w-full': leftSidebar, 'md:-translate-x-0 border-transparent  w-64 -translate-x-full': !leftSidebar }"
-            class="fixed  md:sticky flex-shrink-0 z-[9999] md:left-auto left-0 top-0 md:transition-none md:top-[17px] md:mt-[17px] text-white md:-ml-0.5 h-full  xl:w-72" x-cloak>
+            class="fixed  md:sticky shrink-0 z-9999 md:left-auto left-0 top-0 md:transition-none md:top-[17px] md:mt-[17px] text-white md:-ml-0.5 h-full  xl:w-72" x-cloak>
             
             <div class="overflow-scroll px-5 pt-5 pb-10 h-full md:pt-2 md:pl-0.5 md:pr-8 xl:pr-16 no-scrollbar">
                 <include src="mobilemenu.html"></include>

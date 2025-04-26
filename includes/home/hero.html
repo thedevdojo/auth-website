@@ -1,16 +1,17 @@
 <header class="flex overflow-hidden relative flex-col items-center min-h-screen justify-stretch">
     
     
-    <div class="absolute inset-0 w-full h-full bg-black opacity-20 z-[101]"></div>
-    <div class="absolute inset-0 w-full h-full bg-gradient-to-b from-black via-transparent to-black opacity-100 z-[101]"></div>
+    <div class="absolute inset-0 w-full h-full bg-black opacity-20 z-[997]"></div>
+    <div class="absolute inset-0 w-full h-full from-black via-transparent to-black opacity-100 bg-linear-to-b z-[997]"></div>
     
-    <div class="absolute inset-0 w-full h-full bg-black opacity-60 z-[99]"></div>
+    <div class="absolute inset-0 w-full h-full bg-black opacity-60 z-[996]"></div>
+    
         <include src="marquee-left.html"></include>
         <include src="marquee-right.html"></include>
           
     <!-- BG Image -->
     <!-- Container -->
-    <div class="px-5 mx-auto w-full max-w-7xl h-full flex-1 flex flex-col justify-between md:px-10 pt-24 relative z-[103]">
+    <div class="flex relative flex-col flex-1 justify-between px-5 pt-24 mx-auto w-full max-w-7xl h-full md:px-10 z-[998]">
         <div class="relative w-full h-px"></div>
         <!-- Heading Content -->
         <div class="pt-16 mx-auto max-w-5xl text-left lg:pt-24 sm:text-center">
@@ -19,8 +20,8 @@
             <!-- Seamless & Configurable Authentication for Laravel -->
             <p class="mx-auto mb-8 max-w-lg text-sm font-light leading-relaxed text-white opacity-80 sm:text-base lg:text-xl lg:mb-12">Easily add authentication features with the flip of a switch!<br class="hidden md:inline"> Then, customize it to fit your brand. </p>
 
-            <div class="relative hover:scale-[1.03] ease-out mb-0 duration-300 bg-pink-200 rounded-lg w-full sm:max-w-sm mx-auto [background:linear-gradient(45deg,#090912,theme(colors.black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.900/.48)_80%,_#75a522_86%,_#bcfb4f_90%,_#75a522_94%,_theme(colors.slate.900/.48))_border-box] border border-transparent animate-border">
-                <div class="relative mx-auto w-full h-auto font-mono text-base font-medium text-left text-white bg-gradient-to-br to-black rounded-lg border shadow-sm duration-300 ease-out sm:inline-block border-zinc-700 radial-background group from-neutral-900">
+            <div class="relative hover:scale-[1.03] ease-out mb-0 duration-300 bg-pink-200 rounded-lg w-full sm:max-w-sm mx-auto [background:linear-gradient(45deg,#090912,--theme(--color-black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),--theme(--color-slate-900/.48)_80%,#75a522_86%,#bcfb4f_90%,#75a522_94%,--theme(--color-slate-900/.48))_border-box] border border-transparent animate-border">
+                <div class="relative mx-auto w-full h-auto font-mono text-base font-medium text-left text-white to-black rounded-lg border duration-300 ease-out bg-linear-to-br shadow-xs sm:inline-block border-zinc-700 radial-background group from-neutral-900">
                     <div class="flex items-center w-full p-[3px] border-b border-zinc-800 h-9 bg-zinc-100/10 opacity-100">
                         <div class="flex justify-start items-center pr-1.5 pl-1.5 space-x-0.5 w-full h-full">
                             <div class="flex left-0 items-center px-1.5 space-x-1.5 w-auto h-8">
@@ -46,7 +47,7 @@
                                 }, 3000);
                             }
                         }" class="flex relative z-20 items-center">
-                        <button @click="copyToClipboard();" class="hidden justify-center items-center px-2 py-1 w-auto h-8 text-xs rounded-md border ease-out cursor-pointer sm:flex duration-50 active:scale-100 hover:scale-105 border-white/10 bg-zinc-800 hover:bg-zinc-700 focus:outline-none text-neutral-500 hover:text-neutral-600 group">
+                        <button @click="copyToClipboard();" class="hidden justify-center items-center px-2 py-1 w-auto h-8 text-xs rounded-md border ease-out cursor-pointer sm:flex duration-50 active:scale-100 hover:scale-105 border-white/10 bg-zinc-800 hover:bg-zinc-700 focus:outline-hidden text-neutral-500 hover:text-neutral-600 group">
                             <svg x-show="!copyNotification" class="w-4 h-4 stroke-current text-zinc-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>                  
                             <svg x-show="copyNotification" class="w-4 h-4 text-[#b4fd4f] stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" x-cloak><path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75" /></svg>
                         </button>

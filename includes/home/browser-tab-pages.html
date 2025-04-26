@@ -6,7 +6,7 @@
         </div>
         <div class="flex relative justify-center items-center py-0 w-full">
             <div class="overflow-hidden absolute inset-0 z-10 w-full h-full">
-                <div class="absolute inset-0 z-30 w-full bg-gradient-to-b from-black to-black via-zinc-900"></div>
+                <div class="absolute inset-0 z-30 w-full bg-linear-to-b from-black to-black via-zinc-900"></div>
             </div>
             <div class="mx-auto w-full max-w-6xl h-[700px] md:h-[740px] z-40 md:mb-20">
                 <browser-el x-data="{ 
@@ -63,7 +63,7 @@
                             interacted=true;
                         });
                     " class="flex z-20 flex-col mx-auto w-full h-full rounded-xl duration-300 ease-out scale-100">
-                    <div class="flex flex-shrink-0 items-center w-full h-10 rounded-t-lg bg-zinc-200">
+                    <div class="flex shrink-0 items-center w-full h-10 rounded-t-lg bg-zinc-200">
                         <div class="flex items-center px-3.5 space-x-1.5 h-8">
                             <div class="w-2.5 h-2.5 bg-red-500 rounded-full"></div>
                             <div class="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
@@ -79,7 +79,7 @@
                             <include src="home/tab.html" title="two-factor"></include>
                         </nav>
                     </div>
-                    <div class="flex flex-shrink-0 items-center px-2 py-1.5 space-x-0.5 h-auto bg-white">
+                    <div class="flex shrink-0 items-center px-2 py-1.5 space-x-0.5 h-auto bg-white">
                         <button @click="goToPrevious()" class="flex justify-center items-center w-8 h-8 rounded-full text-zinc-600 hover:text-zinc-800 hover:bg-zinc-100">
                             <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M228 128a12 12 0 0 1-12 12H69l51.52 51.51a12 12 0 0 1-17 17l-72-72a12 12 0 0 1 0-17l72-72a12 12 0 0 1 17 17L69 116h147a12 12 0 0 1 12 12Z"/></svg>
                         </button>

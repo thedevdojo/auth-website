@@ -1,6 +1,6 @@
-<button x-on:click="active='{title}'" :class="{ 'bg-white text-black' : active == '{title}', 'bg-zinc-100/70 text-zinc-500 hover:bg-zinc-100' : active != '{title}', 'pr-7' : ('{title}' == 'register' && !interacted) }" class="block relative flex-shrink-0 items-center px-5 h-full text-xs rounded-t-lg duration-300 ease-out lg:flex">
+<button x-on:click="active='{title}'" :class="{ 'bg-white text-black' : active == '{title}', 'bg-zinc-100/70 text-zinc-500 hover:bg-zinc-100' : active != '{title}', 'pr-7' : ('{title}' == 'register' && !interacted) }" class="block relative shrink-0 items-center px-5 h-full text-xs rounded-t-lg duration-300 ease-out lg:flex">
     <div class="block hidden mr-1 -ml-1 w-3 h-3 current-color lg:inline" x-html="icons['{title}']"></div>
-    <span x-text="uppercase('{title}')" class="flex-shrink-0"></span>
+    <span x-text="uppercase('{title}')" class="shrink-0"></span>
     <span x-show="'{title}'=='register' && !interacted" class="absolute top-0 right-0 mt-[9px] mr-2" x-cloak>
         <span class="flex absolute justify-center items-center w-4 h-4 rounded-full border-4 border-red-500 animate-ping bg-[#a9fd02"></span>
         <span class="flex justify-center items-center w-4 h-4 rounded-full border-4 border-red-400 bg-zinc-100"></span>
