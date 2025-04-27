@@ -43,6 +43,12 @@ After installing the socialite providers you want to use, you can then move on t
 
 To setup a specific social auth provider, you will need to retrieve two keys for each. The `CLIENT_ID` and the `CLIENT_SECRET`. These credentials can be retrieved from each social network and each network has a different process for retrieving these keys. We will not go into detail on how to retrieve these keys; however, you can do a search for `Setting up oAuth with network` and you should find steps that will help you retrieve each of these.
 
+For some social providers, you also need to add a callback URL. The callback URL should correspond to the following route:
+
+```GET   auth/{driver}/callback```
+
+This URL is used by the social network to redirect users back to your application after they have authenticated. 
+
 ## Add keys to your .env
 
 When you have your `CLIENT_ID` and `CLIENT_SECRET` for each social provider, you will need to open your `.env` file and add those credentials, like so:
