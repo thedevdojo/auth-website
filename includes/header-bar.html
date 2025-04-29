@@ -13,17 +13,26 @@
         clearTimeout(this.closeTimeout)
     }
 }"
-class="relative z-[999999] duration-300 select-none ease-out" :class="{ '-mt-11': collapsed }"
+class="z-[999999] duration-300 select-none ease-out fixed top-0" :class="{ '-mt-11': collapsed }"
     x-init="
         window.addEventListener('load', function() {
             isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-        });">
+        });
+            
+        $watch('collapsed', (value) => {
+            if (value) {
+                $dispatch('header-bar-collapsed');
+            } else {
+                $dispatch('header-bar-expanded');
+            }
+        });
+">
 
     <div x-show="communityOpen || platformOpen || moreOpen" x-on:click="platformOpen=false; communityOpen=false; moreOpen=false;" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" :class="{ 'backdrop-blur' : platformOpen || communityOpen || moreOpen }" class="fixed inset-0 z-20 bg-black/50" x-cloak></div>
 
     <div x-on:mouseleave="communityOpen=false; platformOpen=false; moreOpen=false;" class="relative">
         <div x-show="platformOpen" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="-translate-y-full" x-transition:enter-end="translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="translate-y-0" x-transition:leave-end="-translate-y-full" @mouseenter="cancelDebounce(); platformOpen=true" @mouseleave="debounceClose('platformOpen')" class="absolute top-0 z-40 pt-11 pb-5 w-screen h-auto border-b bg-stone-950 border-black/10" x-cloak>
-    <div x-show="platformOpen" x-transition:enter="transition ease-out delay-200 duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" class="relative h-full w-full pl-[45px] max-w-7xl mx-auto duration-300 ease-out">
+    <div x-show="platformOpen" x-transition:enter="transition ease-out delay-200 duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" class="relative h-full w-full pl-[45px] max-w-full mx-auto duration-300 ease-out">
         <div class="flex absolute top-0 left-0 text-xs flex-col font-semibold text-white opacity-40 rotate-90 -translate-x-[11px] translate-y-[26px]">
             PLATFORM
         </div>
@@ -66,25 +75,11 @@ class="relative z-[999999] duration-300 select-none ease-out" :class="{ '-mt-11'
             <span>Pines</span>
             <svg class="ml-1 w-2.5 h-2.5 duration-200 ease-out transform -translate-x-1 stroke-current group-hover:translate-x-0" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="svg" transform="translate(0.666667, 2.333333)" stroke="currentColor" stroke-width="2.4"><g><polyline class="opacity-0 transition-all duration-200 ease-out delay-0 group-hover:opacity-100" points="5.33333333 0 10.8333333 5.5 5.33333333 11"></polyline><line class="opacity-0 transition-all duration-200 ease-out transform -translate-x-1 group-hover:ml-0 group-hover:translate-x-0 group-hover:opacity-100" x1="10.8333333" y1="5.5" x2="0.833333333" y2="5.16666667"></line></g></g></g></svg>
         </h3>
-        <p class="text-xs leading-none text-white/50 group-hover:text-white/70">Alpine &amp;amp; Tailwind UI Library</p>
+        <p class="text-xs leading-none text-white/50 group-hover:text-white/70">Alpine &amp; Tailwind UI Library</p>
     </div>
 </div>
                 </li>
                             <li x-show="platformOpen" x-transition:enter="transition ease-in-out delay-[300ms]  duration-300" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0">
-                    <div onclick="window.location.href='https://static.devdojo.com/docs'" class="flex items-center w-full opacity-95 transition-all duration-75 ease-out cursor-pointer group hover:opacity-100">
-    <div class="flex flex-shrink-0 justify-center items-center mr-2.5 w-10 h-10 bg-gradient-to-br rounded-lg border opacity-90  bg-white/[10%] border-white/20 group-hover:opacity-100">
-        <span class="w-4 h-4 text-white fill-current"><svg class="w-full h-full fill-current" viewBox="0 0 55 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m37.437.807-9.399 41.176h24.915c1.044 0 1.64 1.193 1.044 2.088L17.744 99.718c-.298.597-1.193.15-1.044-.447l8.951-43.115H1.781c-1.044 0-1.64-1.194-1.044-2.09L36.542.21c.15-.447 1.044-.149.895.597Z" fill="currentColor"></path></svg></span>
-    </div>
-    <div class="flex relative flex-col justify-center items-start h-10">
-        <h3 class="flex relative items-center -mt-px mb-1 text-sm font-semibold leading-none text-white/90 group-hover:text-white/100">
-            <span>Static</span>
-            <svg class="ml-1 w-2.5 h-2.5 duration-200 ease-out transform -translate-x-1 stroke-current group-hover:translate-x-0" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="svg" transform="translate(0.666667, 2.333333)" stroke="currentColor" stroke-width="2.4"><g><polyline class="opacity-0 transition-all duration-200 ease-out delay-0 group-hover:opacity-100" points="5.33333333 0 10.8333333 5.5 5.33333333 11"></polyline><line class="opacity-0 transition-all duration-200 ease-out transform -translate-x-1 group-hover:ml-0 group-hover:translate-x-0 group-hover:opacity-100" x1="10.8333333" y1="5.5" x2="0.833333333" y2="5.16666667"></line></g></g></g></svg>
-        </h3>
-        <p class="text-xs leading-none text-white/50 group-hover:text-white/70">Build a simple static website</p>
-    </div>
-</div>
-                </li>
-                            <li x-show="platformOpen" x-transition:enter="transition ease-in-out delay-[375ms]  duration-300" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0">
                     <div onclick="window.location.href='/auth'" class="flex items-center w-full opacity-95 transition-all duration-75 ease-out cursor-pointer group hover:opacity-100">
     <div class="flex flex-shrink-0 justify-center items-center mr-2.5 w-10 h-10 bg-gradient-to-br rounded-lg border opacity-90  bg-white/[10%] border-white/20 group-hover:opacity-100">
         <span class="w-4 h-4 text-white fill-current"><svg class="w-full h-full fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 180" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M68 0C42.718 21.495 26.87 22.5.5 22.5v86.512c0 13.757 3.814 23.462 11.155 31.898l15.773-30.346.31-.595 4.554-8.766 36.292-69.822 36.292 69.822c18.854 2.354 27.804 8.037 27.804 8.037a197.707 197.707 0 0 0-21.705 1.189l-1.234.135c-1.211.142-2.421.293-3.615.452a204.737 204.737 0 0 0-37.542 8.734c-23.521 7.847-41.45 18.461-52.285 25.925 8.372 7.754 19.965 14.828 34.518 23.709C56.151 172.639 61.883 176.137 68 180c6.117-3.863 11.849-7.361 17.183-10.616 14.844-9.059 26.607-16.237 35.015-24.174a184.747 184.747 0 0 0-31.7-17.676 202.999 202.999 0 0 1 27.095-5.723l9.48 18.245c6.864-8.238 10.427-17.749 10.427-31.044V22.5C109.13 22.5 93.282 21.495 68 0Zm.584 101.354c-6.203.713-12.875 1.775-20.033 3.289l2.31-4.431 17.723-34.106 17.724 34.106c-5.924.08-11.84.461-17.724 1.142Z" clip-rule="evenodd"/></svg></span>
@@ -94,11 +89,11 @@ class="relative z-[999999] duration-300 select-none ease-out" :class="{ '-mt-11'
             <span>Auth</span>
             <svg class="ml-1 w-2.5 h-2.5 duration-200 ease-out transform -translate-x-1 stroke-current group-hover:translate-x-0" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="svg" transform="translate(0.666667, 2.333333)" stroke="currentColor" stroke-width="2.4"><g><polyline class="opacity-0 transition-all duration-200 ease-out delay-0 group-hover:opacity-100" points="5.33333333 0 10.8333333 5.5 5.33333333 11"></polyline><line class="opacity-0 transition-all duration-200 ease-out transform -translate-x-1 group-hover:ml-0 group-hover:translate-x-0 group-hover:opacity-100" x1="10.8333333" y1="5.5" x2="0.833333333" y2="5.16666667"></line></g></g></g></svg>
         </h3>
-        <p class="text-xs leading-none text-white/50 group-hover:text-white/70">Plug-in Play Authentication for Laravel</p>
+        <p class="text-xs leading-none text-white/50 group-hover:text-white/70">Plug&#039;n Play Authentication for Laravel</p>
     </div>
 </div>
                 </li>
-                            <li x-show="platformOpen" x-transition:enter="transition ease-in-out delay-[450ms]  duration-300" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0">
+                            <li x-show="platformOpen" x-transition:enter="transition ease-in-out delay-[375ms]  duration-300" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0">
                     <div onclick="window.location.href='/markdownx/docs'" class="flex items-center w-full opacity-95 transition-all duration-75 ease-out cursor-pointer group hover:opacity-100">
     <div class="flex flex-shrink-0 justify-center items-center mr-2.5 w-10 h-10 bg-gradient-to-br rounded-lg border opacity-90  bg-white/[10%] border-white/20 group-hover:opacity-100">
         <span class="w-4 h-4 text-white fill-current"><svg class="w-full h-full fill-current" viewBox="0 0 1024 640" height="640" xmlns="http://www.w3.org/2000/svg"><path d="M950.154 0C990.875 0 1024 33.127 1024 73.846v492.308c0 40.721-33.125 73.846-73.846 73.846H73.846C33.127 640 0 606.875 0 566.154V73.846C0 33.127 33.127 0 73.846 0zM596.331 97H469l176.67 211L469 519h127.331L773 308 596.331 97zm200.444 240L733 412.749 822.454 519H950L796.775 337zM491.882 163.875l-103.967.102-77.974 103.966-77.975-103.966H128v311.898h103.966v-155.95l77.975 99.968 77.974-99.967v74.725l-23.085-.101 75.325 105.973 76.166-105.973h-24.44V163.875zM950 97H822.454L733 203.252 796.775 279 950 97z" fill-rule="nonzero"></path></svg></span>
@@ -109,6 +104,20 @@ class="relative z-[999999] duration-300 select-none ease-out" :class="{ '-mt-11'
             <svg class="ml-1 w-2.5 h-2.5 duration-200 ease-out transform -translate-x-1 stroke-current group-hover:translate-x-0" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="svg" transform="translate(0.666667, 2.333333)" stroke="currentColor" stroke-width="2.4"><g><polyline class="opacity-0 transition-all duration-200 ease-out delay-0 group-hover:opacity-100" points="5.33333333 0 10.8333333 5.5 5.33333333 11"></polyline><line class="opacity-0 transition-all duration-200 ease-out transform -translate-x-1 group-hover:ml-0 group-hover:translate-x-0 group-hover:opacity-100" x1="10.8333333" y1="5.5" x2="0.833333333" y2="5.16666667"></line></g></g></g></svg>
         </h3>
         <p class="text-xs leading-none text-white/50 group-hover:text-white/70">The Markdown editor of the future</p>
+    </div>
+</div>
+                </li>
+                            <li x-show="platformOpen" x-transition:enter="transition ease-in-out delay-[450ms]  duration-300" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0">
+                    <div onclick="window.location.href='https://static.devdojo.com/docs'" class="flex items-center w-full opacity-95 transition-all duration-75 ease-out cursor-pointer group hover:opacity-100">
+    <div class="flex flex-shrink-0 justify-center items-center mr-2.5 w-10 h-10 bg-gradient-to-br rounded-lg border opacity-90  bg-white/[10%] border-white/20 group-hover:opacity-100">
+        <span class="w-4 h-4 text-white fill-current"><svg class="w-full h-full fill-current" viewBox="0 0 55 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m37.437.807-9.399 41.176h24.915c1.044 0 1.64 1.193 1.044 2.088L17.744 99.718c-.298.597-1.193.15-1.044-.447l8.951-43.115H1.781c-1.044 0-1.64-1.194-1.044-2.09L36.542.21c.15-.447 1.044-.149.895.597Z" fill="currentColor"></path></svg></span>
+    </div>
+    <div class="flex relative flex-col justify-center items-start h-10">
+        <h3 class="flex relative items-center -mt-px mb-1 text-sm font-semibold leading-none text-white/90 group-hover:text-white/100">
+            <span>Static</span>
+            <svg class="ml-1 w-2.5 h-2.5 duration-200 ease-out transform -translate-x-1 stroke-current group-hover:translate-x-0" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="svg" transform="translate(0.666667, 2.333333)" stroke="currentColor" stroke-width="2.4"><g><polyline class="opacity-0 transition-all duration-200 ease-out delay-0 group-hover:opacity-100" points="5.33333333 0 10.8333333 5.5 5.33333333 11"></polyline><line class="opacity-0 transition-all duration-200 ease-out transform -translate-x-1 group-hover:ml-0 group-hover:translate-x-0 group-hover:opacity-100" x1="10.8333333" y1="5.5" x2="0.833333333" y2="5.16666667"></line></g></g></g></svg>
+        </h3>
+        <p class="text-xs leading-none text-white/50 group-hover:text-white/70">Build a simple static website</p>
     </div>
 </div>
                 </li>
@@ -136,7 +145,7 @@ class="relative z-[999999] duration-300 select-none ease-out" :class="{ '-mt-11'
             <span>Learn to Code</span>
             <svg class="ml-1 w-2.5 h-2.5 duration-200 ease-out transform -translate-x-1 stroke-current group-hover:translate-x-0" viewBox="0 0 13 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="svg" transform="translate(0.666667, 2.333333)" stroke="currentColor" stroke-width="2.4"><g><polyline class="opacity-0 transition-all duration-200 ease-out delay-0 group-hover:opacity-100" points="5.33333333 0 10.8333333 5.5 5.33333333 11"></polyline><line class="opacity-0 transition-all duration-200 ease-out transform -translate-x-1 group-hover:ml-0 group-hover:translate-x-0 group-hover:opacity-100" x1="10.8333333" y1="5.5" x2="0.833333333" y2="5.16666667"></line></g></g></g></svg>
         </h3>
-        <p class="text-xs leading-none text-white/50 group-hover:text-white/70">learn to code &amp;amp; design</p>
+        <p class="text-xs leading-none text-white/50 group-hover:text-white/70">learn to code &amp; design</p>
     </div>
 </div>
                 </li>
@@ -165,7 +174,7 @@ class="relative z-[999999] duration-300 select-none ease-out" :class="{ '-mt-11'
     </div>
 </div>
         <div x-show="communityOpen" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="-translate-y-full" x-transition:enter-end="translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="translate-y-0" x-transition:leave-end="-translate-y-full" @mouseenter="cancelDebounce(); communityOpen=true" @mouseleave="debounceClose('communityOpen')" class="absolute top-0 z-40 pt-11 pb-5 w-screen h-auto border-b bg-stone-950 border-black/10" x-cloak>
-    <div x-show="communityOpen" x-transition:enter="transition ease-out delay-200 duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" class="relative h-full w-full pl-[53px] max-w-7xl mx-auto duration-300 ease-out">
+    <div x-show="communityOpen" x-transition:enter="transition ease-out delay-200 duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" class="relative h-full w-full pl-[53px] max-w-full mx-auto duration-300 ease-out">
         <div class="absolute left-0 top-0 -ml-[17px] flex translate-y-9 rotate-90 flex-col font-semibold text-xs text-white opacity-30">
             COMMUNITY
         </div>
@@ -196,22 +205,19 @@ class="relative z-[999999] duration-300 select-none ease-out" :class="{ '-mt-11'
     </div>
 </div>
         <div x-show="moreOpen" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="-translate-y-full" x-transition:enter-end="translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="translate-y-0" x-transition:leave-end="-translate-y-full" @mouseenter="cancelDebounce(); moreOpen=true" @mouseleave="debounceClose('moreOpen')" class="absolute top-0 z-40 pt-11 pb-5 w-screen h-auto border-b bg-stone-950 border-black/10" x-cloak>
-    <div x-show="moreOpen" x-transition:enter="transition ease-out delay-200 duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" class="relative h-full w-full pl-[52px] max-w-7xl mx-auto duration-300 ease-out">
+    <div x-show="moreOpen" x-transition:enter="transition ease-out delay-200 duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" class="relative h-full w-full pl-[52px] max-w-full mx-auto duration-300 ease-out">
         <div class="absolute left-0 top-0 ml-[3px] flex translate-y-3.5 rotate-90 flex-col font-semibold text-xs text-white opacity-30">
             MORE
         </div>
         <ul class="space-y-1 pl-[144px] text-sm font-medium text-zinc-400">
-            <li x-show="moreOpen" x-transition:enter="transition ease-out delay-300 duration-300" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" class="flex relative items-center group">
-                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-                <a href="/community" class="duration-300 ease-out text-white/70 hover:text-white/100 ">Sponsorships</a>
+            <li x-show="moreOpen" x-transition:enter="transition ease-out delay-100 duration-300" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" class="flex relative items-center group">
+                                <a href="/community" class="duration-300 ease-out text-white/70 hover:text-white/100 ">Sponsorships</a>
+            </li>
+            <li x-show="moreOpen" x-transition:enter="transition ease-out delay-200 duration-300" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" class="flex relative items-center group">
+                                <a href="/community" class="duration-300 ease-out text-white/70 hover:text-white/100 ">Support</a>
             </li>
             <li x-show="moreOpen" x-transition:enter="transition ease-out delay-300 duration-300" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" class="flex relative items-center group">
-                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-                <a href="/community" class="duration-300 ease-out text-white/70 hover:text-white/100 ">Support</a>
-            </li>
-            <li x-show="moreOpen" x-transition:enter="transition ease-out delay-300 duration-300" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" class="flex relative items-center group">
-                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-                <a href="/community" class="duration-300 ease-out text-white/70 hover:text-white/100 ">Terms</a>
+                                <a href="/community" class="duration-300 ease-out text-white/70 hover:text-white/100 ">Terms</a>
             </li>
         </ul>
         <div x-show="moreOpen" 
@@ -224,8 +230,8 @@ class="relative z-[999999] duration-300 select-none ease-out" :class="{ '-mt-11'
     </div>
 </div>
 
-        <div class="flex relative z-50 w-screen h-11 bg-stone-950">
-            <div class="flex justify-between items-center mx-auto w-full max-w-7xl">
+        <div class="flex relative z-50 w-screen h-11 border-b  bg-stone-950" :class="{ 'border-stone-800' : (!platformOpen && !communityOpen && !moreOpen) && !collapsed, 'border-b-transparent': (platformOpen || communityOpen || moreOpen) || collapsed }" x-cloak>
+            <div class="flex justify-between items-center mx-auto w-full max-w-full">
                 <div class="flex flex-1 justify-start items-center h-full text-xs text-white">
                     <a href="/" class="flex relative justify-center items-center px-5 pr-6">
                         <svg class="absolute left-0 ml-0 w-auto h-3.5 text-white opacity-100 duration-300 ease-out translate-x-4 group-hover:opacity-100" viewBox="0 0 100 150" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" transform="matrix(-1 0 0 1 100 50)" fill="currentColor"></rect><rect width="50" height="50" transform="matrix(-1 0 0 1 50 0)" fill="currentColor"></rect><rect width="50" height="50" transform="matrix(-1 0 0 1 50 100)" fill="currentColor"></rect></svg>
@@ -245,7 +251,7 @@ class="relative z-[999999] duration-300 select-none ease-out" :class="{ '-mt-11'
                     
                 </div>
                 <div class="flex flex-1 justify-end items-center h-full text-xs font-medium text-white">
-                    <a href="/dashboard" class="inline-flex justify-center items-center px-3 py-1 w-auto text-[0.6rem] font-medium text-gray-100 bg-gray-900 rounded-xl border border-transparent cursor-pointer hover:text-white focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 focus:outline-none">
+                    <a href="/dashboard" class="inline-flex justify-center items-center px-3 py-1 w-auto text-[0.6rem] font-medium text-gray-100 bg-black/20 rounded-xl border border-transparent cursor-pointer">
     <svg class="mr-1.5 -ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a6 6 0 0 0-12 0"></path><circle cx="12" cy="11" r="4"></circle><rect width="18" height="18" x="3" y="3" rx="2"></rect></svg>
                         <span>My Dashboard</span>
 </a>
