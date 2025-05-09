@@ -41,6 +41,13 @@ Run the database migrations:
 
 <include src="docs/install/code/extend-model.html"></include>
 
+
+## 6. Tweak the Filament authentication features.
+
+Make sure to tweak the authentication features for a panel in the configuration file. It's important to note that if your configuration file contains any of these methods: `->login()`, `->registration()`, `->passwordReset()`, or `->emailVerification()`, Filament will use its own pages instead of what the Auth package offers.
+
+To ensure you're using the DevDojo Auth package's features, remove these methods from your panel configuration. This way, the package will handle these authentication processes instead of Filament.
+
 ## Enable the Name Field for Registration
 
 The Filament admin panel utilizes the user `name` field, you'll want to enable this option in the setup page.
