@@ -1,10 +1,12 @@
-<header class="flex overflow-hidden relative flex-col items-center min-h-screen justify-stretch">
+<header class="flex overflow-hidden relative flex-col items-center min-h-screen justify-stretch -translate-y-20">
     
     
-    <div class="absolute inset-0 w-full h-full bg-black opacity-20 z-[997]"></div>
-    <div class="absolute inset-0 w-full h-full from-black via-transparent to-black opacity-100 bg-linear-to-b z-[997]"></div>
+    <div class="absolute inset-0 w-full h-full  opacity-100 bg-linear-to-b z-[997]">
+        <div class="w-full h-1/2 from-black via-transparent to-transparent bg-gradient-to-b"></div>
+        <div class="w-full h-1/2 from-transparent via-transparent to-black bg-gradient-to-b"></div>
+    </div>
     
-    <div class="absolute inset-0 w-full h-full bg-black opacity-60 z-[996]"></div>
+    <div class="absolute inset-0 w-full h-full bg-black opacity-0 z-[996]"></div>
     
         <include src="marquee-left.html"></include>
         <include src="marquee-right.html"></include>
@@ -14,15 +16,15 @@
     <div class="flex relative flex-col flex-1 justify-between px-5 pt-24 mx-auto w-full max-w-7xl h-full md:px-10 z-[998]">
         <div class="relative w-full h-px"></div>
         <!-- Heading Content -->
-        <div class="pt-16 mx-auto max-w-5xl text-left lg:pt-24 sm:text-center">
+        <div class="pt-2 mx-auto max-w-5xl text-left -translate-y-6 sm:text-center">
             
-            <h1 class="pb-4 mb-2 text-3xl font-medium text-white text-balance font-rota md:leading-tight sm:text-5xl lg:text-7xl">Customizable Auth Screens for your Laravel App</h1>
+            <h1 class="pb-4 -mt-20 mb-2 text-3xl font-normal text-transparent bg-clip-text bg-gradient-to-br via-white from-stone-700 to-stone-700 from-[10%] via-[30%] to-[150%] font-geist text-balance md:leading-tightest md:max-w-3xl sm:text-5xl lg:text-6xl">Customizable Auth for Laravel Apps</h1>
             <!-- Seamless & Configurable Authentication for Laravel -->
-            <p class="mx-auto mb-8 max-w-lg text-sm font-light leading-relaxed text-white opacity-80 sm:text-base lg:text-xl lg:mb-12">Easily add authentication features with the flip of a switch!<br class="hidden md:inline"> Then, customize it to fit your brand. </p>
+            <p class="mx-auto mb-8 max-w-lg text-sm font-light leading-relaxed text-white opacity-80 sm:text-base lg:text-lg lg:mb-10">Easily add auth features with the flip of a switch!<br class="hidden md:inline"> Then, customize it to fit your brand. </p>
 
-            <div class="relative hover:scale-[1.03] ease-out mb-0 duration-300 bg-pink-200 rounded-lg w-full sm:max-w-sm mx-auto [background:linear-gradient(45deg,#090912,--theme(--color-black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),--theme(--color-slate-900/.48)_80%,#75a522_86%,#bcfb4f_90%,#75a522_94%,--theme(--color-slate-900/.48))_border-box] border border-transparent animate-border">
-                <div class="relative mx-auto w-full h-auto font-mono text-base font-medium text-left text-white to-black rounded-lg border duration-300 ease-out bg-linear-to-br shadow-xs sm:inline-block border-zinc-700 radial-background group from-neutral-900">
-                    <div class="flex items-center w-full p-[3px] border-b border-zinc-800 h-9 bg-zinc-100/10 opacity-100">
+            <div class="relative hover:scale-[1.03] ease-out mb-0 duration-300 rounded-2xl w-full sm:max-w-[340px] mx-auto [background:linear-gradient(45deg,#090912,--theme(--color-black)_50%,#090912)_padding-box,conic-gradient(from_var(--border-angle),--theme(--color-slate-900/.48)_80%,#75a522_86%,#bcfb4f_90%,#75a522_94%,--theme(--color-slate-900/.48))_border-box] border border-transparent animate-border">
+                <div class="relative mx-auto w-full h-auto font-mono text-base font-medium text-left text-white to-black rounded-2xl border duration-300 ease-out bg-linear-to-br shadow-xs sm:inline-block border-zinc-700 radial-background group from-neutral-900">
+                    <div class="flex items-center w-full p-[3px] border-b border-zinc-800 h-9 bg-zinc-100/10 opacity-100 rounded-t-2xl">
                         <div class="flex justify-start items-center pr-1.5 pl-1.5 space-x-0.5 w-full h-full">
                             <div class="flex left-0 items-center px-1.5 space-x-1.5 w-auto h-8">
                                 <div class="w-2.5 h-2.5 bg-red-500 rounded-full"></div>
@@ -57,9 +59,6 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center items-center translate-y-7 sm:bg-transparent bg-[#211d21] rounded-md">
-                <a href="https://www.producthunt.com/posts/devdojo-auth?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-devdojo&#0045;auth" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=463082&theme=dark" alt="DevDojo&#0032;Auth - Customizable&#0032;Auth&#0032;Screens&#0032;for&#0032;Laravel | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-            </div>
             <!-- <div class="hidden relative mt-6 w-full sm:hidden">
                 <include src="button.html" title="View The Docs"></include>
             </div> -->
@@ -67,7 +66,7 @@
         </div>
         <!-- Logo Cloud -->
 
-        <div class="pb-10 w-full">
+        <div class="block pb-10 w-full -translate-y-12">
             <div class="mt-16 mb-10 w-full text-sm font-normal text-center text-white opacity-50">Works with your favorite starter kits</div>
             <div class="mx-auto  grid max-w-[1040px] grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-12 md:grid-cols-6">
                 <a href="https://laravel.com" target="_blank" class="mx-auto opacity-50 hover:opacity-100">

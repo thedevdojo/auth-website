@@ -6,10 +6,16 @@
     <title>{title}</title>
     <style>[x-cloak] { display: none; }</style>
 
-    <link rel="preload" href="{ url('/fonts/rota/rota-semibold-webfont.woff2') }" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="{ url('/fonts/rota/rota-regular-webfont.woff2') }" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="{ url('/fonts/rota/rota-medium-webfont.woff2') }" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="{ url('/fonts/rota/rota-bold-webfont.woff2') }" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+<style>
+  .font-geist {
+    font-family: "Geist", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+</style>
 
     <link rel="icon" type="image/x-icon" href="{ url('/assets/images/favicon.png') }">
 
@@ -132,18 +138,45 @@
       "
       @close-left-sidebar.window="leftSidebar = false"
       x-init="route=window.location.pathname" 
-      @set-route.window="route=event.detail.route" class="border-t border-stone-800" id="site" x-cloak data-loading-class-remove>
+      @set-route.window="route=event.detail.route" class="bg-black border-t border-stone-800" id="site" x-cloak data-loading-class-remove>
 
       <include src="header-bar.html"></include>
-      <include src="header.html"></include>
-      <div class="flex overflow-hidden fixed inset-0 justify-center items-center w-screen h-screen text-white bg-black z-998" data-loading="flex" data-loading-delay="1000">
-        <svg class="w-5 h-5 text-white animate-spin md:mr-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>  
-      </div>
-      <div id="site-content" class="z-[999]">
-        {slot}
-      </div>
-      <include src="footer.html"></include> 
+      
+
+      <div x-data="{ headerBarCollapsed: false }" @header-bar-collapsed.window="headerBarCollapsed = true" @header-bar-expanded.window="headerBarCollapsed = false" class="fixed sm:block hidden left-0 top-0 z-[999998]">
+        <div
+            :class="{ 'pl-[60px]': !headerBarCollapsed }" class="relative left-0 top-0 mx-auto flex h-10 w-[100vh] max-w-full origin-bottom-left -translate-y-10 rotate-90 items-center bg-black pl-4 text-white transition-[padding] duration-300 ease-out" x-cloak>
+            <nav class="pr-2.5 text-sm md:pr-3.5 md:text-xs" aria-label="Breadcrumb">
+                <ul class="flex">
+                    <li class="hidden flex-shrink-0 md:inline">
+                        <a href="/" class="inline-block relative font-normal text-white opacity-60 group hover:text-white hover:opacity-100">
+                            <span>Home</span>
+                            <span class="absolute bottom-0 left-0 mt-1 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
+                        </a>
+                        <span class="px-1.5 text-white opacity-30 sm:px-2 md:px-3">|</span>
+                    </li>
+                    <li class="flex-shrink-0">Auth</li>
+                </ul>
+            </nav>
+        </div>
     </div>
+
+    <main class="px-2 pt-11 w-screen h-screen min-h-screen max-h-screen sm:pl-10">
+    <div :class="{ 'z-20': desktop, 'z-999': !desktop && leftSidebar }" class="overflow-hidden relative top-0 w-full h-full bg-black rounded-t-xl border-t border-l sm:rounded-tl-xl border-stone-800">
+          
+      <div id="base-container" class="overflow-scroll w-full h-full">
+        <include src="header.html"></include>
+          <div class="flex overflow-hidden fixed inset-0 justify-center items-center w-screen h-screen text-white bg-black z-998" data-loading="flex" data-loading-delay="1000">
+            <svg class="w-5 h-5 text-white animate-spin md:mr-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>  
+          </div>
+          <div id="site-content" class="z-[999] ease-out duration-300 transition-[padding]">
+            {slot}
+          </div>
+          <include src="footer.html"></include> 
+        </div>
+      </div>
+    </div>
+  </main>
 
     <input type="hidden" id="home_url" value="{ url('/') }" />
     

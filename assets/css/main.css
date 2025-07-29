@@ -179,3 +179,33 @@ font-family: 'Rota';
 .prose :where(blockquote p:first-of-type):not(:where([class~="not-prose"],[class~="not-prose"] *))::before{
   content: '' !important;
 }
+
+/*
+   *  This is the marquee animation styles. 
+   *  Instead of adding this CSS you may wish to implement in your tailwind config. 
+   *  Learn more in the marquee Tailwind Config section
+   */
+@keyframes marquee {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+      transform: translateY(calc(-50% - var(--gap) / 2));
+    }
+}
+.animate-marquee {
+    animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee-reverse {
+  0% {
+      transform: translateY(calc(-50% - var(--gap) / 2));
+      
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.animate-marquee-reverse {
+  animation: marquee-reverse 40s linear infinite;
+}
