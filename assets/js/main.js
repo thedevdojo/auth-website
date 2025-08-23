@@ -385,7 +385,7 @@ window.renderSmoothAnchorLinks = function(){
         link.addEventListener('click', (event) => {
             event.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
-            const offset = 20; // Adjust the offset value as per your requirement
+            const offset = 60; // Adjust the offset value as per your requirement
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
@@ -406,7 +406,7 @@ window.renderTocFunctionality = function(){
         link.addEventListener('click', (event) => {
             event.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
-            const offset = 20; // Adjust the offset value as per your requirement
+            const offset = 60; // Adjust the offset value as per your requirement
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
