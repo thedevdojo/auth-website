@@ -57,6 +57,16 @@ FACEBOOK_CLIENT_SECRET=your-facebook-client-secret
 
 The example above is what it would look like to add your social authentication with `GOOGLE` and `FACEBOOK`.
 
+## Add callback URL in your provider's dashboard
+
+Combine your `app url` with the `callback uri`: `/auth/{driver}/callback`
+
+Examples:
+- `http://localhost:8000/auth/google/callback`
+- `http://localhost:8000/auth/facebook/callback`
+  
+This will register the callback route as a valid route for your provider and will prevent errors like `redirect_uri is not associated with this application.`
+
 ### Visual Indicators
 
 In the setup screen, you will see a list of social providers with key icons next to them:
